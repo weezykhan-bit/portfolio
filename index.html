@@ -13,6 +13,7 @@
 <link rel="preload" href="fonts/rozha-one-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/khand-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
+<script>try{var c=document.createElement("canvas");if(c.getContext("webgl")||c.getContext("experimental-webgl"))document.documentElement.classList.add("gl")}catch(e){}</script>
 <style>
 :root{
   --wall:#0A3540;
@@ -37,6 +38,7 @@
   --ease-out:cubic-bezier(.16,1,.3,1);
   --gutter:clamp(16px, 4vw, 40px);
   /* letterpress ornament band: diamonds and dots */
+  --frame:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%2321142A'/%3E%3Cg fill='none' stroke='%23F2A81D' stroke-width='1.4'%3E%3Crect x='3' y='3' width='90' height='90'/%3E%3Crect x='28.7' y='28.7' width='38.6' height='38.6'/%3E%3C/g%3E%3Ccircle cx='53' cy='16' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='43' cy='16' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='21' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='11' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='16' r='3' fill='%23C7301F'/%3E%3Ccircle cx='48' cy='16' r='1.2' fill='%23FBF8F1'/%3E%3Ccircle cx='53' cy='80' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='43' cy='80' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='85' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='75' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='80' r='3' fill='%23C7301F'/%3E%3Ccircle cx='48' cy='80' r='1.2' fill='%23FBF8F1'/%3E%3Ccircle cx='21' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='11' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='16' cy='53' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='16' cy='43' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='16' cy='48' r='3' fill='%23C7301F'/%3E%3Ccircle cx='16' cy='48' r='1.2' fill='%23FBF8F1'/%3E%3Ccircle cx='85' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='75' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='80' cy='53' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='80' cy='43' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='80' cy='48' r='3' fill='%23C7301F'/%3E%3Ccircle cx='80' cy='48' r='1.2' fill='%23FBF8F1'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 16 16)'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='16' cy='16' r='1.3' fill='%2321142A'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 80 16)'/%3E%3Ccircle cx='80' cy='16' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='80' cy='16' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='80' cy='16' r='1.3' fill='%2321142A'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 16 80)'/%3E%3Ccircle cx='16' cy='80' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='16' cy='80' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='16' cy='80' r='1.3' fill='%2321142A'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 80 80)'/%3E%3Ccircle cx='80' cy='80' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='80' cy='80' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='80' cy='80' r='1.3' fill='%2321142A'/%3E%3C/svg%3E");
   --ornament:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Crect width='28' height='14' fill='%2321142A'/%3E%3Cpath d='M7 1 L13 7 L7 13 L1 7Z' fill='%23F2A81D'/%3E%3Cpath d='M7 4 L10 7 L7 10 L4 7Z' fill='%23C7301F'/%3E%3Ccircle cx='21' cy='7' r='2' fill='%23FBF8F1'/%3E%3C/svg%3E");
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -80,17 +82,37 @@ p{margin:0}
 .btn--line{border-color:currentColor;color:var(--paper)}
 .btn--line:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 
-/* ───── HERO: one calendar sheet ───── */
-.hero{padding:clamp(14px,2.5vw,28px) 0 clamp(40px,6vw,72px)}
-.sheet{position:relative;background:var(--paper);color:var(--ink);padding:14px;border-radius:2px;
-  box-shadow:0 2px 3px rgba(0,0,0,.25), 0 24px 48px -16px rgba(0,0,0,.55)}
-.sheet::before{content:"";position:absolute;inset:0;border:14px solid transparent;border-image:var(--ornament) 0 round;border-image-source:var(--ornament);border-image-slice:0;pointer-events:none}
-.sheet-in{position:relative;border:2px solid var(--ink);display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);grid-template-areas:"banner banner" "pic pad" "press press";min-height:calc(100svh - var(--nav-h) - 2*clamp(14px,2.5vw,28px) - 28px)}
+/* ───── HERO: one calendar sheet, hung on a nail ───── */
+.hero{padding:clamp(52px,6vw,72px) 0 clamp(64px,8vw,96px)}
+.hang{position:relative}
+.hook{position:absolute;left:50%;top:-50px;width:180px;height:56px;margin-left:-90px;z-index:3;overflow:visible;pointer-events:none}
+.sheet{position:relative;background:var(--paper);color:var(--ink);padding:14px;border-radius:2px;transform-origin:50% -46px;
+  box-shadow:0 2px 3px rgba(0,0,0,.25), 0 24px 48px -16px rgba(0,0,0,.55);animation:sway 3.2s .2s cubic-bezier(.3,.7,.4,1) both}
+@keyframes sway{0%{transform:rotate(1.4deg)}22%{transform:rotate(-.9deg)}44%{transform:rotate(.5deg)}66%{transform:rotate(-.22deg)}84%{transform:rotate(.08deg)}100%{transform:none}}
+.eyelet{position:absolute;top:5px;width:12px;height:12px;border-radius:50%;background:var(--wall);border:2.5px solid #C9A24B;z-index:4;box-shadow:inset 0 1px 2px rgba(0,0,0,.6)}
+.eyelet.a{left:calc(50% - 66px)}.eyelet.b{left:calc(50% + 54px)}
+.sheet-in{position:relative;border:2px solid var(--ink);display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);grid-template-areas:"banner banner" "pic pad" "press press";min-height:calc(100svh - var(--nav-h) - 132px)}
 .border-band{position:absolute;left:0;right:0;height:14px;background:var(--ornament) repeat-x;background-size:28px 14px}
 .border-band.top{top:0}.border-band.bot{bottom:0}
 .border-band.l,.border-band.r{top:0;bottom:0;height:auto;width:14px;background-repeat:repeat-y;background-size:28px 14px;background-position:-7px 0}
 .border-band.l{left:0;right:auto}.border-band.r{right:0;left:auto}
-.sheet::before{display:none}
+
+/* printer's furniture outside the trim */
+.crop{position:absolute;width:26px;height:26px;pointer-events:none;color:var(--on-wall-2)}
+.crop::before,.crop::after{content:"";position:absolute;background:currentColor}
+.crop::before{width:18px;height:1px}.crop::after{width:1px;height:18px}
+.crop.tl{left:-30px;top:-30px}.crop.tl::before{left:0;bottom:4px}.crop.tl::after{right:4px;top:0}
+.crop.tr{right:-30px;top:-30px}.crop.tr::before{right:0;bottom:4px}.crop.tr::after{left:4px;top:0}
+.crop.bl{left:-30px;bottom:-30px}.crop.bl::before{left:0;top:4px}.crop.bl::after{right:4px;bottom:0}
+.crop.br{right:-30px;bottom:-30px}.crop.br::before{right:0;top:4px}.crop.br::after{left:4px;bottom:0}
+.reg{position:absolute;top:50%;width:22px;height:22px;margin-top:-11px;color:var(--on-wall-2);pointer-events:none}
+.reg.l{left:-34px}.reg.r{right:-34px}
+.reg svg{width:100%;height:100%;animation:regspin 1.6s .4s var(--ease-out) both}
+@keyframes regspin{from{transform:rotate(-120deg) scale(1.6);opacity:0}}
+.colorbar{position:absolute;left:0;right:0;bottom:-38px;display:flex;align-items:center;gap:14px;font:500 .75rem/1 var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--on-wall-2)}
+.colorbar .chips{display:flex}
+.colorbar i{width:16px;height:12px;display:block}
+.colorbar .sp{flex:1;height:1px;background:var(--wall-line)}
 
 .banner{grid-area:banner;position:relative;background:var(--vermilion);color:var(--paper);padding:clamp(20px,3vw,36px) clamp(20px,3.4vw,44px) clamp(18px,2.6vw,30px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;overflow:hidden;
   animation:roll .8s var(--ease-out) both}
@@ -101,6 +123,8 @@ p{margin:0}
 .banner-meta{position:relative;z-index:1;max-width:36ch;padding-bottom:.6em}
 .banner-meta .label{color:var(--paper);font-size:1.0625rem;letter-spacing:.12em}
 .banner-meta p{font:500 1.0625rem/1.4 var(--body);margin-top:6px}
+.banner canvas,.frame-in canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.banner canvas{z-index:0}
 @keyframes roll{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes register{
   from{text-shadow:26px 14px 0 rgba(242,168,29,0), -22px -12px 0 rgba(33,20,42,0)}
@@ -108,16 +132,34 @@ p{margin:0}
   to{text-shadow:3px 2px 0 var(--marigold), -2px -1px 0 var(--ink)}}
 
 .pic{grid-area:pic;position:relative;padding:clamp(16px,2.4vw,28px);border-right:2px solid var(--ink);display:flex;flex-direction:column;gap:14px}
-.frame{position:relative;flex:1;min-height:260px;padding:10px;background:var(--marigold)}
-.frame-in{position:relative;height:100%;min-height:240px;overflow:hidden;background:var(--peacock);outline:2px solid var(--ink)}
-.frame-in img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.12) saturate(1.25)}
-.frame-in::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg, rgba(199,48,31,.28), rgba(17,96,110,.3));mix-blend-mode:multiply}
-.frame-in::after{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(rgba(33,20,42,.42) .9px, transparent 1.5px) 0 0/5px 5px;mix-blend-mode:multiply;animation:dots 1.4s .35s var(--ease-out) both}
+.frame{position:relative;flex:1;min-height:260px;border:26px solid var(--ink);border-image:var(--frame) 32 round}
+.frame-in{position:relative;height:100%;min-height:208px;overflow:hidden;background:var(--peacock)}
+.frame-in img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.12) saturate(1.25);transition:opacity .6s}
+.frame-in img.hq{transform:scale(1.34)}
+.frame-in::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg, rgba(199,48,31,.28), rgba(17,96,110,.3));mix-blend-mode:multiply;pointer-events:none}
+.frame-in::after{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(rgba(33,20,42,.42) .9px, transparent 1.5px) 0 0/5px 5px;mix-blend-mode:multiply;animation:dots 1.4s .35s var(--ease-out) both;pointer-events:none}
 @keyframes dots{from{background-size:22px 22px;opacity:.95}to{background-size:5px 5px;opacity:1}}
-.frame-cap{position:absolute;z-index:3;left:18px;bottom:18px;background:var(--ink);color:var(--paper);padding:8px 12px 6px;max-width:calc(100% - 36px)}
+.frame-cap{position:absolute;z-index:3;left:12px;bottom:12px;background:var(--ink);color:var(--paper);padding:8px 12px 6px;max-width:calc(100% - 24px);pointer-events:none}
 .frame-cap b{font:400 1.25rem/1.1 var(--display);display:block}
 .frame-cap span{font:500 .8125rem/1.3 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--marigold)}
+.loupe-hint{display:none;font:500 .8125rem/1.2 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);align-items:center;gap:8px}
+.loupe-hint svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2}
 .lede{font:500 clamp(1.125rem,1.6vw,1.375rem)/1.4 var(--body);max-width:44ch;color:var(--ink)}
+
+/* the press is running: blank paper first, then the plates print it */
+.gl .banner:not(.gl-fail){background:var(--paper);animation:none}
+.gl .banner:not(.gl-fail)::after{display:none}
+.gl .banner:not(.gl-fail) h1{animation:inkin .35s 1.9s both, register 1.1s 1.9s var(--ease-out) both}
+@keyframes inkin{from{opacity:0;transform:scale(1.015)}}
+.gl .banner:not(.gl-fail) .banner-meta{opacity:0;transition:opacity .8s 1.7s}
+.gl .banner.is-printed .banner-meta{opacity:1}
+.gl .frame-in{background:var(--paper)}
+.gl .frame-in:not(.gl-fail) img{opacity:0}
+.gl .frame-in:not(.gl-fail)::before,.gl .frame-in:not(.gl-fail)::after{display:none}
+.gl .frame-in.gl-on{cursor:none}
+.gl .pic.gl-ready .loupe-hint{display:flex}
+.gl .banner.gl-on{cursor:none}
+.gl .banner.gl-on a{cursor:pointer}
 
 /* the tear-off date pad */
 .pad{grid-area:pad;margin:0;position:relative;padding:clamp(16px,2.4vw,28px);display:flex;flex-direction:column;gap:14px;background:var(--paper-2)}
@@ -125,14 +167,17 @@ p{margin:0}
 .pad-head .label{color:var(--vermilion-deep)}
 .pad-count{font:600 .9375rem/1 var(--label);letter-spacing:.06em;color:var(--ink-2);font-variant-numeric:tabular-nums}
 .leaves{position:relative;flex:1;min-height:300px;container-type:inline-size}
-.leaf{position:absolute;inset:0 6px 8px 0;background:var(--paper);border:1.5px solid rgba(33,20,42,.35);display:flex;flex-direction:column;justify-content:space-between;padding:26px clamp(18px,2vw,26px) 20px;
+.leaf{position:absolute;inset:0 6px 8px 0;background:var(--paper);border:1.5px solid rgba(33,20,42,.35);display:flex;flex-direction:column;padding:24px clamp(18px,2vw,26px) 18px;
   -webkit-mask:radial-gradient(circle 4px at 8px 0, transparent 97%, #000) 0 0/16px 100% repeat-x;mask:radial-gradient(circle 4px at 8px 0, transparent 97%, #000) 0 0/16px 100% repeat-x;
   transform-origin:100% 0;box-shadow:0 1px 0 rgba(33,20,42,.12)}
 .leaf::before{content:"";position:absolute;left:0;right:0;top:10px;border-top:1.5px dashed rgba(33,20,42,.28)}
-.leaf .fig{font:400 clamp(3.25rem,25cqi,7rem)/.9 var(--display);white-space:nowrap;color:var(--vermilion);letter-spacing:-.02em;font-variant-numeric:lining-nums;margin-top:8px}
+.leaf-top{display:flex;justify-content:space-between;gap:12px;font:600 .8125rem/1 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--vermilion-deep);padding-bottom:9px;border-bottom:2px solid var(--ink)}
+.leaf-top span:last-child{color:var(--ink-2);font-variant-numeric:tabular-nums}
+.leaf .fig{font:400 clamp(3.25rem,25cqi,7rem)/.9 var(--display);white-space:nowrap;color:var(--vermilion);letter-spacing:-.02em;font-variant-numeric:lining-nums;margin-top:auto;padding-top:14px}
 .leaf .fig small{font-size:.42em;letter-spacing:0;color:var(--ink)}
-.leaf .what{font:500 1.0625rem/1.4 var(--body);color:var(--ink);max-width:28ch}
-.leaf .where{font:600 .8125rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--peacock);margin-top:10px}
+.leaf .what{font:500 1.0625rem/1.4 var(--body);color:var(--ink);max-width:30ch;margin-top:12px}
+.leaf .where{font:600 .8125rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--peacock);margin-top:auto;padding-top:10px;border-top:1px dashed rgba(33,20,42,.3)}
+.leaf .what + .where{margin-top:16px}
 .leaf:nth-child(3n+2) .fig{color:var(--peacock)}
 .leaf:nth-child(3n) .fig{color:var(--marigold-deep)}
 .leaves.is-loading .leaf{animation:drop .6s .6s var(--ease-out) both}
@@ -148,17 +193,20 @@ p{margin:0}
 .press p b{color:var(--marigold);font-weight:600}
 .press .acts{display:flex;flex-wrap:wrap;gap:10px}
 
+@media (max-width:1100px){.crop,.reg{display:none}}
 @media (max-width:900px){
   .sheet-in{grid-template-columns:1fr;grid-template-areas:"banner" "pad" "pic" "press";min-height:0}
   .pic{border-right:0;border-top:2px solid var(--ink)}
-  .leaves{min-height:250px}
-  .frame{min-height:220px}
+  .leaves{min-height:270px}
+  .frame{min-height:240px}
 }
 @media (max-width:480px){
   .sheet{padding:10px}
   .border-band{height:10px;background-size:20px 10px}
   .border-band.l,.border-band.r{width:10px;background-size:20px 10px}
   .press .acts .btn{flex:1;justify-content:center}
+  .frame{border-width:20px}
+  .colorbar .txt{display:none}
 }
 
 /* ───── section heads ───── */
@@ -220,6 +268,7 @@ p{margin:0}
   .yr{grid-template-columns:1fr}
   .cells{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(72px,auto)}
   .alm-tabs{display:none}
+  .cell.blank:not(.odd){display:none}
 }
 
 /* ───── STUDIO ───── */
@@ -243,46 +292,58 @@ p{margin:0}
 .mandate span{font:500 1rem/1.35 var(--body);max-width:24ch}
 @media (max-width:860px){.studio-sheet{grid-template-columns:1fr}.streams{columns:1}}
 
-/* ───── SLATE: new formats with status stamps ───── */
-.slate{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--wall-line);border:2px solid var(--wall-line)}
-.bill{background:var(--wall-2);padding:clamp(22px,3vw,36px);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:12px;min-height:280px}
-.bill:nth-child(1){grid-column:span 2;background:var(--ink)}
-.bill:nth-child(1) h3{max-width:26ch}
-.bill:nth-child(4){grid-column:span 2}
-.bill .kind{font:600 .9375rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--marigold);margin-top:-4px}
-.bill h3{font-size:clamp(1.8rem,3.2vw,2.6rem);max-width:18ch;padding-right:150px}
-.bill p{max-width:60ch;color:var(--on-wall)}
-.bill a{color:var(--marigold)}
-.stamp{position:absolute;top:clamp(20px,3vw,32px);right:clamp(16px,3vw,32px);font:700 1rem/1 var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--marigold);border:3px solid currentColor;padding:9px 12px 6px;transform:rotate(-7deg);border-radius:3px;text-align:center;max-width:150px;
-  -webkit-mask:radial-gradient(rgba(0,0,0,.6) 1px, #000 1.5px) 0 0/3px 3px;mask:radial-gradient(rgba(0,0,0,.6) 1px, #000 1.5px) 0 0/3px 3px}
-.stamp.s-paper{color:var(--on-wall)}
+/* ───── SLATE: one newsprint sheet, stamped ───── */
+.news{background:var(--paper);color:var(--ink);padding:clamp(10px,1.6vw,18px);border-radius:2px;box-shadow:0 2px 3px rgba(0,0,0,.25), 0 24px 48px -18px rgba(0,0,0,.55)}
+.news-in{border:2px solid var(--ink);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));overflow:hidden}
+.news-mast{grid-column:1/-1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px clamp(16px,2.4vw,28px) 8px;border-bottom:4px double var(--ink);font:600 .875rem/1.2 var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.bill{position:relative;overflow:hidden;padding:clamp(20px,2.8vw,34px);display:flex;flex-direction:column;gap:10px;box-shadow:1px 0 0 var(--ink), 0 1px 0 var(--ink)}
+.bill.lead{grid-column:span 6;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:12px clamp(24px,4vw,56px);align-items:start}
+.bill.lead h3{font-size:clamp(2.2rem,4.4vw,3.75rem);max-width:14ch;grid-row:span 2}
+.bill.lead .body{display:flex;flex-direction:column;gap:12px;padding-top:56px}
+.bill.col{grid-column:span 2}
+.bill h3{font-size:clamp(1.6rem,2.4vw,2.1rem);padding-right:4px;margin-top:58px}
+.bill.lead h3{margin-top:0}
+.bill .kind{font:600 .9375rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--vermilion-deep)}
+.bill p{max-width:62ch}
+.bill a{color:var(--peacock);font-weight:600}
+.stamp{position:absolute;top:clamp(18px,2.4vw,28px);right:clamp(16px,2.4vw,28px);font:700 1rem/1 var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--vermilion);border:3px solid currentColor;padding:9px 12px 6px;transform:rotate(-7deg);border-radius:3px;text-align:center;max-width:170px;
+  -webkit-mask:radial-gradient(rgba(0,0,0,.55) 1px, #000 1.6px) 0 0/3px 3px;mask:radial-gradient(rgba(0,0,0,.55) 1px, #000 1.6px) 0 0/3px 3px}
+.stamp::after{content:"";position:absolute;inset:3px;border:1px solid currentColor;border-radius:1px}
+.stamp.s-peacock{color:var(--peacock)}
+.stamp.s-rose{color:#A8344F}
 .stamp.will-in{opacity:0;transform:rotate(-7deg) scale(1.7)}
 .stamp.in{opacity:1;transform:rotate(-7deg) scale(1);transition:transform .45s cubic-bezier(.3,1.4,.5,1), opacity .2s}
-.pitch{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:24px 48px;border-top:2px solid var(--marigold);padding-top:24px}
-.pitch h3{font-size:clamp(1.6rem,2.6vw,2.2rem)}
-.pitch ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 36px}
-.pitch li b{display:block;font:600 1rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--marigold);margin-bottom:4px}
-.pitch li{color:var(--on-wall-2)}
+.pitch{grid-column:1/-1;background:var(--paper-2);padding:clamp(20px,2.8vw,32px);border-top:4px double var(--ink);display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,3fr);gap:18px 40px}
+.pitch h3{font-size:clamp(1.6rem,2.4vw,2rem)}
+.pitch ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.pitch li{padding:0 18px;border-left:1px solid rgba(33,20,42,.35);font-size:.9375rem;line-height:1.5}
+.pitch li b{display:block;font:600 .9375rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--vermilion-deep);margin-bottom:6px}
+@media (max-width:1060px){.pitch{grid-template-columns:1fr}.pitch ul{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}}
 @media (max-width:860px){
-  .slate{grid-template-columns:1fr}.bill:nth-child(1),.bill:nth-child(4){grid-column:auto}
-  .bill h3{padding-right:0;margin-top:64px}
-  .pitch{grid-template-columns:1fr}.pitch ul{grid-template-columns:1fr}
+  .news-in{grid-template-columns:1fr}
+  .bill.lead,.bill.col{grid-column:auto}
+  .bill.lead{display:flex}
+  .bill.lead .body{padding-top:0}
+  .bill.lead h3{margin-top:58px}
+  .pitch ul{grid-template-columns:1fr}
+  .pitch li{padding:0 0 0 14px}
 }
 
 /* ───── REEL ───── */
-.reel{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:clamp(16px,2vw,24px)}
-.reel .promo:first-child{grid-row:span 2}
-.promo{background:var(--paper);padding:10px;color:var(--ink);display:flex;flex-direction:column;gap:10px;border-radius:2px}
-.promo:nth-child(2){background:var(--marigold)}
-.promo:nth-child(3){background:var(--vermilion);color:var(--paper)}
+.reel{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:clamp(16px,2vw,24px);align-items:start}
+.reel .side{display:grid;gap:clamp(16px,2vw,24px)}
+.promo{background:var(--paper);padding:10px;color:var(--ink);display:flex;flex-direction:column;gap:10px;border-radius:2px;margin:0}
+.side .promo:first-child{background:var(--marigold)}
+.side .promo:last-child{background:var(--vermilion);color:var(--paper)}
 .screen{position:relative;aspect-ratio:16/9;background:var(--peacock);outline:2px solid var(--ink);overflow:hidden}
-.reel .promo:first-child .screen{flex:1;aspect-ratio:auto;min-height:280px}
 .screen button{all:unset;position:absolute;inset:0;cursor:pointer;display:block}
 .screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out), filter .3s}
+.screen img.hq{transform:scale(1.34)}
 .screen button::after{content:"";position:absolute;inset:0;background:radial-gradient(rgba(33,20,42,.35) .9px, transparent 1.5px) 0 0/5px 5px;mix-blend-mode:multiply;transition:opacity .3s}
 .screen button:hover img,.screen button:focus-visible img{transform:scale(1.04)}
+.screen button:hover img.hq,.screen button:focus-visible img.hq{transform:scale(1.4)}
 .screen button:hover::after,.screen button:focus-visible::after{opacity:0}
-.play{position:absolute;z-index:2;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);font:600 .9375rem/1 var(--label);letter-spacing:.08em;text-transform:uppercase;padding:11px 14px 9px;border-radius:2px;transition:background .15s}
+.play{position:absolute;z-index:2;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);font:600 .9375rem/1 var(--label);letter-spacing:.08em;text-transform:uppercase;padding:11px 14px 9px;border-radius:2px;transition:background .15s}
 .screen button:hover .play,.screen button:focus-visible .play{background:var(--vermilion)}
 .screen button:focus-visible{outline:3px solid var(--marigold);outline-offset:-3px}
 .screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -290,19 +351,30 @@ p{margin:0}
 .promo-cap b{font:400 1.375rem/1.1 var(--display)}
 .promo-cap span{font:600 .8125rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase}
 .fine{margin-top:16px;font-size:.875rem;color:var(--on-wall-2)}
-@media (max-width:860px){.reel{grid-template-columns:1fr}.reel .promo:first-child{grid-row:auto}.reel .promo:first-child .screen{aspect-ratio:16/9;min-height:0}}
+@media (max-width:860px){.reel{grid-template-columns:1fr}}
 
-/* ───── TOOLKIT: press strip + ledger ───── */
-.strip{background:var(--ink);border-block:3px solid var(--marigold);overflow:hidden;padding:16px 0}
-.strip-track{display:flex;flex-wrap:wrap;justify-content:center;row-gap:12px;width:min(1240px, 100% - 2*var(--gutter));margin-inline:auto}
-.strip-track span{font:600 clamp(1.1rem,1.8vw,1.4rem)/1 var(--label);letter-spacing:.1em;text-transform:uppercase;padding:0 18px;color:var(--paper);text-align:center;display:inline-flex;align-items:center;gap:36px}
-.strip-track span::after{content:"";width:9px;height:9px;transform:rotate(45deg);background:var(--vermilion)}
-.ledger{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
-.ledger h3{font-size:1.75rem;margin-bottom:14px;color:var(--marigold)}
-.ledger ul{list-style:none;margin:0;padding:0}
-.ledger li{padding:10px 0;border-bottom:1px solid var(--wall-line);color:var(--on-wall)}
-.ledger li small{display:block;color:var(--on-wall-2);font-size:.9375rem}
-@media (max-width:860px){.ledger{grid-template-columns:1fr}}
+/* ───── OVERLEAF: the calendar's printed back page ───── */
+.back{background:var(--paper);color:var(--ink);padding:clamp(10px,1.6vw,18px);border-radius:2px;box-shadow:0 2px 3px rgba(0,0,0,.25), 0 24px 48px -18px rgba(0,0,0,.55)}
+.back-in{border:2px solid var(--ink);padding:clamp(22px,3.4vw,44px)}
+.back h2{font-size:clamp(2rem,3.6vw,3rem);margin-bottom:18px}
+.comps{font:600 clamp(1rem,1.4vw,1.1875rem)/1.9 var(--label);letter-spacing:.08em;text-transform:uppercase;padding:14px 0;border-block:4px double var(--ink);margin:0 0 clamp(24px,3vw,36px)}
+.comps span{white-space:nowrap}
+.comps span + span::before{content:"";display:inline-block;width:7px;height:7px;transform:translateY(-3px) rotate(45deg);background:var(--vermilion);margin:0 .9em 0 .8em}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols > div{padding:0 clamp(16px,2.4vw,32px)}
+.cols > div:first-child{padding-left:0}
+.cols > div + div{border-left:1px solid rgba(33,20,42,.35)}
+.cols h3{font-size:1.5rem;margin-bottom:10px;color:var(--vermilion-deep)}
+.cols ul{list-style:none;margin:0;padding:0}
+.cols li{padding:9px 0;border-bottom:1px dashed rgba(33,20,42,.3)}
+.cols li small{display:block;color:var(--ink-2);font-size:.9375rem}
+.imprint{margin-top:clamp(24px,3vw,36px);padding-top:12px;border-top:1px solid var(--ink);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font:500 .8125rem/1.4 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+@media (max-width:860px){
+  .cols{grid-template-columns:1fr;gap:24px}
+  .cols > div{padding:0}
+  .cols > div + div{border-left:0}
+  .comps span{white-space:normal}
+}
 
 /* ───── CLOSE ───── */
 .close{padding:clamp(40px,6vw,72px) 0 clamp(48px,6vw,80px)}
@@ -310,7 +382,7 @@ p{margin:0}
   box-shadow:0 2px 3px rgba(0,0,0,.25), 0 24px 48px -18px rgba(0,0,0,.55)}
 .close-sheet::after{content:"";position:absolute;inset:0;background:radial-gradient(rgba(33,20,42,.22) .8px, transparent 1.1px) 0 0/4px 4px;mix-blend-mode:multiply;pointer-events:none}
 .close-sheet > *{position:relative;z-index:1}
-.close-sheet h2{font-size:clamp(2.8rem,7.4vw,6rem);max-width:13ch;text-shadow:3px 2px 0 var(--ink)}
+.close-sheet h2{font-size:clamp(2.8rem,7.4vw,6rem);max-width:13ch;text-shadow:3px 2px 0 var(--marigold), -2px -1px 0 var(--ink)}
 .close-sheet p{max-width:52ch;margin:20px 0 30px;font-size:1.125rem}
 .mail{display:inline-block;font:400 clamp(1.35rem,3.6vw,2.6rem)/1.15 var(--display);color:var(--paper);text-decoration:none;border-bottom:3px solid var(--marigold);padding-bottom:4px;overflow-wrap:anywhere;transition:color .15s}
 .mail:hover{color:var(--marigold)}
@@ -323,6 +395,7 @@ p{margin:0}
   *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;animation-iteration-count:1 !important}
   .stamp.will-in,.stamp.in,.almanac .yr.will-in{transform:rotate(-7deg);opacity:1;transition:none}
   .almanac .yr.will-in{transform:none}
+  .sheet{animation:none}
 }
 </style>
 </head>
@@ -354,60 +427,79 @@ p{margin:0}
 <!-- ═════ HERO ═════ -->
 <section class="hero" id="top" aria-label="Introduction">
   <div class="wrap">
-    <div class="sheet">
-      <i class="border-band top" aria-hidden="true"></i><i class="border-band bot" aria-hidden="true"></i>
-      <i class="border-band l" aria-hidden="true"></i><i class="border-band r" aria-hidden="true"></i>
-      <div class="sheet-in">
-        <div class="banner">
-          <h1>Fowzan Khan</h1>
-          <div class="banner-meta">
-            <span class="label">Head of Commercial</span>
-            <p>Media &amp; Entertainment · Swastik Stories, Mumbai</p>
-          </div>
-        </div>
+    <div class="hang">
+      <svg class="hook" viewBox="0 0 180 56" aria-hidden="true">
+        <path d="M30 52 L90 8 L150 52" fill="none" stroke="#C9A24B" stroke-width="1.6"/>
+        <path d="M30 52 L90 8 L150 52" fill="none" stroke="#21142A" stroke-width="1.6" stroke-dasharray="1 3" opacity=".45"/>
+        <circle cx="90" cy="8" r="6.5" fill="#21142A"/><circle cx="90" cy="8" r="4.5" fill="#8C8A84"/><circle cx="88.6" cy="6.6" r="1.6" fill="#E9E4D8"/>
+      </svg>
+      <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span>
+      <span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+      <span class="reg l" aria-hidden="true"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="6"/><circle cx="11" cy="11" r="2.5" fill="currentColor"/><path d="M11 0v22M0 11h22"/></svg></span>
+      <span class="reg r" aria-hidden="true"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="6"/><circle cx="11" cy="11" r="2.5" fill="currentColor"/><path d="M11 0v22M0 11h22"/></svg></span>
+      <div class="colorbar" aria-hidden="true">
+        <span class="chips"><i style="background:#1A8FB0"></i><i style="background:#D33A6A"></i><i style="background:#F5C318"></i><i style="background:#21142A"></i><i style="background:#8CC8D6"></i><i style="background:#EE9DB4"></i><i style="background:#F9DF8A"></i><i style="background:#8F8794"></i></span>
+        <span class="sp"></span>
+        <span class="txt">Four-colour process · 15° 75° 0° 45° · printed live in your browser</span>
+      </div>
 
-        <div class="pic">
-          <p class="lede">I run the business behind the stories India watches: budgets, deals and studio revenue across broadcast, OTT, micro-drama and live entertainment.</p>
-          <div class="frame">
-            <div class="frame-in">
-              <img src="https://i.ytimg.com/vi/9gK5ogsY4YA/maxresdefault.jpg" alt="Promotional still from Shiv Shakti on Colors" width="1280" height="720" fetchpriority="high">
-              <div class="frame-cap"><b>Shiv Shakti</b><span>Colors · on the current slate</span></div>
+      <div class="sheet">
+        <i class="border-band top" aria-hidden="true"></i><i class="border-band bot" aria-hidden="true"></i>
+        <i class="border-band l" aria-hidden="true"></i><i class="border-band r" aria-hidden="true"></i>
+        <i class="eyelet a" aria-hidden="true"></i><i class="eyelet b" aria-hidden="true"></i>
+        <div class="sheet-in">
+          <div class="banner" data-press-banner>
+            <h1><span class="w">Fowzan</span> <span class="w">Khan</span></h1>
+            <div class="banner-meta">
+              <span class="label">Head of Commercial</span>
+              <p>Media &amp; Entertainment · Swastik Stories, Mumbai</p>
             </div>
           </div>
-        </div>
 
-        <figure class="pad" aria-labelledby="pad-title">
-          <div class="pad-head">
-            <span class="label" id="pad-title">By the numbers</span>
-            <span class="pad-count" aria-hidden="true"><span data-pad-n>1</span> / 6</span>
+          <div class="pic">
+            <p class="lede">I run the business behind the stories India watches: budgets, deals and studio revenue across broadcast, OTT, micro-drama and live entertainment.</p>
+            <div class="frame">
+              <div class="frame-in" data-press-pic>
+                <img src="https://i.ytimg.com/vi/9gK5ogsY4YA/maxresdefault.jpg" data-yt-thumb="9gK5ogsY4YA" alt="Promotional still from Shiv Shakti on Colors" width="1280" height="720" fetchpriority="high">
+                <div class="frame-cap"><b>Shiv Shakti</b><span>Colors · on the current slate</span></div>
+              </div>
+            </div>
+            <p class="loupe-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><span data-hint>Move over the print to inspect it under a loupe</span></p>
           </div>
-          <div class="leaves is-loading" data-leaves aria-hidden="true">
-            <div class="leaf"><div class="fig">₹120<small> Cr+</small></div><div><p class="what">Annual production P&amp;L I control across the slate</p><p class="where">Swastik Stories</p></div></div>
-            <div class="leaf"><div class="fig">6+</div><div><p class="what">Prime-time and digital properties on air at the same time</p><p class="where">Sony · Colors · Star Plus · SAB</p></div></div>
-            <div class="leaf"><div class="fig">25<small> acres</small></div><div><p class="what">Studio lot whose commercial function I built from zero</p><p class="where">Swastik Bhoomi, Umargaon</p></div></div>
-            <div class="leaf"><div class="fig">₹10<small> Cr+</small></div><div><p class="what">Annual revenue mandate for the studio business</p><p class="where">Swastik Bhoomi</p></div></div>
-            <div class="leaf"><div class="fig">3,000+</div><div><p class="what">Film and TV decision-makers reached to build the studio's first external pipeline</p><p class="where">Direct outreach</p></div></div>
-            <div class="leaf"><div class="fig">12+<small> yrs</small></div><div><p class="what">From production coordinator on live formats to Head of Commercial</p><p class="where">2014 – now</p></div></div>
-          </div>
-          <ul class="sr-only">
-            <li>₹120 Cr+ annual production P&amp;L controlled at Swastik Stories</li>
-            <li>6+ prime-time and digital properties on air at the same time</li>
-            <li>25-acre studio, Swastik Bhoomi, commercial function built from zero</li>
-            <li>₹10 Cr+ annual studio revenue mandate</li>
-            <li>3,000+ film and TV decision-makers reached</li>
-            <li>12+ years in media and entertainment</li>
-          </ul>
-          <div class="pad-ctrl">
-            <button class="tear" type="button" data-tear><svg class="icon" aria-hidden="true"><use href="#i-tear"/></svg>Tear off a sheet</button>
-            <button class="pause" type="button" data-pause aria-label="Pause the flipping figures" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg></button>
-          </div>
-        </figure>
 
-        <div class="press">
-          <p><b>Sony · Colors · Star Plus · Netflix · Hotstar · Applause</b> &nbsp;content, commercially delivered</p>
-          <div class="acts">
-            <a class="btn btn--marigold" href="mailto:khanfowzan28@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
-            <a class="btn btn--line" href="https://www.linkedin.com/in/fowzan-khan-89903a42" target="_blank" rel="noopener">LinkedIn<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <figure class="pad" aria-labelledby="pad-title">
+            <div class="pad-head">
+              <span class="label" id="pad-title">By the numbers</span>
+              <span class="pad-count" aria-hidden="true"><span data-pad-n>1</span> / 6</span>
+            </div>
+            <div class="leaves is-loading" data-leaves aria-hidden="true">
+              <div class="leaf"><div class="leaf-top"><span>Since Jun 2024</span><span>No. 01</span></div><div class="fig">₹120<small> Cr+</small></div><p class="what">Annual production P&amp;L I control across the slate</p><p class="where">Swastik Stories</p></div>
+              <div class="leaf"><div class="leaf-top"><span>Every week, on air</span><span>No. 02</span></div><div class="fig">6+</div><p class="what">Prime-time and digital properties running at the same time</p><p class="where">Sony · Colors · Star Plus · SAB</p></div>
+              <div class="leaf"><div class="leaf-top"><span>Umargaon, Gujarat</span><span>No. 03</span></div><div class="fig">25<small> acres</small></div><p class="what">Studio lot whose commercial function I built from zero</p><p class="where">Swastik Bhoomi</p></div>
+              <div class="leaf"><div class="leaf-top"><span>Per year</span><span>No. 04</span></div><div class="fig">₹10<small> Cr+</small></div><p class="what">Revenue mandate for the studio business</p><p class="where">Swastik Bhoomi</p></div>
+              <div class="leaf"><div class="leaf-top"><span>Outbound</span><span>No. 05</span></div><div class="fig">3,000+</div><p class="what">Film and TV decision-makers reached to build the studio's first external pipeline</p><p class="where">Direct, LinkedIn &amp; agency</p></div>
+              <div class="leaf"><div class="leaf-top"><span>Mar 2014 – today</span><span>No. 06</span></div><div class="fig">12+<small> yrs</small></div><p class="what">From production coordinator on live formats to Head of Commercial</p><p class="where">Broadcast · OTT · Live</p></div>
+            </div>
+            <ul class="sr-only">
+              <li>₹120 Cr+ annual production P&amp;L controlled at Swastik Stories</li>
+              <li>6+ prime-time and digital properties on air at the same time</li>
+              <li>25-acre studio, Swastik Bhoomi, commercial function built from zero</li>
+              <li>₹10 Cr+ annual studio revenue mandate</li>
+              <li>3,000+ film and TV decision-makers reached</li>
+              <li>12+ years in media and entertainment</li>
+            </ul>
+            <div class="pad-ctrl">
+              <button class="tear" type="button" data-tear><svg class="icon" aria-hidden="true"><use href="#i-tear"/></svg>Tear off a sheet</button>
+              <button class="pause" type="button" data-pause aria-label="Pause the flipping figures" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg></button>
+            </div>
+          </figure>
+
+          <div class="press">
+            <p><b>Sony · Colors · Star Plus · Netflix · Hotstar · Applause</b> &nbsp;content, commercially delivered</p>
+            <div class="acts">
+              <a class="btn btn--marigold" href="mailto:khanfowzan28@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+              <a class="btn btn--line" href="https://www.linkedin.com/in/fowzan-khan-89903a42" target="_blank" rel="noopener">LinkedIn<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
           </div>
         </div>
       </div>
@@ -468,7 +560,7 @@ p{margin:0}
               <div class="cell"><b>State of Siege S3</b><span>OTT</span></div>
               <div class="cell"><b>Garuda</b><span>Series</span></div>
               <div class="cell"><b>Krishna</b><span>Series</span></div>
-              <div class="cell blank" aria-hidden="true"></div>
+              <div class="cell blank odd" aria-hidden="true"></div>
               <div class="cell blank" aria-hidden="true"></div>
               <div class="cell blank" aria-hidden="true"></div>
             </div>
@@ -493,7 +585,7 @@ p{margin:0}
               <div class="cell"><b>Code M S2</b><span>Hotstar</span></div>
               <div class="cell"><b>Shoorveer</b><span>Hotstar</span></div>
               <div class="cell"><b>EPIC TV</b><span>GEC content</span></div>
-              <div class="cell blank" aria-hidden="true"></div>
+              <div class="cell blank odd" aria-hidden="true"></div>
               <div class="cell blank" aria-hidden="true"></div>
               <div class="cell blank" aria-hidden="true"></div>
             </div>
@@ -591,41 +683,46 @@ p{margin:0}
       <h2 id="slate-title">What's next on the slate</h2>
       <p>The commercial and financial planning for Swastik Stories' new formats. Each one carries its real status.</p>
     </div>
-    <div class="slate">
-      <article class="bill">
-        <span class="stamp s-paper" data-stamp>In negotiation</span>
-        <h3>AI-generated mythology, priced by the minute</h3>
-        <p class="kind">AI-hybrid production</p>
-        <p>Designed the commercial model for AI-generated versus live-shot mythology and micro-drama: fixed rate cards by runtime, margin floors and concession limits. Negotiating a 70-minute AI mythology drama commission with Story TV; sample approved, flat-fee deal with the channel owning the IP.</p>
-      </article>
-      <article class="bill">
-        <span class="stamp s-amber" data-stamp>In development</span>
-        <h3>IshSwaram</h3>
-        <p class="kind">Music reality format</p>
-        <p>A devotional-fusion band hunt. Built the multi-department budget, the S1 schedule (two-month casting, shoot targeted from Dec 2026 at Swastik Bhoomi), the SPV structure and the Grand Finale plan.</p>
-      </article>
-      <article class="bill">
-        <span class="stamp s-paper" data-stamp>In planning</span>
-        <h3>Khatu Shyam (Barbarik)</h3>
-        <p class="kind">Motion capture</p>
-        <p>A mythology show planned for a motion-capture shoot.</p>
-      </article>
-      <article class="bill">
-        <span class="stamp s-amber" data-stamp>Production planning</span>
-        <h3>World of Raaya: Great Indian Tales</h3>
-        <p class="kind">Original animated IP</p>
-        <p>Self-funded, 18 episodes, targeting Q2 2027. Built the business plan and digital marketing plan, and set up trademark and copyright registration. <a href="https://www.instagram.com/helloraaya/" target="_blank" rel="noopener">Raaya on Instagram</a></p>
-      </article>
-    </div>
-
-    <div class="pitch">
-      <h3>On the pitch table</h3>
-      <ul>
-        <li><b>Micro-drama</b>A 12-episode micro-drama in budget development for Pinkvilla Buzz, and a co-production proposal for 25 mythological micro-series shot at Swastik Bhoomi.</li>
-        <li><b>Platform pitches</b>Mythology series Mahabali pitched to JioStar/Hotstar with development budget, writer terms and an XR partner costed in.</li>
-        <li><b>IP decks</b>Parvati, Krishna and Mahamaya, with modular rights-participation frameworks for Dangal TV and Amazon MX Player.</li>
-        <li><b>New business models</b>Stress-tested the Swastik OTT Marathon, a theatrical festival for unsold content, and a YouTube content business built on real channel data.</li>
-      </ul>
+    <div class="news">
+      <div class="news-in">
+        <div class="news-mast" aria-hidden="true"><span>Swastik Stories · New formats &amp; IP</span><span>Status as of 2026</span></div>
+        <article class="bill lead">
+          <span class="stamp" data-stamp>In negotiation</span>
+          <h3>AI-generated mythology, priced by the minute</h3>
+          <div class="body">
+            <p class="kind">AI-hybrid production</p>
+            <p>Designed the commercial model for AI-generated versus live-shot mythology and micro-drama: fixed rate cards by runtime, margin floors and concession limits.</p>
+            <p>Negotiating a 70-minute AI mythology drama commission with Story TV; sample approved, flat-fee deal with the channel owning the IP.</p>
+          </div>
+        </article>
+        <article class="bill col">
+          <span class="stamp s-peacock" data-stamp>In development</span>
+          <h3>IshSwaram</h3>
+          <p class="kind">Music reality format</p>
+          <p>A devotional-fusion band hunt. Built the multi-department budget, the S1 schedule (two-month casting, shoot targeted from Dec 2026 at Swastik Bhoomi), the SPV structure and the Grand Finale plan.</p>
+        </article>
+        <article class="bill col">
+          <span class="stamp s-rose" data-stamp>In planning</span>
+          <h3>Khatu Shyam (Barbarik)</h3>
+          <p class="kind">Motion capture</p>
+          <p>A mythology show planned for a motion-capture shoot.</p>
+        </article>
+        <article class="bill col">
+          <span class="stamp s-peacock" data-stamp>Production planning</span>
+          <h3>World of Raaya: Great Indian Tales</h3>
+          <p class="kind">Original animated IP</p>
+          <p>Self-funded, 18 episodes, targeting Q2 2027. Built the business plan and digital marketing plan, and set up trademark and copyright registration. <a href="https://www.instagram.com/helloraaya/" target="_blank" rel="noopener">Raaya on Instagram</a></p>
+        </article>
+        <div class="pitch">
+          <h3>On the pitch table</h3>
+          <ul>
+            <li><b>Micro-drama</b>A 12-episode micro-drama in budget development for Pinkvilla Buzz, and a co-production proposal for 25 mythological micro-series shot at Swastik Bhoomi.</li>
+            <li><b>Platform pitches</b>Mythology series Mahabali pitched to JioStar/Hotstar with development budget, writer terms and an XR partner costed in.</li>
+            <li><b>IP decks</b>Parvati, Krishna and Mahamaya, with modular rights-participation frameworks for Dangal TV and Amazon MX Player.</li>
+            <li><b>New business models</b>Stress-tested the Swastik OTT Marathon, a theatrical festival for unsold content, and a YouTube content business built on real channel data.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -638,74 +735,76 @@ p{margin:0}
       <p>Official promos from shows I've delivered the business side of.</p>
     </div>
     <div class="reel">
-      <figure class="promo" style="margin:0">
+      <figure class="promo">
         <div class="screen">
           <button type="button" data-yt="nOV6fSUw6W0" aria-label="Play the Taj: Reign of Revenge promo">
-            <img src="https://i.ytimg.com/vi/nOV6fSUw6W0/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+            <img src="https://i.ytimg.com/vi/nOV6fSUw6W0/maxresdefault.jpg" data-yt-thumb="nOV6fSUw6W0" alt="" loading="lazy" width="1280" height="720">
             <span class="play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Play promo</span>
           </button>
         </div>
         <figcaption class="promo-cap"><b>Taj: Reign of Revenge</b><span>Contiloe · OTT · production leadership</span></figcaption>
       </figure>
-      <figure class="promo" style="margin:0">
-        <div class="screen">
-          <button type="button" data-yt="9gK5ogsY4YA" aria-label="Play the Shiv Shakti promo">
-            <img src="https://i.ytimg.com/vi/9gK5ogsY4YA/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
-            <span class="play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Play promo</span>
-          </button>
-        </div>
-        <figcaption class="promo-cap"><b>Shiv Shakti</b><span>Colors · commercial</span></figcaption>
-      </figure>
-      <figure class="promo" style="margin:0">
-        <div class="screen">
-          <button type="button" data-yt="lXZPMb51IQU" aria-label="Play the AK vs AK promo">
-            <img src="https://i.ytimg.com/vi/lXZPMb51IQU/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
-            <span class="play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Play promo</span>
-          </button>
-        </div>
-        <figcaption class="promo-cap"><b>AK vs AK</b><span>Netflix · promo campaign</span></figcaption>
-      </figure>
+      <div class="side">
+        <figure class="promo">
+          <div class="screen">
+            <button type="button" data-yt="9gK5ogsY4YA" aria-label="Play the Shiv Shakti promo">
+              <img src="https://i.ytimg.com/vi/9gK5ogsY4YA/maxresdefault.jpg" data-yt-thumb="9gK5ogsY4YA" alt="" loading="lazy" width="1280" height="720">
+              <span class="play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Play promo</span>
+            </button>
+          </div>
+          <figcaption class="promo-cap"><b>Shiv Shakti</b><span>Colors · commercial</span></figcaption>
+        </figure>
+        <figure class="promo">
+          <div class="screen">
+            <button type="button" data-yt="lXZPMb51IQU" aria-label="Play the AK vs AK promo">
+              <img src="https://i.ytimg.com/vi/lXZPMb51IQU/maxresdefault.jpg" data-yt-thumb="lXZPMb51IQU" alt="" loading="lazy" width="1280" height="720">
+              <span class="play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Play promo</span>
+            </button>
+          </div>
+          <figcaption class="promo-cap"><b>AK vs AK</b><span>Netflix · promo campaign</span></figcaption>
+        </figure>
+      </div>
     </div>
     <p class="fine">Videos play from YouTube and remain the property of their rights holders. More credits on <a href="https://www.imdb.com/name/nm14584088/" target="_blank" rel="noopener">IMDb</a> and the <a href="https://fowzan-khan-showreel.fowzan723764.chatgpt.site/" target="_blank" rel="noopener">full showreel</a>.</p>
   </div>
 </section>
 
-<!-- ═════ TOOLKIT ═════ -->
-<div class="strip" aria-label="Core competencies">
-  <div class="strip-track">
-    <span>P&amp;L management</span><span>Deal structuring</span><span>Production finance</span><span>Studio operations</span><span>Broadcaster &amp; platform relationships</span><span>Financial modelling</span><span>IP business planning</span><span>AI-hybrid production economics</span><span>Vendor &amp; contract negotiation</span>
-  </div>
-</div>
-
-<section class="sec" aria-labelledby="ledger-title">
+<!-- ═════ OVERLEAF ═════ -->
+<section class="sec" aria-labelledby="back-title" style="padding-top:0">
   <div class="wrap">
-    <h2 id="ledger-title" class="sr-only">Skills, education and certifications</h2>
-    <div class="ledger">
-      <div>
-        <h3>Where I add value</h3>
-        <ul>
-          <li>Commercial strategy &amp; revenue growth</li>
-          <li>Budget forecasting &amp; cost optimisation</li>
-          <li>Business development &amp; new verticals</li>
-          <li>Cross-functional leadership across large on-ground teams</li>
-          <li>Content production · OTT &amp; digital media</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Education</h3>
-        <ul>
-          <li>Bachelor of Mass Media<small>University of Mumbai · Media &amp; Entertainment · 2014</small></li>
-          <li>Languages<small>English (fluent)</small></li>
-          <li>Off the clock<small>Football, music, films &amp; OTT</small></li>
-        </ul>
-      </div>
-      <div>
-        <h3>AI certifications</h3>
-        <ul>
-          <li>Claude 101 · AI Fluency: Framework &amp; Foundations<small>Anthropic</small></li>
-          <li>AI Foundations · Applied AI Foundations<small>OpenAI Academy · Aug 2026</small></li>
-          <li>Generative AI Mastermind<small>Outskill</small></li>
-        </ul>
+    <div class="back">
+      <div class="back-in">
+        <h2 id="back-title">Overleaf: the fine print</h2>
+        <p class="comps"><span>P&amp;L management</span> <span>Deal structuring</span> <span>Production finance</span> <span>Studio operations</span> <span>Broadcaster &amp; platform relationships</span> <span>Financial modelling</span> <span>IP business planning</span> <span>AI-hybrid production economics</span> <span>Vendor &amp; contract negotiation</span></p>
+        <div class="cols">
+          <div>
+            <h3>Where I add value</h3>
+            <ul>
+              <li>Commercial strategy &amp; revenue growth</li>
+              <li>Budget forecasting &amp; cost optimisation</li>
+              <li>Business development &amp; new verticals</li>
+              <li>Leading large on-ground teams across departments</li>
+              <li>Content production · OTT &amp; digital media</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Education</h3>
+            <ul>
+              <li>Bachelor of Mass Media<small>University of Mumbai · Media &amp; Entertainment · 2014</small></li>
+              <li>Languages<small>English (fluent)</small></li>
+              <li>Off the clock<small>Football, music, films &amp; OTT</small></li>
+            </ul>
+          </div>
+          <div>
+            <h3>AI certifications</h3>
+            <ul>
+              <li>Claude 101 · AI Fluency: Framework &amp; Foundations<small>Anthropic</small></li>
+              <li>AI Foundations · Applied AI Foundations<small>OpenAI Academy · Aug 2026</small></li>
+              <li>Generative AI Mastermind<small>Outskill</small></li>
+            </ul>
+          </div>
+        </div>
+        <p class="imprint"><span>Printed &amp; published by Fowzan Khan, Mumbai</span><span>Four-colour process, screened live in your browser</span></p>
       </div>
     </div>
   </div>
@@ -890,6 +989,243 @@ p{margin:0}
     btn.replaceWith(f);
     f.focus();
   }));
+})();
+</script>
+<script>
+/* YouTube stills: fall back to hqdefault when a maxres frame doesn't exist */
+document.querySelectorAll('img[data-yt-thumb]').forEach(img => {
+  const fix = () => {
+    if (img.dataset.fb) return;
+    img.dataset.fb = 1;
+    img.src = `https://i.ytimg.com/vi/${img.dataset.ytThumb}/hqdefault.jpg`;
+    img.classList.add('hq');
+  };
+  img.addEventListener('error', fix);
+  img.addEventListener('load', () => { if (img.naturalWidth <= 120) fix(); });
+  if (img.complete && img.naturalWidth <= 120) fix();
+});
+
+/* ── the press: a four-colour halftone print run, live in WebGL ── */
+(() => {
+  const root = document.documentElement;
+  if (!root.classList.contains('gl')) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const VS = 'attribute vec2 p;varying vec2 vUv;void main(){vUv=p*.5+.5;gl_Position=vec4(p,0.,1.);}';
+  const FS = `
+precision highp float;
+uniform sampler2D uTex;
+uniform vec2 uRes;
+uniform float uCell;
+uniform vec4 uRev;
+uniform vec2 uOc;
+uniform vec2 uOm;
+uniform vec2 uOy;
+uniform vec2 uOk;
+uniform vec3 uMouse;
+uniform float uR;
+varying vec2 vUv;
+const vec3 PAPER = vec3(.984, .972, .945);
+const vec3 IC = vec3(.10, .56, .69);
+const vec3 IM = vec3(.83, .23, .42);
+const vec3 IY = vec3(.96, .77, .09);
+const vec3 IK = vec3(.13, .08, .16);
+float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+vec2 rot(vec2 v, float a){ float s = sin(a), c = cos(a); return vec2(c*v.x - s*v.y, s*v.x + c*v.y); }
+vec4 cmyk(vec3 c){
+  float k = 1. - max(max(c.r, c.g), c.b);
+  float d = max(1. - k, .001);
+  return clamp(vec4((1.-c.r-k)/d, (1.-c.g-k)/d, (1.-c.b-k)/d, k), 0., 1.);
+}
+float screen(vec2 p, vec2 off, float ang, float ch, float aa){
+  vec2 q = rot(p - off, ang);
+  vec2 cc = (floor(q / uCell) + .5) * uCell;
+  vec4 k = cmyk(texture2D(uTex, clamp(rot(cc, -ang) / uRes, 0., 1.)).rgb);
+  float v = ch < .5 ? k.x : ch < 1.5 ? k.y : ch < 2.5 ? k.z : k.w;
+  v *= .93 + .12 * hash(cc + ch * 31.7);
+  float r = sqrt(v) * uCell * .75;
+  return 1. - smoothstep(r - aa, r + aa, length(q - cc));
+}
+float sweep(float r, float x){ float e = r * 1.3 - .15; return 1. - smoothstep(e - .12, e, x); }
+void main(){
+  vec2 fp = vec2(vUv.x, 1. - vUv.y) * uRes;
+  vec2 p = fp;
+  float aa = .85;
+  float md = length(fp - uMouse.xy);
+  bool inside = uMouse.z > .001 && md < uR;
+  if (inside) { float mag = mix(1., 3.4, uMouse.z); p = uMouse.xy + (fp - uMouse.xy) / mag; aa = .85 / mag; }
+  float x = fp.x / uRes.x;
+  float c = screen(p, uOc, .2618, 0., aa) * sweep(uRev.x, x);
+  float m = screen(p, uOm, 1.309, 1., aa) * sweep(uRev.y, x);
+  float y = screen(p, uOy, 0., 2., aa) * sweep(uRev.z, x);
+  float k = screen(p, uOk, .7854, 3., aa) * sweep(uRev.w, x);
+  vec3 col = PAPER * (1. - .04 * hash(floor(p * .7)));
+  col *= mix(vec3(1.), IY, y);
+  col *= mix(vec3(1.), IM, m);
+  col *= mix(vec3(1.), IC, c);
+  col *= mix(vec3(1.), IK, k);
+  if (uMouse.z > .001) {
+    float ring = smoothstep(uR - 4., uR - 2., md) * (1. - smoothstep(uR, uR + 1.5, md));
+    if (inside) col *= 1. - .18 * smoothstep(uR * .6, uR, md) * uMouse.z;
+    vec2 d = abs(fp - uMouse.xy);
+    float tick = step(d.x, 1.) * step(uR * .8, d.y) * step(d.y, uR - 4.) + step(d.y, 1.) * step(uR * .8, d.x) * step(d.x, uR - 4.);
+    col = mix(col, IK, clamp(ring + tick * .8, 0., 1.) * uMouse.z);
+  }
+  gl_FragColor = vec4(col, 1.);
+}`;
+
+  // plates print in press order: yellow, magenta, cyan, black
+  const PLATES = [
+    { u: 'uOy', i: 2, start: 0,    dir: [ 1,  .6], rest: [ .9,  .5] },
+    { u: 'uOm', i: 1, start: .42,  dir: [-1,  .4], rest: [-.6,  .3] },
+    { u: 'uOc', i: 0, start: .84,  dir: [ .7, -1], rest: [ .3, -.7] },
+    { u: 'uOk', i: 3, start: 1.26, dir: [-.6, -1], rest: [ 0,   0 ] }
+  ];
+  const DUR = .9, SETTLE = 1.3, END = 1.26 + DUR + SETTLE;
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  const clamp01 = v => Math.min(1, Math.max(0, v));
+
+  function Press(host, cellCss, drawSource) {
+    const cv = document.createElement('canvas');
+    cv.setAttribute('aria-hidden', 'true');
+    const gl = cv.getContext('webgl', { antialias: false, premultipliedAlpha: false }) || cv.getContext('experimental-webgl');
+    if (!gl) throw new Error('webgl unavailable');
+    const shader = (type, src) => {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, src);
+      gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+      return s;
+    };
+    const pr = gl.createProgram();
+    gl.attachShader(pr, shader(gl.VERTEX_SHADER, VS));
+    gl.attachShader(pr, shader(gl.FRAGMENT_SHADER, FS));
+    gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(pr));
+    gl.useProgram(pr);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(pr, 'p');
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const U = {};
+    ['uTex', 'uRes', 'uCell', 'uRev', 'uOc', 'uOm', 'uOy', 'uOk', 'uMouse', 'uR'].forEach(n => U[n] = gl.getUniformLocation(pr, n));
+    gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+    const src = document.createElement('canvas');
+    const sctx = src.getContext('2d');
+    let w = 1, h = 1, dpr = 1, t0 = null, raf = 0, visible = true;
+    const mouse = { x: 0, y: 0, s: 0, to: 0 };
+
+    function size() {
+      const r = host.getBoundingClientRect();
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = Math.max(1, Math.round(r.width * dpr));
+      h = Math.max(1, Math.round(r.height * dpr));
+      cv.width = src.width = w;
+      cv.height = src.height = h;
+      drawSource(sctx, w, h, dpr);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, src); // throws on a tainted source
+      gl.viewport(0, 0, w, h);
+    }
+    function frame(now) {
+      raf = 0;
+      const t = reduce ? END : t0 === null ? -1 : (now - t0) / 1000;
+      const rev = [0, 0, 0, 0];
+      PLATES.forEach(pl => {
+        rev[pl.i] = ease(clamp01((t - pl.start) / DUR));
+        const off = (1 - ease(clamp01((t - pl.start) / (DUR + SETTLE)))) * 22 * dpr;
+        gl.uniform2f(U[pl.u], pl.dir[0] * off + pl.rest[0] * dpr, pl.dir[1] * off + pl.rest[1] * dpr);
+      });
+      mouse.s += (mouse.to - mouse.s) * (reduce ? 1 : .2);
+      if (Math.abs(mouse.to - mouse.s) < .005) mouse.s = mouse.to;
+      gl.uniform1i(U.uTex, 0);
+      gl.uniform2f(U.uRes, w, h);
+      gl.uniform1f(U.uCell, cellCss * dpr);
+      gl.uniform4f(U.uRev, rev[0], rev[1], rev[2], rev[3]);
+      gl.uniform3f(U.uMouse, mouse.x, mouse.y, mouse.s);
+      gl.uniform1f(U.uR, Math.max(56, Math.min(104, Math.min(w, h) / dpr * .3)) * dpr);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+      if (visible && ((t0 !== null && t < END) || mouse.s !== mouse.to)) raf = requestAnimationFrame(frame);
+    }
+    const kick = () => { if (!raf) raf = requestAnimationFrame(frame); };
+
+    size();
+    host.prepend(cv);
+    host.classList.add('gl-on');
+    kick();
+
+    const at = e => {
+      const r = host.getBoundingClientRect();
+      mouse.x = (e.clientX - r.left) * dpr;
+      mouse.y = (e.clientY - r.top) * dpr;
+    };
+    host.addEventListener('pointermove', e => { at(e); mouse.to = 1; kick(); });
+    host.addEventListener('pointerdown', e => { at(e); mouse.to = 1; kick(); });
+    host.addEventListener('pointerleave', () => { mouse.to = 0; kick(); });
+    host.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') setTimeout(() => { mouse.to = 0; kick(); }, 900); });
+    host.addEventListener('pointercancel', () => { mouse.to = 0; kick(); });
+    let rt;
+    new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => { try { size(); kick(); } catch (e) {} }, 120); }).observe(host);
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) kick(); }).observe(host);
+    cv.addEventListener('webglcontextlost', () => { cv.remove(); host.classList.remove('gl-on'); host.classList.add('gl-fail'); });
+
+    return { start(delay = 0) { t0 = performance.now() + delay; kick(); } };
+  }
+
+  /* the sponsor banner: its vermilion field, screened from four plates */
+  const banner = document.querySelector('[data-press-banner]');
+  function drawBanner(ctx, w, h) {
+    // the field is a flat tint; it goes to the screens. Type stays solid and prints over it.
+    const g = ctx.createLinearGradient(0, 0, w, h);
+    g.addColorStop(0, '#FF5226');
+    g.addColorStop(1, '#F23C22');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, h);
+  }
+  document.fonts.load('400 40px "Rozha One"').catch(() => {}).then(() => {
+    try {
+      Press(banner, 6.5, drawBanner).start(150);
+      banner.classList.add('is-printed');
+    } catch (e) {
+      banner.classList.add('gl-fail');
+    }
+  });
+
+  /* the picture panel: the Shiv Shakti still, separated and screened */
+  const pic = document.querySelector('[data-press-pic]');
+  const picWrap = pic.closest('.pic');
+  const id = pic.querySelector('img').dataset.ytThumb;
+  const fail = () => pic.classList.add('gl-fail');
+  const load = (name) => new Promise((ok, no) => {
+    const im = new Image();
+    im.crossOrigin = 'anonymous';
+    im.onload = () => im.naturalWidth > 120 ? ok(im) : no();
+    im.onerror = no;
+    im.src = `https://i.ytimg.com/vi/${id}/${name}.jpg`;
+  });
+  const giveUp = setTimeout(fail, 6000);
+  load('maxresdefault').then(im => [im, false], () => load('hqdefault').then(im => [im, true])).then(([im, hq]) => {
+    clearTimeout(giveUp);
+    if (pic.classList.contains('gl-fail')) return;
+    Press(pic, 5, (ctx, w, h) => {
+      ctx.fillStyle = '#FBF8F1';
+      ctx.fillRect(0, 0, w, h);
+      let sy = 0, sh = im.naturalHeight;
+      if (hq) { sy = sh * .125; sh *= .75; } // hqdefault is letterboxed 4:3
+      const s = Math.max(w / im.naturalWidth, h / sh);
+      const dw = im.naturalWidth * s, dh = sh * s;
+      ctx.filter = 'contrast(1.08) saturate(1.15)';
+      ctx.drawImage(im, 0, sy, im.naturalWidth, sh, (w - dw) / 2, (h - dh) / 2, dw, dh);
+      ctx.filter = 'none';
+    }).start(650);
+    picWrap.classList.add('gl-ready');
+    if (matchMedia('(hover: none)').matches) picWrap.querySelector('[data-hint]').textContent = 'Touch the print to inspect it under a loupe';
+  }).catch(() => { clearTimeout(giveUp); fail(); });
 })();
 </script>
 </body>

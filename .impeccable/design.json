@@ -1,0 +1,641 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T04:16:42+00:00",
+  "title": "Design System: Fowzan Khan",
+  "extensions": {
+    "colorMeta": {
+      "peacock-wall": {
+        "role": "neutral",
+        "displayName": "Peacock Wall",
+        "canonical": "#0A3540",
+        "oklch": "oklch(30.6% 0.049 219.0)",
+        "tonalRamp": [
+          "#040D10",
+          "#13292F",
+          "#254852",
+          "#406874",
+          "#618A96",
+          "#83ADBA",
+          "#ACD0DC",
+          "#DAF4FC"
+        ]
+      },
+      "wall-line": {
+        "role": "neutral",
+        "displayName": "Wall Seam",
+        "canonical": "#1B5A68",
+        "oklch": "oklch(43.5% 0.066 215.7)",
+        "tonalRamp": [
+          "#010E11",
+          "#072A32",
+          "#134A56",
+          "#2E6B79",
+          "#518D9B",
+          "#74B0BF",
+          "#A0D3E0",
+          "#D5F5FE"
+        ]
+      },
+      "on-wall": {
+        "role": "neutral",
+        "displayName": "Lamp-lit Paper",
+        "canonical": "#F4EFE4",
+        "oklch": "oklch(95.3% 0.016 86.4)",
+        "tonalRamp": [
+          "#0C0B09",
+          "#272520",
+          "#45423A",
+          "#656157",
+          "#868278",
+          "#A9A59A",
+          "#CDC9C0",
+          "#F1EEE8"
+        ]
+      },
+      "on-wall-muted": {
+        "role": "neutral",
+        "displayName": "Verdigris Mist",
+        "canonical": "#B9D3D6",
+        "oklch": "oklch(84.9% 0.028 205.1)",
+        "tonalRamp": [
+          "#070C0D",
+          "#1B2829",
+          "#324648",
+          "#4F6669",
+          "#6F888A",
+          "#91ABAD",
+          "#B8CED1",
+          "#E3F2F4"
+        ]
+      },
+      "vermilion": {
+        "role": "primary",
+        "displayName": "Bazaar Vermilion",
+        "canonical": "#C7301F",
+        "oklch": "oklch(54.6% 0.190 30.4)",
+        "tonalRamp": [
+          "#1F0000",
+          "#4A0602",
+          "#7C1106",
+          "#B41807",
+          "#DD4634",
+          "#F97965",
+          "#FEB4A6",
+          "#FFE9E5"
+        ]
+      },
+      "vermilion-deep": {
+        "role": "primary",
+        "displayName": "Burnt Vermilion",
+        "canonical": "#9A2115",
+        "oklch": "oklch(45.0% 0.159 30.1)",
+        "tonalRamp": [
+          "#1D0101",
+          "#4A0703",
+          "#7C1309",
+          "#A93023",
+          "#D05645",
+          "#F87A67",
+          "#FEB4A7",
+          "#FFE9E5"
+        ]
+      },
+      "marigold": {
+        "role": "secondary",
+        "displayName": "Temple Marigold",
+        "canonical": "#F2A81D",
+        "oklch": "oklch(78.4% 0.159 75.8)",
+        "tonalRamp": [
+          "#130900",
+          "#342101",
+          "#5A3B02",
+          "#805812",
+          "#AC760F",
+          "#D99619",
+          "#FBBC5A",
+          "#FFEBD1"
+        ]
+      },
+      "marigold-deep": {
+        "role": "secondary",
+        "displayName": "Turmeric Ochre",
+        "canonical": "#A06404",
+        "oklch": "oklch(55.6% 0.120 68.9)",
+        "tonalRamp": [
+          "#140800",
+          "#371F00",
+          "#5E3800",
+          "#86550F",
+          "#B07321",
+          "#D6964A",
+          "#F5BD7F",
+          "#FEEBD7"
+        ]
+      },
+      "peacock": {
+        "role": "tertiary",
+        "displayName": "Peacock Plate",
+        "canonical": "#11606E",
+        "oklch": "oklch(45.1% 0.074 213.1)",
+        "tonalRamp": [
+          "#000E12",
+          "#012B32",
+          "#034B57",
+          "#226C7A",
+          "#488E9D",
+          "#6CB2C1",
+          "#9AD4E2",
+          "#D1F6FF"
+        ]
+      },
+      "rose": {
+        "role": "tertiary",
+        "displayName": "Faded Rose",
+        "canonical": "#A8344F",
+        "oklch": "oklch(50.3% 0.152 10.7)",
+        "tonalRamp": [
+          "#1C0106",
+          "#48081A",
+          "#781430",
+          "#A4314C",
+          "#CC556C",
+          "#F3788E",
+          "#FFB0BB",
+          "#FFE8EA"
+        ],
+        "note": "Shipped value (hard-coded in the band and stamp rules). The :root --rose (#D9506F) is declared but unused."
+      },
+      "ink-violet": {
+        "role": "neutral",
+        "displayName": "Ink Violet",
+        "canonical": "#21142A",
+        "oklch": "oklch(22.0% 0.045 310.3)",
+        "tonalRamp": [
+          "#0D0910",
+          "#29212F",
+          "#493C52",
+          "#695A75",
+          "#8B7B97",
+          "#AE9EBB",
+          "#D1C3DC",
+          "#F4EAFC"
+        ]
+      },
+      "ink-violet-muted": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "#55465A",
+        "oklch": "oklch(41.7% 0.038 317.6)",
+        "tonalRamp": [
+          "#0D090F",
+          "#2A222D",
+          "#493D4E",
+          "#6A5B70",
+          "#8C7C91",
+          "#AF9EB5",
+          "#D2C3D7",
+          "#F5EAF8"
+        ]
+      },
+      "newsprint": {
+        "role": "neutral",
+        "displayName": "Newsprint",
+        "canonical": "#FBF8F1",
+        "oklch": "oklch(98.0% 0.010 87.5)",
+        "tonalRamp": [
+          "#0C0B0A",
+          "#262522",
+          "#44423D",
+          "#63615B",
+          "#85827C",
+          "#A8A59E",
+          "#CBC9C3",
+          "#F0EEEA"
+        ]
+      },
+      "newsprint-shade": {
+        "role": "neutral",
+        "displayName": "Aged Newsprint",
+        "canonical": "#EFE7D6",
+        "oklch": "oklch(93.0% 0.024 85.8)",
+        "tonalRamp": [
+          "#0D0B07",
+          "#28251D",
+          "#474135",
+          "#676052",
+          "#898272",
+          "#ACA494",
+          "#CFC8BA",
+          "#F3EEE4"
+        ]
+      },
+      "brass": {
+        "role": "neutral",
+        "displayName": "Hook Brass",
+        "canonical": "#C9A24B",
+        "oklch": "oklch(73.1% 0.115 85.0)",
+        "tonalRamp": [
+          "#110A00",
+          "#302303",
+          "#543E08",
+          "#7A5C0B",
+          "#A27C1E",
+          "#C69F48",
+          "#E6C57E",
+          "#FFEDC8"
+        ]
+      },
+      "process-cyan": {
+        "role": "process",
+        "displayName": "Process Cyan",
+        "canonical": "#1A8FB0",
+        "oklch": "oklch(60.5% 0.107 223.0)",
+        "tonalRamp": [
+          "#000D13",
+          "#022A36",
+          "#07495C",
+          "#056C86",
+          "#1B90B1",
+          "#4BB4D6",
+          "#84D7F4",
+          "#D8F4FE"
+        ],
+        "note": "Press plate ink: halftone and colour bar only; the shader uses the same values as linear RGB constants."
+      },
+      "process-magenta": {
+        "role": "process",
+        "displayName": "Process Magenta",
+        "canonical": "#D33A6A",
+        "oklch": "oklch(58.8% 0.191 6.6)",
+        "tonalRamp": [
+          "#1E0007",
+          "#49041D",
+          "#7A0C35",
+          "#B10E4F",
+          "#DA416F",
+          "#FD6E93",
+          "#FDB1BF",
+          "#FEE8EC"
+        ],
+        "note": "Press plate ink: halftone and colour bar only; the shader uses the same values as linear RGB constants."
+      },
+      "process-yellow": {
+        "role": "process",
+        "displayName": "Process Yellow",
+        "canonical": "#F5C318",
+        "oklch": "oklch(83.8% 0.168 89.4)",
+        "tonalRamp": [
+          "#100A00",
+          "#2F2301",
+          "#523F02",
+          "#765E12",
+          "#9F7E10",
+          "#C89F1A",
+          "#EEC44C",
+          "#FEEDC2"
+        ],
+        "note": "Press plate ink: halftone and colour bar only; the shader uses the same values as linear RGB constants."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on the sponsor banner and the closing headline; only type that carries the registration ghost."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads on the wall and sheet headings, max 16ch."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Date-leaf and studio numerals, lining figures, sized by container."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Captions, wordmark, calendar cell titles."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Opening statement on the hero sheet, max 44ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running copy, 46-62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Khand uppercase slugs: roles, counters, captions, nav, mastheads."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Khand uppercase action text."
+      },
+      "stamp": {
+        "displayName": "Stamp",
+        "purpose": "Rubber-stamp status marks only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hang",
+        "value": "0 2px 3px rgba(0,0,0,.25), 0 24px 48px -18px rgba(0,0,0,.55)",
+        "purpose": "Every sheet hung on the wall. The hero sheet ships -16px spread."
+      },
+      {
+        "name": "punched-hole",
+        "value": "inset 0 1px 2px rgba(0,0,0,.6)",
+        "purpose": "Eyelets and nail holes through the sheet."
+      },
+      {
+        "name": "registration-ghost",
+        "value": "text-shadow: 3px 2px 0 #F2A81D, -2px -1px 0 #21142A",
+        "purpose": "Display type on vermilion fields; marigold and ink plates slightly out of register."
+      }
+    ],
+    "textures": [
+      {
+        "name": "wall-dots",
+        "value": "radial-gradient(rgba(255,255,255,.035) 1px, transparent 1.2px) 0 0/7px 7px",
+        "purpose": "Page ground texture on the peacock wall."
+      },
+      {
+        "name": "field-screen",
+        "value": "radial-gradient(rgba(33,20,42,.22) .8px, transparent 1.1px) 0 0/4px 4px; mix-blend-mode:multiply",
+        "purpose": "Dot screen over printed fields (alpha .16-.22), beneath the text layer."
+      },
+      {
+        "name": "photo-screen",
+        "value": "radial-gradient(rgba(33,20,42,.42) .9px, transparent 1.5px) 0 0/5px 5px; mix-blend-mode:multiply",
+        "purpose": "Dot screen over stills (CSS fallback for the press)."
+      },
+      {
+        "name": "ornament-band",
+        "value": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Crect width='28' height='14' fill='%2321142A'/%3E%3Cpath d='M7 1 L13 7 L7 13 L1 7Z' fill='%23F2A81D'/%3E%3Cpath d='M7 4 L10 7 L7 10 L4 7Z' fill='%23C7301F'/%3E%3Ccircle cx='21' cy='7' r='2' fill='%23FBF8F1'/%3E%3C/svg%3E\") repeat-x 0 0/28px 14px",
+        "purpose": "Letterpress diamond-and-dot band around the hero trim."
+      },
+      {
+        "name": "ornament-frame",
+        "value": "border:26px solid; border-image:url(frame) 32 round",
+        "purpose": "Rosette-and-quatrefoil picture frame."
+      }
+    ],
+    "press": {
+      "plates": [
+        {
+          "ink": "Y",
+          "angleDeg": 0,
+          "start": 0,
+          "rest": [
+            0.9,
+            0.5
+          ]
+        },
+        {
+          "ink": "M",
+          "angleDeg": 75,
+          "start": 0.42,
+          "rest": [
+            -0.6,
+            0.3
+          ]
+        },
+        {
+          "ink": "C",
+          "angleDeg": 15,
+          "start": 0.84,
+          "rest": [
+            0.3,
+            -0.7
+          ]
+        },
+        {
+          "ink": "K",
+          "angleDeg": 45,
+          "start": 1.26,
+          "rest": [
+            0,
+            0
+          ]
+        }
+      ],
+      "sweepSeconds": 0.9,
+      "settleSeconds": 1.3,
+      "travelPx": 22,
+      "cellPx": {
+        "banner": 6.5,
+        "picture": 5
+      },
+      "loupe": {
+        "magnification": 3.4,
+        "radiusPx": "56-104 (30% of the short side)"
+      },
+      "fallback": "CSS field or photo with multiply dot screen; used when WebGL is absent, the context is lost, or the image is tainted (6s give-up)."
+    },
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Default easing for entrances and state transitions."
+      },
+      {
+        "name": "state",
+        "value": ".15s",
+        "purpose": "Colour swaps on buttons, links, tabs."
+      },
+      {
+        "name": "sheet-sway",
+        "value": "3.2s cubic-bezier(.3,.7,.4,1), rotate 1.4deg damped to 0",
+        "purpose": "Hero sheet settling on its nail."
+      },
+      {
+        "name": "banner-roll",
+        "value": ".8s ease-out clip-path wipe",
+        "purpose": "Fallback banner rolling on."
+      },
+      {
+        "name": "register",
+        "value": "1.1s ease-out, text-shadow 26px/14px to 3px/2px",
+        "purpose": "Registration ghost settling."
+      },
+      {
+        "name": "tear-interval",
+        "value": "3400ms",
+        "purpose": "Auto tear of date-pad leaves (pausable)."
+      },
+      {
+        "name": "stamp-thump",
+        "value": ".45s cubic-bezier(.3,1.4,.5,1), scale 1.7 to 1",
+        "purpose": "Stamps landing."
+      },
+      {
+        "name": "sheet-flip",
+        "value": "scroll-linked rotateX 0 to 104deg",
+        "purpose": "Career sheets over the hanger (≥861px wide, ≥680px tall, motion allowed)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "480px"
+      },
+      {
+        "name": "nav",
+        "value": "760px"
+      },
+      {
+        "name": "md",
+        "value": "860px"
+      },
+      {
+        "name": "hero-stack",
+        "value": "900px"
+      },
+      {
+        "name": "pitch",
+        "value": "1060px"
+      },
+      {
+        "name": "furniture",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Marigold Button",
+      "kind": "button",
+      "refersTo": "button-marigold",
+      "description": "Primary action (email, LinkedIn) on ink strips and printed fields.",
+      "html": "<div class=\"ds-strip\"><a class=\"ds-btn ds-btn-marigold\" href=\"#\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"1\"/><path d=\"m3 7 9 6 9-6\"/></svg>Email me</a></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-icon{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round} .ds-btn{display:inline-flex;align-items:center;gap:.55em;font:600 1rem/1 var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:14px 20px 12px;border-radius:2px;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,transform .15s var(--ease-out)} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:3px solid var(--marigold);outline-offset:3px} .ds-strip{background:var(--ink);padding:20px} .ds-btn-marigold{background:var(--marigold);color:var(--ink)} .ds-btn-marigold:hover{background:var(--paper)}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action beside the marigold button, on dark or vermilion fields only.",
+      "html": "<div class=\"ds-strip\"><a class=\"ds-btn ds-btn-line\" href=\"#\">LinkedIn<svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-icon{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round} .ds-btn{display:inline-flex;align-items:center;gap:.55em;font:600 1rem/1 var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:14px 20px 12px;border-radius:2px;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,transform .15s var(--ease-out)} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:3px solid var(--marigold);outline-offset:3px} .ds-strip{background:var(--vermilion);padding:20px} .ds-btn-line{border-color:currentColor;color:var(--paper)} .ds-btn-line:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Control printed on paper: the pad's Tear button and play badges.",
+      "html": "<div class=\"ds-paper\"><button class=\"ds-btn ds-btn-ink\" type=\"button\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 4h16v10l-3 2-3-2-3 2-3-2-4 2z\"/><path d=\"M8 20l4 0\"/></svg>Tear off a sheet</button></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-icon{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round} .ds-btn{display:inline-flex;align-items:center;gap:.55em;font:600 1rem/1 var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:14px 20px 12px;border-radius:2px;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,transform .15s var(--ease-out)} .ds-btn:active{transform:translateY(1px)} .ds-btn:focus-visible{outline:3px solid var(--marigold);outline-offset:3px} .ds-paper{background:var(--paper-2);padding:20px} .ds-btn-ink{background:var(--ink);color:var(--paper);border:0;font-size:.9375rem;padding:12px 16px 10px} .ds-btn-ink:hover{background:var(--vermilion)}"
+    },
+    {
+      "name": "Hanger Rail",
+      "kind": "nav",
+      "refersTo": "nav-rail",
+      "description": "Sticky ink nav with marigold underline and a marigold Contact chip.",
+      "html": "<header class=\"ds-rail\"><a class=\"ds-mark\" href=\"#\">Fowzan <span>Khan</span></a><nav class=\"ds-nav\"><a href=\"#\">Career</a><a href=\"#\">Studio</a><a href=\"#\">Reel</a><a class=\"ds-cta\" href=\"#\">Contact</a></nav></header>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-rail{height:56px;background:var(--ink);border-bottom:3px solid var(--marigold);display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:16px} .ds-mark{font:400 1.375rem/1 var(--display);color:var(--paper);text-decoration:none} .ds-mark span{color:var(--marigold)} .ds-nav{display:flex;gap:24px;align-items:center} .ds-nav a{font:600 .9375rem/1 var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--on-wall-2);padding:8px 0;transition:color .15s} .ds-nav a:hover{color:var(--paper)} .ds-nav a:focus-visible{outline:3px solid var(--marigold);outline-offset:3px} .ds-nav a.ds-cta{color:var(--ink);background:var(--marigold);padding:9px 14px 7px;border-radius:2px} .ds-nav a.ds-cta:hover{background:var(--paper)}"
+    },
+    {
+      "name": "Year Tabs",
+      "kind": "chip",
+      "refersTo": "year-tab",
+      "description": "Jump-to-year chips on the wall; current year in solid marigold.",
+      "html": "<div class=\"ds-wall\"><div class=\"ds-tabs\"><button type=\"button\" aria-current=\"true\">2024</button><button type=\"button\">2022</button><button type=\"button\">2021</button></div></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-wall{background:var(--wall);padding:20px} .ds-tabs{display:flex;gap:6px} .ds-tabs button{font:600 .9375rem/1 var(--label);letter-spacing:.06em;font-variant-numeric:tabular-nums;background:transparent;color:var(--on-wall-2);border:1.5px solid var(--wall-line);padding:9px 12px 7px;border-radius:2px;cursor:pointer;transition:background .15s,color .15s,border-color .15s} .ds-tabs button:hover{color:var(--paper);border-color:var(--on-wall-2)} .ds-tabs button:focus-visible{outline:3px solid var(--marigold);outline-offset:3px} .ds-tabs button[aria-current=true]{background:var(--marigold);border-color:var(--marigold);color:var(--ink)}"
+    },
+    {
+      "name": "Calendar Sheet",
+      "kind": "card",
+      "refersTo": "calendar-sheet",
+      "description": "The hung newsprint sheet: margin, 2px ink keyline, Hang shadow, banded side with dot screen under solid type.",
+      "html": "<div class=\"ds-wall\"><article class=\"ds-sheet\"><div class=\"ds-band\"><div class=\"ds-years\">2024 – now</div><div class=\"ds-role\">Head of Commercial · Mumbai</div></div><div class=\"ds-body\"><span class=\"ds-label\">On the slate</span><p>Single commercial decision point for the slate: budgets, cashflow, vendor commitments and margin.</p></div></article></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-wall{background:var(--wall);padding:32px} .ds-sheet{position:relative;background:var(--paper);color:var(--ink);border-radius:2px;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 2px 3px rgba(0,0,0,.25),0 24px 48px -18px rgba(0,0,0,.55)} .ds-sheet::before{content:'';position:absolute;top:-9px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--wall);box-shadow:inset 0 2px 3px rgba(0,0,0,.5)} .ds-band{position:relative;overflow:hidden;background:var(--vermilion);color:var(--paper);padding:28px;display:flex;flex-direction:column;gap:12px} .ds-band::after{content:'';position:absolute;inset:0;background:radial-gradient(rgba(33,20,42,.2) .8px,transparent 1.1px) 0 0/4px 4px;mix-blend-mode:multiply;pointer-events:none} .ds-band>*{position:relative;z-index:1} .ds-years{font:400 3rem/.95 var(--display)} .ds-role{font:600 1rem/1.25 var(--label);letter-spacing:.08em;text-transform:uppercase} .ds-body{padding:24px;display:flex;flex-direction:column;gap:12px;font:400 1.0625rem/1.6 var(--body)} .ds-body p{margin:0;border-top:2px solid var(--ink);padding-top:12px} .ds-label{font:600 .875rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}"
+    },
+    {
+      "name": "Tear-off Date Leaf",
+      "kind": "custom",
+      "refersTo": "date-leaf",
+      "description": "Perforated newsprint leaf from the date pad: slug row, giant figure, meaning, provenance.",
+      "html": "<div class=\"ds-pad\"><div class=\"ds-leaf\"><div class=\"ds-top\"><span>Since Jun 2024</span><span>No. 01</span></div><div class=\"ds-fig\">₹120<small> Cr+</small></div><p class=\"ds-what\">Annual production P&amp;L under control across the slate</p><p class=\"ds-where\">Swastik Stories</p></div></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-pad{background:var(--paper-2);padding:24px} .ds-leaf{position:relative;background:var(--paper);border:1.5px solid rgba(33,20,42,.35);padding:24px 24px 18px;display:flex;flex-direction:column;-webkit-mask:radial-gradient(circle 4px at 8px 0,transparent 97%,#000) 0 0/16px 100% repeat-x;mask:radial-gradient(circle 4px at 8px 0,transparent 97%,#000) 0 0/16px 100% repeat-x} .ds-leaf::before{content:'';position:absolute;left:0;right:0;top:10px;border-top:1.5px dashed rgba(33,20,42,.28)} .ds-top{display:flex;justify-content:space-between;font:600 .8125rem/1 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--vermilion-deep);padding-bottom:9px;border-bottom:2px solid var(--ink)} .ds-top span:last-child{color:var(--ink-2);font-variant-numeric:tabular-nums} .ds-fig{font:400 5rem/.9 var(--display);color:var(--vermilion);letter-spacing:-.02em;padding-top:14px;white-space:nowrap} .ds-fig small{font-size:.42em;letter-spacing:0;color:var(--ink)} .ds-what{margin:12px 0 0;font:500 1.0625rem/1.4 var(--body);color:var(--ink);max-width:30ch} .ds-where{margin:16px 0 0;padding-top:10px;border-top:1px dashed rgba(33,20,42,.3);font:600 .8125rem/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--peacock)}"
+    },
+    {
+      "name": "Status Stamp",
+      "kind": "custom",
+      "refersTo": "status-stamp",
+      "description": "Rubber-stamp status mark on newsprint; colour maps to stage.",
+      "html": "<div class=\"ds-news\"><span class=\"ds-stamp\">In negotiation</span><span class=\"ds-stamp ds-stamp-peacock\">In development</span><span class=\"ds-stamp ds-stamp-rose\">In planning</span></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-news{background:var(--paper);padding:32px;display:flex;gap:28px;flex-wrap:wrap} .ds-stamp{position:relative;display:inline-block;font:700 1rem/1 var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--vermilion);border:3px solid currentColor;padding:9px 12px 6px;border-radius:3px;transform:rotate(-7deg);transition:transform .45s cubic-bezier(.3,1.4,.5,1);-webkit-mask:radial-gradient(rgba(0,0,0,.55) 1px,#000 1.6px) 0 0/3px 3px;mask:radial-gradient(rgba(0,0,0,.55) 1px,#000 1.6px) 0 0/3px 3px} .ds-stamp::after{content:'';position:absolute;inset:3px;border:1px solid currentColor;border-radius:1px} .ds-stamp:hover{transform:rotate(-7deg) scale(1.06)} .ds-stamp-peacock{color:var(--peacock)} .ds-stamp-rose{color:#A8344F}"
+    },
+    {
+      "name": "Ornament Frame",
+      "kind": "custom",
+      "refersTo": "calendar-sheet",
+      "description": "Picture mount: 26px rosette-and-quatrefoil border-image around a dot-screened still, ink caption plate.",
+      "html": "<div class=\"ds-frame\"><div class=\"ds-frame-in\"><div class=\"ds-cap\"><b>Shiv Shakti</b><span>Colors · on the current slate</span></div></div></div>",
+      "css": ":host{--wall:#0A3540;--wall-line:#1B5A68;--on-wall-2:#B9D3D6;--peacock:#11606E;--vermilion:#C7301F;--vermilion-deep:#9A2115;--marigold:#F2A81D;--ink:#21142A;--ink-2:#55465A;--paper:#FBF8F1;--paper-2:#EFE7D6;--display:'Rozha One','Times New Roman',serif;--label:'Khand','Arial Narrow',sans-serif;--body:'Hind','Segoe UI',sans-serif;--ease-out:cubic-bezier(.16,1,.3,1)} .ds-frame{border:26px solid var(--ink);border-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%2321142A'/%3E%3Cg fill='none' stroke='%23F2A81D' stroke-width='1.4'%3E%3Crect x='3' y='3' width='90' height='90'/%3E%3Crect x='28.7' y='28.7' width='38.6' height='38.6'/%3E%3C/g%3E%3Ccircle cx='53' cy='16' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='43' cy='16' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='21' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='11' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='16' r='3' fill='%23C7301F'/%3E%3Ccircle cx='48' cy='16' r='1.2' fill='%23FBF8F1'/%3E%3Ccircle cx='53' cy='80' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='43' cy='80' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='85' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='75' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='48' cy='80' r='3' fill='%23C7301F'/%3E%3Ccircle cx='48' cy='80' r='1.2' fill='%23FBF8F1'/%3E%3Ccircle cx='21' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='11' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='16' cy='53' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='16' cy='43' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='16' cy='48' r='3' fill='%23C7301F'/%3E%3Ccircle cx='16' cy='48' r='1.2' fill='%23FBF8F1'/%3E%3Ccircle cx='85' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='75' cy='48' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='80' cy='53' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='80' cy='43' r='4.2' fill='%23F2A81D'/%3E%3Ccircle cx='80' cy='48' r='3' fill='%23C7301F'/%3E%3Ccircle cx='80' cy='48' r='1.2' fill='%23FBF8F1'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 16 16)'/%3E%3Cellipse cx='16' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 16 16)'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='16' cy='16' r='1.3' fill='%2321142A'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 80 16)'/%3E%3Cellipse cx='80' cy='8' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 80 16)'/%3E%3Ccircle cx='80' cy='16' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='80' cy='16' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='80' cy='16' r='1.3' fill='%2321142A'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 16 80)'/%3E%3Cellipse cx='16' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 16 80)'/%3E%3Ccircle cx='16' cy='80' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='16' cy='80' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='16' cy='80' r='1.3' fill='%2321142A'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(0 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(45 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(90 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(135 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(180 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(225 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(270 80 80)'/%3E%3Cellipse cx='80' cy='72' rx='3.2' ry='5.5' fill='%23F2A81D' transform='rotate(315 80 80)'/%3E%3Ccircle cx='80' cy='80' r='6.5' fill='%23C7301F'/%3E%3Ccircle cx='80' cy='80' r='3' fill='%23FBF8F1'/%3E%3Ccircle cx='80' cy='80' r='1.3' fill='%2321142A'/%3E%3C/svg%3E\") 32 round;max-width:420px} .ds-frame-in{position:relative;height:200px;background:linear-gradient(160deg,#C7301F,#11606E)} .ds-frame-in::after{content:'';position:absolute;inset:0;background:radial-gradient(rgba(33,20,42,.42) .9px,transparent 1.5px) 0 0/5px 5px;mix-blend-mode:multiply} .ds-cap{position:absolute;z-index:1;left:12px;bottom:12px;background:var(--ink);color:var(--paper);padding:8px 12px 6px} .ds-cap b{display:block;font:400 1.25rem/1.1 var(--display)} .ds-cap span{font:500 .8125rem/1.3 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--marigold)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sponsor Calendar",
+    "overview": "Every surface is a printed object from an Indian bazaar merchant calendar: chromolithographed sheets in vermilion, marigold and peacock, keylined in ink-violet, hung on a deep peacock wall. The calendar was always commerce dressed in story, and the system takes that literally: content never floats on a generic page; it is printed on stock, framed in letterpress ornament, stamped, torn off, or flipped over a hanger.\n\nDensity is that of a well-filled print sheet: a 2px ink keyline inside a newsprint margin, panels divided by solid ink rules and dashed perforations, Khand labels set tight and uppercase like a printer's slug. The press is visible on purpose. Fields and photographs are screened in four-colour process halftone; the hero banner and picture panel are printed live by a WebGL press whose Y, M, C and K plates roll on in order and settle a hair out of register. Type never goes to the screens: it prints as solid line-work over the fields.\n\nThe wall is dark, the sheets are bright. Depth comes from paper hanging on a nail (a soft drop shadow, eyelets, a hook, a sway on arrival), never from glass, glow or gradients.",
+    "keyCharacteristics": [
+      "Deep peacock wall with a fine 7px dot texture; all content on hung sheets.",
+      "Flat printed fields in vermilion, marigold, peacock, rose and ink-violet, rotated per sheet.",
+      "Rozha One display, Khand condensed uppercase labels and figures, Hind body.",
+      "Letterpress ornament bands and an authored rosette-and-quatrefoil frame (SVG border-image).",
+      "CMYK halftone at 15°/75°/0°/45° on fields and stills; solid, unscreened type.",
+      "Rubber-stamp status marks, a perforated tear-off date pad, sheets that flip over a hanger.",
+      "Near-square 2px corners throughout."
+    ],
+    "rules": [
+      {
+        "name": "The Wall And Sheet Rule",
+        "body": "The peacock wall is ground, never a content surface for more than a section head. Anything that carries substance is printed on a sheet: newsprint, vermilion or marigold stock.",
+        "section": "colors"
+      },
+      {
+        "name": "The Band Rotation Rule",
+        "body": "Career sheets cycle vermilion, peacock, marigold, rose, ink as their band colour. On the marigold band, text flips to ink-violet; on every other band, text is newsprint.",
+        "section": "colors"
+      },
+      {
+        "name": "The Process-Inks-Stay-In-The-Press Rule",
+        "body": "Cyan, magenta and yellow appear only as halftone dots and colour-bar chips. UI colour comes from the printed-field palette.",
+        "section": "colors"
+      },
+      {
+        "name": "The Solid Type Rule",
+        "body": "Type is always solid line-work, never screened. Halftone layers sit beneath the text layer (text at z-index 1 over the dot overlay); in the WebGL press the field is a flat tint sent to the screens and the type prints over the canvas.",
+        "section": "typography"
+      },
+      {
+        "name": "The Khand Slug Rule",
+        "body": "Every uppercase label is Khand with positive tracking (0.06-0.12em). Hind is never set in uppercase; Rozha One is never tracked open.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Only Lifts Once Rule",
+        "body": "A sheet carries the Hang shadow; nothing printed on a sheet carries its own shadow. Inner structure is ruled, not raised.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** hang every substantive block on a sheet with the Hang shadow, a 2px ink keyline and 2px corners.",
+      "**Do** keep type solid over screens: dot overlays and press canvases sit beneath the text layer.",
+      "**Do** screen photographs and printed fields at 15°/75°/0°/45° with dots of 4-6.5px, and let plates settle slightly out of register.",
+      "**Do** set every uppercase label in Khand at 0.06-0.12em tracking, with tabular numerals for counters.",
+      "**Do** rotate band colours across a series of sheets and flip text to ink-violet on marigold.",
+      "**Do** use diamonds, ornament bands, perforations and double rules as the dividers and bullets.",
+      "**Do** give status only as a rubber stamp that states the real stage.",
+      "**Do** provide the CSS dot-screen fallback for anything the press prints, and honour reduced motion (no sway, no flip, stamps static)."
+    ],
+    "donts": [
+      "**Don't** screen, halftone or misregister body copy, labels or buttons; the registration ghost belongs to display type on printed fields only.",
+      "**Don't** use process cyan, magenta or yellow as UI fills.",
+      "**Don't** round corners past 3px or use pill shapes; circles are for hardware only.",
+      "**Don't** stack shadows on elements inside a sheet; depth belongs to the hanging sheet alone.",
+      "**Don't** place long-form content directly on the peacock wall; the wall carries section heads and fine print only.",
+      "**Don't** set Hind in uppercase or track Rozha One open.",
+      "**Don't** use icon fonts or emoji; icons are inline 2px-stroke SVG."
+    ]
+  }
+}

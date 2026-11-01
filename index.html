@@ -19,7 +19,6 @@
   --paper-2:#E7E7E1;
   --rule:#C8CAD0;
   --navy:#0D1B2E;
-  --navy-2:#13253D;
   --navy-line:#2A3D5B;
   --ink:#0D1B2E;
   --ink-2:#475266;
@@ -67,9 +66,10 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .mast nav a:hover,.mast nav a[aria-current="true"]{color:var(--on-navy)}
 .mast nav a.cta{color:var(--navy);background:var(--on-navy);padding:10px 16px;border-radius:2px;font-weight:600;transition:background .15s,color .15s}
 .mast nav a.cta:hover{background:var(--accent-on-navy)}
+.mast nav a.li{color:var(--on-navy);text-decoration:underline;text-decoration-color:var(--navy-line);text-underline-offset:.3em}
 .progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--accent-on-navy);transform-origin:0 50%;transform:scaleX(0)}
 @media (max-width:1060px){.mark span{display:none}}
-@media (max-width:860px){.mast nav a:not(.cta){display:none}}
+@media (max-width:860px){.mast nav a:not(.cta):not(.li){display:none}}
 
 .btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--sans);text-decoration:none;padding:15px 20px;border-radius:2px;border:1.5px solid transparent;transition:background .15s,color .15s,border-color .15s}
 .btn--solid{background:var(--accent);color:#fff}
@@ -99,7 +99,6 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .plate-frame{position:relative;aspect-ratio:1;max-height:calc(100svh - var(--nav-h) - 330px);min-height:280px;width:100%;background:var(--paper);overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .plate-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15)}
 .plate-frame img.hq{transform:scale(1.34)}
-.plate-frame::before{content:"";position:absolute;inset:0;z-index:1;background:var(--navy);mix-blend-mode:screen;opacity:.0;pointer-events:none}
 .plate-frame::after{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(rgba(13,27,46,.55) .9px, transparent 1.6px) 0 0/5px 5px;mix-blend-mode:multiply;pointer-events:none}
 .plate-frame canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .plate figcaption{display:flex;gap:10px;font:400 .9375rem/1.45 var(--serif);color:var(--on-navy-2)}
@@ -107,11 +106,14 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .loupe{display:none;align-items:center;gap:8px;font:500 .8125rem/1.2 var(--sans);letter-spacing:.04em;color:var(--on-navy-2)}
 .loupe svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2}
 .gl .plate-frame:not(.gl-fail) img{opacity:0}
-.gl .plate-frame:not(.gl-fail)::before,.gl .plate-frame:not(.gl-fail)::after{display:none}
+.gl .plate-frame:not(.gl-fail)::after{display:none}
 .gl .plate-frame.gl-on{cursor:none}
 .plate.gl-ready .loupe{display:flex}
 
-.figures{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--navy-line)}
+.figures{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:2px solid var(--on-navy)}
+.fig-head{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding:10px 0;border-bottom:1px solid var(--navy-line);font:600 .875rem/1.3 var(--sans);color:var(--on-navy-2)}
+.fig-head span:first-child{color:var(--on-navy)}
+.fig-head a{color:inherit}
 .fig{padding:22px 18px 28px 0;display:flex;flex-direction:column;gap:8px;min-width:0}
 .fig + .fig{padding-left:18px;border-left:1px solid var(--navy-line)}
 .num{font:700 clamp(2rem,3.3vw,3rem)/1 var(--sans);letter-spacing:-.035em;font-variant-numeric:lining-nums;white-space:nowrap}
@@ -119,24 +121,24 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .num sup{font:600 .75rem/1 var(--sans);color:var(--accent-on-navy);margin-left:4px;vertical-align:1.6em;letter-spacing:0}
 .num sup a{text-decoration:none}
 .fig p{font:400 .9375rem/1.4 var(--sans);color:var(--on-navy-2)}
-.reel-d{display:inline-block;height:1em;overflow:hidden;vertical-align:top}
+.reel-d{display:inline-block;height:1em;overflow:hidden;vertical-align:top;font-variant-numeric:tabular-nums lining-nums}
 .reel-d > span{display:flex;flex-direction:column;transition:transform 1.5s var(--ease)}
 .reel-d > span > span{height:1em;line-height:1em;display:block;text-align:center}
-@media (max-width:1100px){.figures{grid-template-columns:repeat(3,minmax(0,1fr))}.fig:nth-child(4){padding-left:0;border-left:0}.fig:nth-child(n+4){border-top:1px solid var(--navy-line)}}
+@media (max-width:1100px){.figures{grid-template-columns:repeat(3,minmax(0,1fr))}.fig:nth-child(5){padding-left:0;border-left:0}.fig:nth-child(n+5){border-top:1px solid var(--navy-line)}}
 @media (max-width:860px){
-  .cover .wrap{grid-template-columns:1fr;grid-template-rows:auto;min-height:0}
+  .cover .wrap{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;min-height:0}
   .cover-copy{padding-bottom:28px}
   .plate{padding-bottom:32px}
-  .plate-frame{aspect-ratio:16/10}
+  .plate-frame{aspect-ratio:16/10;min-height:0;max-height:none}
 }
 @media (max-width:560px){
   .role{flex-direction:column;align-items:flex-start;gap:2px}
   .role i{display:none}
   .figures{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fig + .fig{padding-left:14px}
-  .fig:nth-child(odd){padding-left:0;border-left:0}
-  .fig:nth-child(n+3){border-top:1px solid var(--navy-line)}
-  .fig:nth-child(4){padding-left:14px;border-left:1px solid var(--navy-line)}
+  .fig:nth-child(even){padding-left:0;border-left:0}
+  .fig:nth-child(n+4){border-top:1px solid var(--navy-line)}
+  .fig:nth-child(5){padding-left:14px;border-left:1px solid var(--navy-line)}
   .cover-acts .btn{flex:1;justify-content:center}
 }
 
@@ -148,7 +150,10 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .tab{display:flex;align-items:baseline;gap:12px;font:700 .875rem/1 var(--sans);letter-spacing:.04em;color:var(--accent);font-variant-numeric:tabular-nums}
 .tab::after{content:"";flex:1;height:1px;background:currentColor;opacity:.5;transform-origin:0 50%}
 .navy .tab{color:var(--accent-on-navy)}
-.side .meta{max-width:26ch}
+.dek{font:500 1rem/1.45 var(--sans);color:var(--ink-2);margin-top:14px;max-width:60ch}
+.navy .dek{color:var(--on-navy-2)}
+.sec h2 + .dek{margin-top:14px}
+.dek + *{margin-top:24px}
 .sec h2{font-size:clamp(2.2rem,4.6vw,3.75rem);font-weight:800;max-width:18ch}
 .sec h2 + p{margin-top:22px}
 .big{font:500 clamp(1.3rem,2.1vw,1.75rem)/1.4 var(--sans);letter-spacing:-.012em;max-width:40ch}
@@ -156,7 +161,7 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .body strong{color:var(--ink);font-weight:600}
 .cols2{columns:2 300px;column-gap:44px}
 .cols2 p{break-inside:avoid;margin-bottom:1em}
-@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}.side{display:none}}
 
 /* summary + notes */
 .pull{margin:44px 0 0;padding:26px 0 0;border-top:3px solid var(--ink);font:700 clamp(1.4rem,2.4vw,2rem)/1.25 var(--sans);letter-spacing:-.02em;max-width:34ch}
@@ -185,7 +190,7 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 .status{display:inline-flex;align-items:center;gap:8px;font:600 .875rem/1.2 var(--sans);white-space:nowrap}
 .status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink-2)}
 .status.live::before{background:var(--accent)}
-.status.dev::before{background:#2F6FA3}
+.status.dev::before{background:var(--ink)}
 .status.plan::before{background:transparent;border:1.5px solid var(--ink-2)}
 @media (max-width:700px){
   .tbl table,.tbl tbody,.tbl tr,.tbl td{display:block}
@@ -193,7 +198,7 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
   .tbl caption{display:block;border-bottom:2px solid var(--ink)}
   .tbl tr{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:6px 16px}
   .tbl td{border:0;padding:0}
-  .tbl td:nth-child(2){grid-column:1/-1;grid-row:2}
+  .tbl td:nth-child(2):not(:last-child){grid-column:1/-1;grid-row:2}
   .tbl td:last-child{text-align:right}
 }
 
@@ -201,8 +206,8 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 .studio{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px clamp(28px,4vw,64px);margin-top:44px;align-items:start}
 .acres{display:flex;flex-direction:column;gap:16px}
 .acre-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;max-width:300px;aspect-ratio:1}
-.acre-grid i{background:var(--paper-2);border:1px solid var(--rule);transition:background .35s, border-color .35s}
-.acre-grid.on i{background:var(--navy);border-color:var(--navy)}
+.acre-grid i{background:var(--navy);border:1px solid var(--navy);transition:background .35s, border-color .35s}
+.acre-grid.wait i{background:var(--paper-2);border-color:var(--rule)}
 .acre-num{font:800 clamp(3.4rem,6vw,5rem)/.9 var(--sans);letter-spacing:-.05em}
 .acre-num small{font-size:.32em;letter-spacing:0;font-weight:600;margin-left:.2em}
 .acres p{font-size:.9375rem;color:var(--ink-2);max-width:32ch}
@@ -227,6 +232,8 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 .timeline{margin-top:44px}
 .axis{position:relative;height:28px;margin-left:var(--label-w);border-bottom:1px solid var(--on-navy-2)}
 .axis span{position:absolute;bottom:6px;transform:translateX(-50%);font:600 .75rem/1 var(--sans);color:var(--on-navy-2);font-variant-numeric:tabular-nums}
+.axis span:first-child{transform:none}
+.axis span:first-child::after{left:0}
 .axis span::after{content:"";position:absolute;left:50%;top:calc(100% + 6px);height:6px;width:1px;background:var(--on-navy-2)}
 .t-row{display:grid;grid-template-columns:var(--label-w) 1fr;align-items:center;border-bottom:1px solid var(--navy-line);min-height:64px}
 .timeline{--label-w:minmax(0,260px)}
@@ -236,10 +243,10 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 .t-label b{display:block;font:700 1rem/1.25 var(--sans);letter-spacing:-.005em}
 .t-label span{font:400 .875rem/1.3 var(--sans);color:var(--on-navy-2)}
 .track{position:relative;height:100%;min-height:64px;background-image:repeating-linear-gradient(to right, var(--navy-line) 0 1px, transparent 1px calc(100% / 13));}
-.bar{position:absolute;top:50%;height:14px;margin-top:-7px;left:calc(var(--s) / 156 * 100%);width:calc((var(--e) - var(--s)) / 156 * 100%);background:var(--on-navy);transform-origin:0 50%;transform:scaleX(0);transition:transform 1.1s var(--ease)}
+.bar{position:absolute;top:50%;height:14px;margin-top:-7px;left:calc(var(--s) / 156 * 100%);width:calc((var(--e) - var(--s)) / 156 * 100%);background:var(--on-navy);transform-origin:0 50%;transition:transform 1.1s var(--ease)}
+.timeline.wait .bar{transform:scaleX(0)}
 .bar.now{background:var(--accent-on-navy)}
 .bar.now::after{content:"";position:absolute;right:-6px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--accent-on-navy);box-shadow:0 0 0 4px rgba(255,122,92,.25)}
-.timeline.on .bar{transform:scaleX(1)}
 .roles{margin-top:56px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
 .roles article{padding:22px 0;border-top:1px solid var(--navy-line)}
 .roles h3{font-size:1.25rem;letter-spacing:-.015em}
@@ -249,7 +256,9 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 .roles .proj{font:500 .9375rem/1.5 var(--sans);color:var(--on-navy)}
 @media (max-width:860px){
   .timeline{--label-w:minmax(0,1fr)}
-  .t-head{display:none}
+  .t-head{grid-template-columns:minmax(0,1fr)}
+  .t-head > span:first-child{display:none}
+  .axis span:nth-child(2),.axis span:nth-child(3),.axis span:nth-child(5),.axis span:nth-child(6){display:none}
   .t-row{grid-template-columns:1fr;padding:12px 0}
   .t-label{padding:0 0 8px}
   .track{min-height:24px;height:24px}
@@ -319,7 +328,8 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
       <a href="#pipeline">Pipeline</a>
       <a href="#career">Career</a>
       <a href="#reel">Work</a>
-      <a class="cta" href="#contact">Contact</a>
+      <a class="li" href="https://www.linkedin.com/in/fowzan-khan-89903a42" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="cta" href="mailto:khanfowzan28@gmail.com">Email me</a>
     </nav>
   </div>
   <i class="progress" data-progress aria-hidden="true"></i>
@@ -347,7 +357,8 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
       <p class="loupe" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><span data-hint>Printed live as a two-colour halftone. Move over it to inspect the screen.</span></p>
     </figure>
 
-    <div class="figures" aria-label="Key figures">
+    <div class="figures" role="group" aria-labelledby="kf">
+      <div class="fig-head"><span id="kf">Key figures</span><span>As stated in the 2026 résumé · <a href="#notes">notes to the figures</a></span></div>
       <div class="fig"><div class="num" data-odo aria-label="₹120 Crore plus">₹120<small>Cr+</small><sup><a href="#n1" aria-label="Note 1">1</a></sup></div><p>Annual production P&amp;L controlled</p></div>
       <div class="fig"><div class="num" data-odo aria-label="6 plus">6+<sup><a href="#n2" aria-label="Note 2">2</a></sup></div><p>Prime-time and digital properties at once</p></div>
       <div class="fig"><div class="num" data-odo aria-label="25 acres">25<small>acres</small><sup><a href="#n3" aria-label="Note 3">3</a></sup></div><p>Studio commercial function built from zero</p></div>
@@ -361,24 +372,25 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ 01 SUMMARY ═════ -->
 <section class="sec" id="summary" aria-labelledby="summary-title">
   <div class="wrap grid">
-    <div class="side"><span class="tab">01</span><span class="meta">Executive summary</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">01</span></div>
     <div>
       <h2 id="summary-title">The business side of content, owned end to end</h2>
+      <p class="dek">Executive summary</p>
       <p class="big">A P&amp;L-owning commercial leader with 12+ years building and running the business side of content production across India's broadcast, OTT, digital and live-entertainment ecosystem.</p>
       <div class="cols2 body" style="margin-top:28px">
         <p>As Head of Commercial at Swastik Stories, I control a <strong>₹120 Cr+ annual production P&amp;L</strong> across 6+ simultaneous prime-time and digital properties. I built the commercial function of the <strong>25-acre Swastik Bhoomi studio</strong> from zero: rate architecture, client acquisition and partnership economics, against a ₹10 Cr+ revenue mandate.</p>
         <p>I also lead commercial and financial planning for the studio's new-format slate: AI-hybrid mythology content, a music reality format and self-funded animated IP.</p>
         <p>My record is in creating new revenue verticals, restructuring deal terms to protect cashflow, and turning production infrastructure into a business, for content on <strong>Sony, Colors, Star Plus, Netflix, Applause and Hotstar</strong>.</p>
       </div>
-      <p class="pull">Creative ambition, <span>commercial control.</span> I came up through the production floor, so the numbers I sign off are numbers I know a unit can deliver.</p>
+      <p class="pull">Six years coordinating India's biggest live and awards formats built <span>the execution depth</span> behind every commercial call I make today.</p>
 
       <div class="notes" id="notes">
         <h3>Notes to the figures</h3>
         <ol>
           <li id="n1"><span><b>Production P&amp;L.</b> Swastik Stories, Jun 2024 to present: the single commercial decision point for budgets, cashflow, vendor commitments and margin across the slate.</span></li>
-          <li id="n2"><span><b>Concurrent properties.</b> Prime-time GEC, OTT and micro-drama properties delivered weekly on air and on budget for Sony, Colors, Star Plus and SAB.</span></li>
+          <li id="n2"><span><b>Concurrent properties.</b> Simultaneous prime-time GEC, OTT and micro-drama properties under one production P&amp;L at Swastik Stories.</span></li>
           <li id="n3"><span><b>Swastik Bhoomi, Umargaon, Gujarat.</b> Rate card with protected margin floors, booking and scheduling workflows, collateral and outreach built from zero.</span></li>
-          <li id="n4"><span><b>Revenue mandate.</b> Annual target for the studio's commercial business, supported by CRM intake, outbound campaigns and CFO-level models.</span></li>
+          <li id="n4"><span><b>Revenue mandate.</b> Annual revenue target for Swastik Bhoomi's commercial business, against which the studio's commercial function was built.</span></li>
           <li id="n5"><span><b>Outreach.</b> Film and television decision-makers reached directly, plus LinkedIn and agency channels, to build the studio's first external demand pipeline.</span></li>
           <li id="n6"><span><b>Experience.</b> Mar 2014 to present, from production coordination on live and awards formats to Head of Commercial.</span></li>
         </ol>
@@ -390,9 +402,10 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ 02 OPERATING REVIEW ═════ -->
 <section class="sec" id="review" aria-labelledby="review-title">
   <div class="wrap grid">
-    <div class="side"><span class="tab">02</span><span class="meta">Swastik Stories Pvt. Ltd., Mumbai</span><span class="meta">Head of Commercial · Jun 2024 – present</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">02</span></div>
     <div>
       <h2 id="review-title">Operating review</h2>
+      <p class="dek">Swastik Stories Pvt. Ltd., Mumbai · Head of Commercial · Jun 2024 – present</p>
       <ul class="acts-list">
         <li><b>P&amp;L control</b><span>Control a ₹120 Cr+ annual production P&amp;L across 6+ simultaneous prime-time GEC, OTT and micro-drama properties: the single commercial decision point for budgets, cashflow, vendor commitments and margin.</span></li>
         <li><b>Finance governance</b><span>Rebuilt production-finance governance company-wide: a fixed/variable/episodic cost-classification architecture now used across all shows, standardised vendor payables control, and monthly promoter-level MIS that gives leadership per-show margin visibility it previously lacked.</span></li>
@@ -404,16 +417,16 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
       <div class="tbl">
         <table>
           <caption>Key projects</caption>
-          <thead><tr><th scope="col">Title</th><th scope="col">Network</th><th scope="col">Format</th></tr></thead>
+          <thead><tr><th scope="col">Title</th><th scope="col">Network</th></tr></thead>
           <tbody>
-            <tr><td>Ramayan</td><td>Sony</td><td>Mythology series</td></tr>
-            <tr><td>Vanshaj</td><td>Sony</td><td>Drama series</td></tr>
-            <tr><td>Chalo Bulawa Aaya Hai</td><td>Sony</td><td>Series</td></tr>
-            <tr><td>Laxmi Narayan</td><td>Colors</td><td>Mythology series</td></tr>
-            <tr><td>Shiv Shakti</td><td>Colors</td><td>Mythology series</td></tr>
-            <tr><td>Veer Hanuman</td><td>SAB</td><td>Mythology series</td></tr>
-            <tr><td>Tu Dil Mai Dhadkan</td><td>Star Plus</td><td>Series</td></tr>
-            <tr><td>Dagdu Seth</td><td>Theatrical</td><td><span class="status plan">Marathi film, pre-production</span></td></tr>
+            <tr><td>Ramayan</td><td>Sony</td></tr>
+            <tr><td>Vanshaj</td><td>Sony</td></tr>
+            <tr><td>Chalo Bulawa Aaya Hai</td><td>Sony</td></tr>
+            <tr><td>Laxmi Narayan</td><td>Colors</td></tr>
+            <tr><td>Shiv Shakti</td><td>Colors</td></tr>
+            <tr><td>Veer Hanuman</td><td>SAB</td></tr>
+            <tr><td>Tu Dil Mai Dhadkan</td><td>Star Plus</td></tr>
+            <tr><td>Dagdu Seth</td><td><span class="status plan">Marathi film, pre-production</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -424,9 +437,10 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ 03 STUDIO ═════ -->
 <section class="sec" id="studio" aria-labelledby="studio-title">
   <div class="wrap grid">
-    <div class="side"><span class="tab">03</span><span class="meta">Swastik Bhoomi Studio, Umargaon, Gujarat</span><span class="meta">P&amp;L build-out &amp; commercial leadership</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">03</span></div>
     <div>
       <h2 id="studio-title">A 25-acre lot, turned into a revenue business</h2>
+      <p class="dek">Swastik Bhoomi Studio, Umargaon, Gujarat · P&amp;L build-out &amp; commercial leadership</p>
       <div class="studio">
         <div class="acres">
           <div class="acre-grid" data-acres aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -458,16 +472,17 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ 04 PIPELINE ═════ -->
 <section class="sec" id="pipeline" aria-labelledby="pipeline-title">
   <div class="wrap grid">
-    <div class="side"><span class="tab">04</span><span class="meta">New formats, IP and business development</span><span class="meta">Status as of Nov 2026</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">04</span></div>
     <div>
       <h2 id="pipeline-title">Pipeline</h2>
+      <p class="dek">New formats, IP and business development · Status as of Nov 2026</p>
       <div class="tbl" style="margin-top:36px">
         <table>
           <caption>New formats and IP</caption>
           <thead><tr><th scope="col">Project</th><th scope="col">What I built</th><th scope="col">Status</th></tr></thead>
           <tbody>
             <tr><td>AI mythology drama<br><span class="meta">AI-hybrid production</span></td><td>Commercial model for AI-generated vs live-shot mythology and micro-drama: fixed rate cards by runtime, margin floors and concession limits. 70-minute commission with Story TV; sample approved, flat fee, channel owns the IP.</td><td><span class="status live">In negotiation</span></td></tr>
-            <tr><td>IshSwaram<br><span class="meta">Music reality format</span></td><td>Devotional-fusion band hunt. Multi-department budget, S1 schedule (two-month casting, shoot from Dec 2026 at Swastik Bhoomi), SPV structure, Grand Finale plan and a micro-drama partnership vertical.</td><td><span class="status dev">In development</span></td></tr>
+            <tr><td>IshSwaram<br><span class="meta">Music reality format</span></td><td>Devotional-fusion band hunt. Multi-department budget, S1 schedule (two-month casting, shoot targeted from Dec 2026 at Swastik Bhoomi), SPV structure, Grand Finale plan and a micro-drama partnership vertical.</td><td><span class="status dev">In development</span></td></tr>
             <tr><td>World of Raaya: Great Indian Tales<br><span class="meta">Original animated IP</span></td><td>Self-funded, 18 episodes, targeting Q2 2027. Business plan, digital marketing execution plan, trademark and copyright registration. <a href="https://www.instagram.com/helloraaya/" target="_blank" rel="noopener">Instagram</a></td><td><span class="status dev">Production planning</span></td></tr>
             <tr><td>Khatu Shyam (Barbarik)<br><span class="meta">Motion capture</span></td><td>Mythology show planned for a motion-capture shoot.</td><td><span class="status plan">In planning</span></td></tr>
           </tbody>
@@ -488,9 +503,10 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ 05 CAREER ═════ -->
 <section class="sec navy" id="career" aria-labelledby="career-title">
   <div class="wrap grid">
-    <div class="side"><span class="tab">05</span><span class="meta">Mar 2014 – present</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">05</span></div>
     <div>
       <h2 id="career-title">Twelve years, from the floor to the P&amp;L</h2>
+      <p class="dek">Mar 2014 – present</p>
       <div class="timeline" data-timeline role="img" aria-label="Career timeline from 2014 to 2026: production coordinator 2014 to 2020, executive producer 2020 to 2021, assistant commercial manager 2021 to 2022, deputy commercial manager 2022 to 2024, head of commercial 2024 to present.">
         <div class="t-head" aria-hidden="true"><span></span><div class="axis"><span style="left:0%">2014</span><span style="left:15.38%">2016</span><span style="left:30.77%">2018</span><span style="left:46.15%">2020</span><span style="left:61.54%">2022</span><span style="left:76.92%">2024</span><span style="left:92.31%">2026</span></div></div>
         <div class="t-row" aria-hidden="true"><div class="t-label"><b>Head of Commercial</b><span>Swastik Stories · 2024–now</span></div><div class="track"><i class="bar now" style="--s:125;--e:154;transition-delay:.48s"></i></div></div>
@@ -535,9 +551,10 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ 06 WORK ═════ -->
 <section class="sec" id="reel" aria-labelledby="reel-title" style="border-top:0">
   <div class="wrap grid">
-    <div class="side"><span class="tab">06</span><span class="meta">Official promotional videos</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">06</span></div>
     <div>
       <h2 id="reel-title">The work on screen</h2>
+      <p class="dek">Official promotional videos</p>
       <div class="reel">
         <figure class="promo">
           <div class="screen"><button type="button" data-yt="nOV6fSUw6W0" aria-label="Play the Taj: Reign of Revenge promo"><img src="https://i.ytimg.com/vi/nOV6fSUw6W0/maxresdefault.jpg" data-yt-thumb="nOV6fSUw6W0" alt="" loading="lazy" width="1280" height="720"><span class="play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Play promo</span></button></div>
@@ -562,9 +579,10 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ 07 CAPABILITIES ═════ -->
 <section class="sec" id="capabilities" aria-labelledby="cap-title">
   <div class="wrap grid">
-    <div class="side"><span class="tab">07</span><span class="meta">Competencies, education, certifications</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">07</span></div>
     <div>
       <h2 id="cap-title">Capabilities</h2>
+      <p class="dek">Competencies, education, certifications</p>
       <ul class="comp">
         <li>P&amp;L management</li><li>Commercial strategy</li><li>Revenue growth</li><li>Business development</li><li>Studio operations</li><li>Production finance</li><li>Budget forecasting</li>
         <li>Cost optimisation</li><li>Vendor &amp; contract negotiation</li><li>Broadcaster &amp; platform relationships</li><li>Deal structuring</li><li>Financial modelling &amp; feasibility</li><li>IP business planning</li><li>AI-hybrid production economics</li>
@@ -598,7 +616,7 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 <!-- ═════ CONTACT ═════ -->
 <section class="sec navy close" id="contact" aria-labelledby="contact-title">
   <div class="wrap grid">
-    <div class="side"><span class="tab">08</span><span class="meta">Contact</span></div>
+    <div class="side" aria-hidden="true"><span class="tab">08</span></div>
     <div>
       <h2 id="contact-title">Let's make the numbers work</h2>
       <p class="lede">For senior commercial and business leadership conversations in media and entertainment, write to me directly.</p>
@@ -641,7 +659,7 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 
   /* masthead: reading progress and current section */
   const bar = document.querySelector('[data-progress]');
-  const links = [...document.querySelectorAll('.mast nav a:not(.cta)')];
+  const links = [...document.querySelectorAll('.mast nav a[href^="#"]')];
   const secs = links.map(a => document.querySelector(a.getAttribute('href')));
   let tick = false;
   const onScroll = () => {
@@ -693,11 +711,15 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
   });
 
   /* charts that draw themselves */
+  // charts render complete by default; with motion allowed they wait, then draw in
   const tl = document.querySelector('[data-timeline]');
-  io(tl, () => tl.classList.add('on'));
   const acres = document.querySelector('[data-acres]');
-  if (!reduce) [...acres.children].forEach((c, i) => c.style.transitionDelay = `${i * 40}ms`);
-  io(acres, () => acres.classList.add('on'));
+  if (!reduce && 'IntersectionObserver' in window) {
+    [tl, acres].forEach(el => el.classList.add('wait'));
+    [...acres.children].forEach((c, i) => c.style.transitionDelay = `${i * 40}ms`);
+    io(tl, () => tl.classList.remove('wait'));
+    io(acres, () => acres.classList.remove('wait'));
+  }
 
   /* promos load YouTube only when played */
   document.querySelectorAll('[data-yt]').forEach(btn => btn.addEventListener('click', () => {

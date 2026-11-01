@@ -7,18 +7,18 @@ related_targets: []
 
 # Portfolio home (index.html)
 
-Mode: Experience (personal portfolio). Audience: hiring leaders and recruiters for senior commercial roles. Action: email or LinkedIn. Proof: resume figures, named shows, official promo videos. Constraints: no phone number, no headshot, no fabricated testimonials; in-development projects carry honest status.
+Mode: Experience (personal portfolio), professional register. Audience: hiring leaders, CXOs and executive search evaluating Fowzan for senior commercial roles. Action: email or LinkedIn. Proof: resume figures, named shows, official promos. Constraints: no phone number, no headshot, no fabricated claims; in-development projects carry honest status. Owner rejected the earlier bazaar-calendar world as too casual (Nov 2026) and chose this direction.
 
 ## Direction contract
 
-THESIS: The site is an Indian bazaar sponsor calendar printed under Fowzan's name: the merchant calendar was always commerce dressed in story, which is his job. Refuses the dark executive template of name, stat counters, timeline and card grid.
+THESIS: The site is Fowzan's career published as an annual report: a commercial leader's record presented the way boards read performance, figures first, every number sourced. Refuses both the playful print-ephemera world it replaces and the dark executive template of hero, stat counters and card grid.
 
-OWN-WORLD: Chromolithograph print on a deep peacock wall. Vermilion, marigold and peacock printed fields, ink-violet keylines, white newsprint date pads, letterpress ornament borders, halftone dots on stills, rubber-stamp status marks. Rozha One display, Khand condensed figures, Hind body.
+OWN-WORLD: Report stock white, deep ink-navy cover boards, one vermilion accent used like a highlighter in financial statements. Hairline rules, ruled tables with tabular figures, note references, section tabs. Schibsted Grotesk for headings and figures, Source Serif 4 for narrative text. Duotone halftone (navy + vermilion) for the only photograph.
 
-STORY: Visitor sees the scale (₹120 Cr+ P&L) in one look, flips through the career as calendar sheets, sees the studio and new-format slate with honest stamps, watches real promos, then emails.
+STORY: The visitor sees the scale on the cover, reads the summary, scans key figures with notes, then the operating review, the studio build, the pipeline by stage, the career timeline, the promos, and emails.
 
-FIRST VIEWPORT: One calendar sheet fills the viewport: sponsor banner with name and title across the top; left, the picture panel with a halftoned Shiv Shakti promo still inside an ornament frame; right, a perforated tear-off date pad whose top sheet reads ₹120 Cr+. Email and LinkedIn buttons in the press strip at the sheet's foot.
+FIRST VIEWPORT: Navy cover board: report masthead, name set large, one-line title, the Shiv Shakti still printed live as a navy/vermilion duotone with a loupe, and a ruled figures strip whose numbers roll in like a mechanical counter. Email and LinkedIn in the masthead and under the name.
 
-FORM: Bazaar calendar print, position 6 of 7 on the grounded list. seed:7d0f79fbc1308b8d. Signature interaction: tear-off date pad cycling the figures; focal entrance: colour plates sliding into register; career sheets flip over the hanger on scroll.
+FORM: Annual report, user-pinned direction (no roll). seed: none (unavailable). Signature: odometer figures on the cover and the duotone press; scroll motion is charts drawing themselves (career timeline bars, 25-acre grid, pipeline stage track).
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

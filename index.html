@@ -67,9 +67,10 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .mast nav a:hover,.mast nav a[aria-current="true"]{color:var(--on-navy)}
 .mast nav a.cta{color:var(--navy);background:var(--on-navy);padding:10px 16px;border-radius:2px;font-weight:600;transition:background .15s,color .15s}
 .mast nav a.cta:hover{background:var(--accent-on-navy)}
+.mast nav a.li{color:var(--on-navy);text-decoration:underline;text-decoration-color:var(--navy-line);text-underline-offset:.3em}
 .progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--accent-on-navy);transform-origin:0 50%;transform:scaleX(0)}
 @media (max-width:1060px){.mark span{display:none}}
-@media (max-width:860px){.mast nav a:not(.cta){display:none}}
+@media (max-width:860px){.mast nav a:not(.cta):not(.li){display:none}}
 
 .btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--sans);text-decoration:none;padding:15px 20px;border-radius:2px;border:1.5px solid transparent;transition:background .15s,color .15s,border-color .15s}
 .btn--solid{background:var(--accent);color:#fff}
@@ -111,7 +112,10 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .gl .plate-frame.gl-on{cursor:none}
 .plate.gl-ready .loupe{display:flex}
 
-.figures{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--navy-line)}
+.figures{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:2px solid var(--on-navy)}
+.fig-head{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding:10px 0;border-bottom:1px solid var(--navy-line);font:600 .875rem/1.3 var(--sans);color:var(--on-navy-2)}
+.fig-head span:first-child{color:var(--on-navy)}
+.fig-head a{color:inherit}
 .fig{padding:22px 18px 28px 0;display:flex;flex-direction:column;gap:8px;min-width:0}
 .fig + .fig{padding-left:18px;border-left:1px solid var(--navy-line)}
 .num{font:700 clamp(2rem,3.3vw,3rem)/1 var(--sans);letter-spacing:-.035em;font-variant-numeric:lining-nums;white-space:nowrap}
@@ -119,10 +123,10 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
 .num sup{font:600 .75rem/1 var(--sans);color:var(--accent-on-navy);margin-left:4px;vertical-align:1.6em;letter-spacing:0}
 .num sup a{text-decoration:none}
 .fig p{font:400 .9375rem/1.4 var(--sans);color:var(--on-navy-2)}
-.reel-d{display:inline-block;height:1em;overflow:hidden;vertical-align:top}
+.reel-d{display:inline-block;height:1em;overflow:hidden;vertical-align:top;font-variant-numeric:tabular-nums lining-nums}
 .reel-d > span{display:flex;flex-direction:column;transition:transform 1.5s var(--ease)}
 .reel-d > span > span{height:1em;line-height:1em;display:block;text-align:center}
-@media (max-width:1100px){.figures{grid-template-columns:repeat(3,minmax(0,1fr))}.fig:nth-child(4){padding-left:0;border-left:0}.fig:nth-child(n+4){border-top:1px solid var(--navy-line)}}
+@media (max-width:1100px){.figures{grid-template-columns:repeat(3,minmax(0,1fr))}.fig:nth-child(5){padding-left:0;border-left:0}.fig:nth-child(n+5){border-top:1px solid var(--navy-line)}}
 @media (max-width:860px){
   .cover .wrap{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;min-height:0}
   .cover-copy{padding-bottom:28px}
@@ -134,9 +138,9 @@ h1,h2,h3,h4{font-family:var(--sans);margin:0;text-wrap:balance;letter-spacing:-.
   .role i{display:none}
   .figures{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fig + .fig{padding-left:14px}
-  .fig:nth-child(odd){padding-left:0;border-left:0}
-  .fig:nth-child(n+3){border-top:1px solid var(--navy-line)}
-  .fig:nth-child(4){padding-left:14px;border-left:1px solid var(--navy-line)}
+  .fig:nth-child(even){padding-left:0;border-left:0}
+  .fig:nth-child(n+4){border-top:1px solid var(--navy-line)}
+  .fig:nth-child(5){padding-left:14px;border-left:1px solid var(--navy-line)}
   .cover-acts .btn{flex:1;justify-content:center}
 }
 
@@ -196,7 +200,7 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
   .tbl caption{display:block;border-bottom:2px solid var(--ink)}
   .tbl tr{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:6px 16px}
   .tbl td{border:0;padding:0}
-  .tbl td:nth-child(2){grid-column:1/-1;grid-row:2}
+  .tbl td:nth-child(2):not(:last-child){grid-column:1/-1;grid-row:2}
   .tbl td:last-child{text-align:right}
 }
 
@@ -230,6 +234,8 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 .timeline{margin-top:44px}
 .axis{position:relative;height:28px;margin-left:var(--label-w);border-bottom:1px solid var(--on-navy-2)}
 .axis span{position:absolute;bottom:6px;transform:translateX(-50%);font:600 .75rem/1 var(--sans);color:var(--on-navy-2);font-variant-numeric:tabular-nums}
+.axis span:first-child{transform:none}
+.axis span:first-child::after{left:0}
 .axis span::after{content:"";position:absolute;left:50%;top:calc(100% + 6px);height:6px;width:1px;background:var(--on-navy-2)}
 .t-row{display:grid;grid-template-columns:var(--label-w) 1fr;align-items:center;border-bottom:1px solid var(--navy-line);min-height:64px}
 .timeline{--label-w:minmax(0,260px)}
@@ -252,7 +258,9 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 .roles .proj{font:500 .9375rem/1.5 var(--sans);color:var(--on-navy)}
 @media (max-width:860px){
   .timeline{--label-w:minmax(0,1fr)}
-  .t-head{display:none}
+  .t-head{grid-template-columns:minmax(0,1fr)}
+  .t-head > span:first-child{display:none}
+  .axis span:nth-child(2),.axis span:nth-child(3),.axis span:nth-child(5),.axis span:nth-child(6){display:none}
   .t-row{grid-template-columns:1fr;padding:12px 0}
   .t-label{padding:0 0 8px}
   .track{min-height:24px;height:24px}
@@ -322,7 +330,8 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
       <a href="#pipeline">Pipeline</a>
       <a href="#career">Career</a>
       <a href="#reel">Work</a>
-      <a class="cta" href="#contact">Contact</a>
+      <a class="li" href="https://www.linkedin.com/in/fowzan-khan-89903a42" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="cta" href="mailto:khanfowzan28@gmail.com">Email me</a>
     </nav>
   </div>
   <i class="progress" data-progress aria-hidden="true"></i>
@@ -350,7 +359,8 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
       <p class="loupe" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><span data-hint>Printed live as a two-colour halftone. Move over it to inspect the screen.</span></p>
     </figure>
 
-    <div class="figures" aria-label="Key figures">
+    <div class="figures" role="group" aria-labelledby="kf">
+      <div class="fig-head"><span id="kf">Key figures</span><span>As stated in the 2026 résumé · <a href="#notes">notes to the figures</a></span></div>
       <div class="fig"><div class="num" data-odo aria-label="₹120 Crore plus">₹120<small>Cr+</small><sup><a href="#n1" aria-label="Note 1">1</a></sup></div><p>Annual production P&amp;L controlled</p></div>
       <div class="fig"><div class="num" data-odo aria-label="6 plus">6+<sup><a href="#n2" aria-label="Note 2">2</a></sup></div><p>Prime-time and digital properties at once</p></div>
       <div class="fig"><div class="num" data-odo aria-label="25 acres">25<small>acres</small><sup><a href="#n3" aria-label="Note 3">3</a></sup></div><p>Studio commercial function built from zero</p></div>
@@ -651,7 +661,7 @@ td:first-child{font:600 1.0625rem/1.35 var(--sans);letter-spacing:-.01em}
 
   /* masthead: reading progress and current section */
   const bar = document.querySelector('[data-progress]');
-  const links = [...document.querySelectorAll('.mast nav a:not(.cta)')];
+  const links = [...document.querySelectorAll('.mast nav a[href^="#"]')];
   const secs = links.map(a => document.querySelector(a.getAttribute('href')));
   let tick = false;
   const onScroll = () => {

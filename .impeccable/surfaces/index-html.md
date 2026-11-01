@@ -19,6 +19,6 @@ STORY: The visitor sees the scale on the cover, reads the summary, scans key fig
 
 FIRST VIEWPORT: Navy cover board: report masthead, name set large, one-line title, the Shiv Shakti still printed live as a navy/vermilion duotone with a loupe, and a ruled figures strip whose numbers roll in like a mechanical counter. Email and LinkedIn in the masthead and under the name.
 
-FORM: Annual report, user-pinned direction (no roll). seed: none (unavailable). Signature: odometer figures on the cover and the duotone press; scroll motion is charts drawing themselves (career timeline bars, 25-acre grid); pipeline status is carried by the status column. Charts render complete without JavaScript.
+FORM: Annual report, picked by the owner from three offered directions; no concept roll was run for this round. seed: none (no roll run). Signature: odometer figures on the cover and the duotone press; scroll motion is charts drawing themselves (career timeline bars, 25-acre grid); pipeline status is carried by the status column. Charts render complete without JavaScript.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

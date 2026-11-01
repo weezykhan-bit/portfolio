@@ -34,7 +34,8 @@ Visitors judge against other senior candidates' LinkedIn profiles and CVs. The r
 
 ## Brand Commitments
 
-None established. Name: Fowzan Khan. Title: Head of Commercial, Media & Entertainment.
+Name: Fowzan Khan. Title: Head of Commercial, Media & Entertainment.
+Register: professional, boardroom-ready. The owner rejected a playful, ephemera-style presentation as too casual (Nov 2026) while asking to keep strong motion graphics.
 
 ## Evidence on Hand
 

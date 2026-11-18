@@ -27,3 +27,18 @@ def test_paragraphs_get_longer_pause():
 def test_hindi_danda_splits():
     chunks = chunk_text("यह पहला वाक्य है। यह दूसरा वाक्य है।", max_chars=20)
     assert len(chunks) == 2
+
+
+def test_script_parsing_merges_speaker_case():
+    from app.store import parse_script
+
+    lines, speakers = parse_script("NARRATOR: Night fell.\nRiya: Hi.\nRIYA: Bye.\nThe end came quietly.")
+    assert speakers == ["NARRATOR", "Riya"]
+    assert [l["speaker"] for l in lines] == ["NARRATOR", "Riya", "Riya", "NARRATOR"]
+
+
+def test_pronunciations_apply():
+    from app.lexicon import apply
+
+    rules = [{"find": "OTT", "say": "O T T", "match_case": True}, {"find": "swara", "say": "Swuh-raa"}]
+    assert apply("Swara is an OTT app, not ott.", rules) == "Swuh-raa is an O T T app, not ott."

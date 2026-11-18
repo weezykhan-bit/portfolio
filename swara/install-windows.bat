@@ -1,9 +1,9 @@
 @echo off
 setlocal
-title Voice Studio - Install
+title Swara - Install
 cd /d "%~dp0"
 echo.
-echo  ===  Voice Studio installer (Windows)  ===
+echo  ===  Swara installer (Windows)  ===
 echo.
 
 rem ---- find Python 3.10 - 3.12 ----
@@ -43,18 +43,22 @@ if %errorlevel%==0 (
   "%VPY%" -m pip install torch==2.6.0 torchaudio==2.6.0 || goto :fail
 )
 
-echo  Installing Voice Studio dependencies...
+echo  Installing Swara dependencies...
 "%VPY%" -m pip install -r requirements.txt || goto :fail
 
 echo.
-echo  Downloading voice models (one time, about 4 GB)...
+echo  Downloading voice and transcription models (one time, about 6 GB)...
 "%VPY%" run.py --prefetch || goto :fail
 
-rem ---- desktop shortcut ----
-powershell -NoProfile -Command "$s=(New-Object -ComObject WScript.Shell).CreateShortcut([Environment]::GetFolderPath('Desktop')+'\Voice Studio.lnk'); $s.TargetPath='%~dp0start-windows.bat'; $s.WorkingDirectory='%~dp0'; $s.Save()" >nul 2>&1
+rem ---- desktop + Start menu shortcuts that open Swara without a console window ----
+set "TARGET=%~dp0.venv\Scripts\pythonw.exe"
+for %%L in ("Desktop" "Programs") do (
+  powershell -NoProfile -Command "$d=[Environment]::GetFolderPath('%%~L'); $s=(New-Object -ComObject WScript.Shell).CreateShortcut($d+'\Swara.lnk'); $s.TargetPath='%TARGET%'; $s.Arguments='\"%~dp0run.py\"'; $s.WorkingDirectory='%~dp0'; $s.Description='Swara offline voice studio'; $s.Save()" >nul 2>&1
+)
 
 echo.
-echo  Done. Start Voice Studio with "start-windows.bat" or the desktop shortcut.
+echo  Done. Open Swara from the desktop or Start menu shortcut.
+echo  (start-windows.bat also works and keeps a log window open.)
 echo.
 pause
 exit /b 0

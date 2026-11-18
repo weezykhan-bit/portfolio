@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T17:45:00Z",
+  "title": "Design System: Swara",
+  "extensions": {
+    "colorMeta": {
+      "booth": { "role": "neutral", "displayName": "Booth Slate", "tonalRamp": ["#0b0c0f", "#111317", "#191c22", "#22262e", "#2c313b", "#4a515e", "#8a909c", "#d5d8de"] },
+      "desk": { "role": "neutral", "displayName": "Desk Grey", "tonalRamp": ["#2b2d33", "#4b4e56", "#70737c", "#9a9da5", "#c3c5cc", "#d9dae0", "#e9eaee", "#f6f6f8"] },
+      "paper": { "role": "neutral", "displayName": "Script Paper", "tonalRamp": ["#1e2128", "#3a3e47", "#6b707b", "#a3a7b0", "#c9cbd3", "#e1e2e7", "#f5f5f7", "#ffffff"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "tonalRamp": ["#0e0f12", "#1b1d22", "#2f323a", "#4a4e58", "#5f6470", "#8b909b", "#b9bdc5", "#e4e6ea"] },
+      "highlighter": { "role": "primary", "displayName": "Highlighter Yellow", "tonalRamp": ["#4a4214", "#7a6500", "#b38f00", "#f2c200", "#ffd83d", "#ffe577", "#fff3b8", "#fffbe6"] },
+      "cast-pink": { "role": "secondary", "displayName": "Cast Pink", "tonalRamp": ["#5c1f35", "#94345a", "#d4588a", "#ff9cc2", "#ffbcd6", "#ffd6e6", "#ffeaf2", "#fff6f9"] },
+      "cast-green": { "role": "secondary", "displayName": "Cast Green", "tonalRamp": ["#123f27", "#1f6b42", "#3fae70", "#7fe0a6", "#a6ebc1", "#c8f3d8", "#e3f9eb", "#f3fcf6"] },
+      "cast-blue": { "role": "secondary", "displayName": "Cast Blue", "tonalRamp": ["#123a5c", "#1f5f94", "#3f8fd0", "#84c8ff", "#a9d8ff", "#cbe7ff", "#e4f2ff", "#f3f9ff"] },
+      "cast-orange": { "role": "secondary", "displayName": "Cast Orange", "tonalRamp": ["#5a3008", "#8f4f10", "#d27a22", "#ffb661", "#ffcb8f", "#ffdfb8", "#ffefdb", "#fff8ef"] },
+      "cast-violet": { "role": "secondary", "displayName": "Cast Violet", "tonalRamp": ["#33235c", "#543b94", "#8a6bd4", "#c9adff", "#dac6ff", "#e8dbff", "#f3edff", "#faf7ff"] },
+      "danger": { "role": "state", "displayName": "Error Red", "tonalRamp": ["#3b1c1a", "#6e1d18", "#9d2620", "#c4312b", "#e0574f", "#f39089", "#fde8e6", "#fff5f4"] },
+      "ok": { "role": "state", "displayName": "Ready Green", "tonalRamp": ["#0b2e1f", "#124d33", "#1d7f55", "#2fa36f", "#5fd39a", "#9fe5c1", "#e2f4ea", "#f3fbf6"] },
+      "warn": { "role": "state", "displayName": "Edited Amber", "tonalRamp": ["#3a2c12", "#5e3f00", "#9a6400", "#c98a14", "#f0b64a", "#f7d38d", "#fff1d6", "#fff9ec"] }
+    },
+    "typographyMeta": {
+      "title": { "displayName": "Title", "purpose": "View titles." },
+      "heading": { "displayName": "Heading", "purpose": "Panel and section heads." },
+      "body": { "displayName": "Body", "purpose": "All UI text." },
+      "script": { "displayName": "Script", "purpose": "The script being voiced." },
+      "cue": { "displayName": "Cue", "purpose": "Speaker cues and column heads, uppercase mono." },
+      "timecode": { "displayName": "Timecode", "purpose": "Times, durations, counts; tabular figures." }
+    },
+    "shadows": [
+      { "name": "shadow-1", "value": "0 1px 2px rgba(17,20,26,.06), 0 2px 8px rgba(17,20,26,.05)", "purpose": "Paper resting on the desk." },
+      { "name": "shadow-2", "value": "0 2px 4px rgba(17,20,26,.06), 0 12px 32px rgba(17,20,26,.10)", "purpose": "Hovered cards and menus." },
+      { "name": "shadow-3", "value": "0 8px 16px rgba(10,12,16,.18), 0 28px 70px rgba(10,12,16,.28)", "purpose": "Dialogs and toasts." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.2,.8,.2,1)", "purpose": "Progress bars, dialogs rising, disclosure chevrons." },
+      { "name": "state", "value": "150ms", "purpose": "Hover and colour changes." }
+    ],
+    "breakpoints": [
+      { "name": "stack-panels", "value": "1080px" },
+      { "name": "single-column-tools", "value": "860px" },
+      { "name": "phone", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action that does the job on a screen: Generate, Change voice, Transcribe, Save.",
+      "html": "<button class=\"ds-btn-primary\">Generate speech</button>",
+      "css": ".ds-btn-primary { height: 36px; padding: 0 14px; border-radius: 9px; border: 1px solid #f2c200; background: #ffd83d; color: #1b1d22; font: 580 14.5px system-ui, sans-serif; cursor: pointer; transition: background .15s; } .ds-btn-primary:hover { background: #f2c200; } .ds-btn-primary:focus-visible { outline: 2px solid #f2c200; outline-offset: 2px; }"
+    },
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Main secondary action in a toolbar (Export, Send to Studio).",
+      "html": "<button class=\"ds-btn-dark\">Export</button>",
+      "css": ".ds-btn-dark { height: 36px; padding: 0 14px; border-radius: 9px; border: 1px solid #191c22; background: #191c22; color: #ebe9e4; font: 580 14.5px system-ui, sans-serif; cursor: pointer; } .ds-btn-dark:hover { background: #2c313b; } .ds-btn-dark:focus-visible { outline: 2px solid #f2c200; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Everything else.",
+      "html": "<button class=\"ds-btn\">Add line</button>",
+      "css": ".ds-btn { height: 36px; padding: 0 14px; border-radius: 9px; border: 1px solid #c9cbd3; background: #fff; color: #1b1d22; font: 580 14.5px system-ui, sans-serif; cursor: pointer; } .ds-btn:hover { background: #f5f5f7; border-color: #5f6470; } .ds-btn:focus-visible { outline: 2px solid #f2c200; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Single-line fields and selects.",
+      "html": "<input class=\"ds-input\" placeholder=\"e.g. Diwali promo\">",
+      "css": ".ds-input { height: 38px; padding: 0 12px; border-radius: 9px; border: 1px solid #c9cbd3; background: #fff; color: #1b1d22; font: 14.5px system-ui, sans-serif; outline: none; width: 240px; } .ds-input:focus { border-color: #4a4e58; box-shadow: 0 0 0 3px rgba(255,216,61,.45); }"
+    },
+    {
+      "name": "Speaker Cue",
+      "kind": "custom",
+      "refersTo": "cue",
+      "description": "Signature: a highlighter swipe in the character's cast colour naming who speaks a line.",
+      "html": "<span class=\"ds-cue\">Riya</span> <span class=\"ds-cue ds-cue-green\">Arjun</span>",
+      "css": ".ds-cue { display: inline-flex; font: 600 11.5px/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: .06em; text-transform: uppercase; color: #1b1d22; padding: 5px 8px 4px; border-radius: 3px 6px 4px 7px; background: linear-gradient(100deg, transparent 0 2px, var(--cue, #ff9cc2) 2px calc(100% - 3px), transparent calc(100% - 3px)); transform: rotate(-.6deg); } .ds-cue-green { --cue: #7fe0a6; }"
+    },
+    {
+      "name": "Line State",
+      "kind": "chip",
+      "description": "Render state of a Studio line.",
+      "html": "<span class=\"ds-state ds-ready\">Ready</span> <span class=\"ds-state ds-stale\">Edited</span> <span class=\"ds-state\">New</span>",
+      "css": ".ds-state { font: 600 10.5px ui-monospace, Menlo, monospace; letter-spacing: .05em; text-transform: uppercase; padding: 3px 6px; border-radius: 5px; background: #f5f5f7; color: #5f6470; } .ds-ready { color: #1d7f55; background: #e2f4ea; } .ds-stale { color: #9a6400; background: #fff1d6; }"
+    },
+    {
+      "name": "Rail Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Booth rail; the active tool gets a lighter booth fill and a yellow icon.",
+      "html": "<nav class=\"ds-rail\"><a class=\"ds-nav ds-on\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\"><path d=\"M4 6h16M4 11h11M4 16h8\"/></svg>Text to Speech</a><a class=\"ds-nav\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\"><path d=\"M5 4h10l4 4v12H5z\"/></svg>Studio</a></nav>",
+      "css": ".ds-rail { background: #191c22; padding: 12px; width: 220px; display: flex; flex-direction: column; gap: 2px; } .ds-nav { display: flex; align-items: center; gap: 11px; padding: 8px 10px; border-radius: 9px; color: #a4a9b4; text-decoration: none; font: 540 14.5px system-ui, sans-serif; } .ds-nav:hover { background: #22262e; color: #ebe9e4; } .ds-on { background: #2c313b; color: #fff; } .ds-on svg { color: #ffd83d; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Script Desk",
+    "overview": "A dark booth frames white script pages on a cool grey desk. Every line visibly belongs to a speaker through a highlighter-coloured cue, with timecodes in the margin. Yellow is the action; cast colours are identity; state colours are small labels.",
+    "keyCharacteristics": ["Booth shell, paper work area", "Highlighter yellow primary", "Cast colours on cues only", "System sans + mono for cues and times", "Works offline, no web fonts"],
+    "rules": [
+      { "name": "The Highlighter Rule", "body": "Yellow means do this or this is yours; never a large background.", "section": "colors" },
+      { "name": "Cast colour is identity", "body": "A character keeps one colour everywhere in a project.", "section": "colors" },
+      { "name": "Mono is measurement", "body": "Mono only for cues, timecodes, durations and counts.", "section": "typography" }
+    ],
+    "dos": ["Show who speaks every line and whether it is rendered.", "Offer upload and record side by side wherever audio comes in."],
+    "donts": ["Don't add coloured side stripes to rows.", "Don't fake materials (vinyl grooves, paper texture, embossing).", "Don't load web fonts or CDN assets."]
+  }
+}

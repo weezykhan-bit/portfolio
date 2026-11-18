@@ -1,4 +1,5 @@
 data/
 .venv/
+Swara.app/
 __pycache__/
 *.pyc

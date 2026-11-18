@@ -96,3 +96,19 @@ def read_wav(path: Path) -> np.ndarray:
 
 def duration(wav: np.ndarray) -> float:
     return round(len(wav) / SAMPLE_RATE, 2)
+
+
+def tmp_path(suffix: str) -> Path:
+    import uuid
+
+    from .config import UPLOADS_DIR
+
+    return UPLOADS_DIR / f"tmp-{uuid.uuid4().hex}{suffix}"
+
+
+def to_srt_time(t: float, sep: str = ",") -> str:
+    ms = int(round(t * 1000))
+    h, ms = divmod(ms, 3_600_000)
+    m, ms = divmod(ms, 60_000)
+    s, ms = divmod(ms, 1000)
+    return f"{h:02d}:{m:02d}:{s:02d}{sep}{ms:03d}"

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Studio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23161513'/%3E%3Cg fill='%23ff6b2c'%3E%3Crect x='7' y='12' width='3' height='8' rx='1.5'/%3E%3Crect x='12' y='8' width='3' height='16' rx='1.5'/%3E%3Crect x='17' y='5' width='3' height='22' rx='1.5'/%3E%3Crect x='22' y='10' width='3' height='12' rx='1.5'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="brand-name">Voice Studio</span>
+    </div>
+    <nav class="nav">
+      <a href="#tts" data-view="tts" class="nav-item">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M17 15v6m-3-3h6"/></svg>
+        <span>Text to Speech</span>
+      </a>
+      <a href="#voices" data-view="voices" class="nav-item">
+        <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+        <span>Voices</span>
+      </a>
+      <a href="#history" data-view="history" class="nav-item">
+        <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg>
+        <span>History</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="local-badge"><span class="dot"></span>Running locally</div>
+      <div class="device" id="device">Detecting hardware…</div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <!-- ============ TEXT TO SPEECH ============ -->
+    <section class="view" id="view-tts">
+      <header class="view-head">
+        <div>
+          <h1>Text to Speech</h1>
+          <p class="sub">Type or paste a script, pick a voice, generate. Nothing leaves this computer.</p>
+        </div>
+      </header>
+
+      <div class="tts-grid">
+        <div class="card editor">
+          <textarea id="text" spellcheck="true" placeholder="Start typing here or paste any text you want to turn into lifelike speech…"></textarea>
+          <div class="editor-foot">
+            <div class="hint-row">
+              <button class="chip" data-sample="narration">Narration</button>
+              <button class="chip" data-sample="ad">Ad read</button>
+              <button class="chip" data-sample="story">Story</button>
+              <button class="chip" data-sample="hindi">हिंदी</button>
+            </div>
+            <div class="counter"><span id="charCount">0</span> / <span id="charMax">20,000</span></div>
+          </div>
+        </div>
+
+        <div class="card settings">
+          <label class="field-label">Voice</label>
+          <button class="voice-select" id="voiceSelect">
+            <span class="avatar" id="vsAvatar"></span>
+            <span class="vs-text">
+              <span class="vs-name" id="vsName">Choose a voice</span>
+              <span class="vs-meta" id="vsMeta"></span>
+            </span>
+            <svg class="chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+
+          <div id="cloneSettings" hidden>
+            <label class="field-label" for="language">Language</label>
+            <select id="language" class="select"></select>
+
+            <div class="slider">
+              <div class="slider-head"><label for="exaggeration">Expressiveness</label><output id="exaggerationOut"></output></div>
+              <input type="range" id="exaggeration" min="0.25" max="1.5" step="0.05" value="0.5">
+              <div class="slider-ends"><span>Calm</span><span>Dramatic</span></div>
+            </div>
+            <div class="slider">
+              <div class="slider-head"><label for="cfg">Pacing</label><output id="cfgOut"></output></div>
+              <input type="range" id="cfg" min="0.1" max="1" step="0.05" value="0.5">
+              <div class="slider-ends"><span>Slower</span><span>Faster</span></div>
+            </div>
+            <div class="slider">
+              <div class="slider-head"><label for="temperature">Variability</label><output id="temperatureOut"></output></div>
+              <input type="range" id="temperature" min="0.3" max="1.2" step="0.05" value="0.8">
+              <div class="slider-ends"><span>Consistent</span><span>Varied</span></div>
+            </div>
+          </div>
+
+          <div id="presetSettings">
+            <div class="slider">
+              <div class="slider-head"><label for="speed">Speed</label><output id="speedOut"></output></div>
+              <input type="range" id="speed" min="0.6" max="1.6" step="0.05" value="1">
+              <div class="slider-ends"><span>Slower</span><span>Faster</span></div>
+            </div>
+          </div>
+
+          <details class="advanced">
+            <summary>Advanced</summary>
+            <label class="field-label" for="seed">Seed <span class="muted">(same seed + settings = same take)</span></label>
+            <input type="number" id="seed" class="input" placeholder="Random" min="0">
+            <button class="link-btn" id="resetSettings">Reset to defaults</button>
+          </details>
+
+          <div class="gen-wrap">
+            <button class="btn btn-primary btn-lg" id="generateBtn">
+              <span class="btn-label">Generate speech</span>
+              <kbd id="kbdHint">Ctrl ↵</kbd>
+            </button>
+            <div class="progress" id="progress" hidden>
+              <div class="progress-bar"><div id="progressFill"></div></div>
+              <div class="progress-row">
+                <span id="progressText">Starting…</span>
+                <button class="link-btn" id="cancelBtn">Cancel</button>
+              </div>
+            </div>
+            <p class="est" id="estimate"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="recent">
+        <div class="section-head"><h2>Recent</h2><a href="#history" class="link-btn">View all</a></div>
+        <div class="history-list" id="recentList"></div>
+      </div>
+    </section>
+
+    <!-- ============ VOICES ============ -->
+    <section class="view" id="view-voices" hidden>
+      <header class="view-head">
+        <div>
+          <h1>Voices</h1>
+          <p class="sub">Clone a voice from a short recording, or use one of the built-in voices.</p>
+        </div>
+        <button class="btn btn-primary" id="addVoiceBtn">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Add voice
+        </button>
+      </header>
+
+      <div class="section-head"><h2>My voices</h2><span class="muted" id="myCount"></span></div>
+      <div class="voice-grid" id="myVoices"></div>
+
+      <div class="section-head">
+        <h2>Built-in voices</h2>
+        <div class="seg" id="presetFilter"></div>
+      </div>
+      <div class="voice-grid" id="presetVoices"></div>
+    </section>
+
+    <!-- ============ HISTORY ============ -->
+    <section class="view" id="view-history" hidden>
+      <header class="view-head">
+        <div>
+          <h1>History</h1>
+          <p class="sub">Every generation is saved on this computer. Download as WAV or MP3.</p>
+        </div>
+        <input type="search" class="input search" id="historySearch" placeholder="Search text or voice…">
+      </header>
+      <div class="history-list" id="historyList"></div>
+    </section>
+  </main>
+</div>
+
+<!-- ============ PLAYER ============ -->
+<footer class="player" id="player" hidden>
+  <button class="play-btn" id="playBtn" aria-label="Play">
+    <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <svg class="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+  </button>
+  <div class="player-info">
+    <div class="player-title" id="playerTitle"></div>
+    <div class="player-sub" id="playerSub"></div>
+  </div>
+  <div class="wave-wrap">
+    <span class="time" id="timeCur">0:00</span>
+    <canvas id="wave" height="40"></canvas>
+    <span class="time" id="timeDur">0:00</span>
+  </div>
+  <div class="player-actions">
+    <a class="icon-btn" id="dlWav" title="Download WAV" download>WAV</a>
+    <a class="icon-btn" id="dlMp3" title="Download MP3" download>MP3</a>
+    <button class="icon-btn close" id="playerClose" aria-label="Close player">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+</footer>
+
+<!-- ============ VOICE PICKER ============ -->
+<div class="modal" id="pickerModal" hidden>
+  <div class="modal-card picker">
+    <div class="modal-head">
+      <h3>Select a voice</h3>
+      <button class="icon-btn close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <input type="search" class="input" id="pickerSearch" placeholder="Search voices…">
+    <div class="picker-list" id="pickerList"></div>
+  </div>
+</div>
+
+<!-- ============ ADD VOICE ============ -->
+<div class="modal" id="addModal" hidden>
+  <div class="modal-card add">
+    <div class="modal-head">
+      <h3>Clone a voice</h3>
+      <button class="icon-btn close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="upload" role="tab">Upload audio</button>
+      <button class="tab" data-tab="record" role="tab">Record</button>
+    </div>
+
+    <div class="tab-panel" id="tab-upload">
+      <label class="drop" id="drop">
+        <input type="file" id="fileInput" accept="audio/*,.wav,.mp3,.m4a,.ogg,.flac,.webm,.aac" hidden>
+        <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0-4 4m4-4 4 4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        <strong>Drop an audio file or click to browse</strong>
+        <span>WAV, MP3, M4A, OGG or FLAC · 10–30 seconds of one person speaking</span>
+      </label>
+    </div>
+
+    <div class="tab-panel" id="tab-record" hidden>
+      <div class="script-box">
+        <span class="muted">Read this aloud in your natural voice:</span>
+        <p id="readScript">The quick morning light spread across the quiet city. I made a cup of tea, opened my notebook, and started planning the day ahead. Some days are busy and loud, others are calm and slow, but every one of them starts with a single step.</p>
+      </div>
+      <div class="rec-row">
+        <button class="rec-btn" id="recBtn"><span class="rec-dot"></span><span id="recLabel">Start recording</span></button>
+        <div class="meter"><div id="meterFill"></div></div>
+        <span class="time" id="recTime">0:00</span>
+      </div>
+    </div>
+
+    <div class="sample-preview" id="samplePreview" hidden>
+      <button class="play-btn sm" id="samplePlay" aria-label="Play sample">
+        <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+      </button>
+      <canvas id="sampleWave" height="36"></canvas>
+      <span class="time" id="sampleDur"></span>
+      <button class="icon-btn" id="sampleClear" title="Remove sample" aria-label="Remove sample"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <ul class="quality" id="quality"></ul>
+
+    <div class="form-grid">
+      <div>
+        <label class="field-label" for="voiceName">Name</label>
+        <input class="input" id="voiceName" maxlength="60" placeholder="e.g. My narration voice">
+      </div>
+      <div>
+        <label class="field-label" for="voiceLang">Language spoken</label>
+        <select class="select" id="voiceLang"></select>
+      </div>
+    </div>
+    <label class="field-label" for="voiceDesc">Description <span class="muted">(optional)</span></label>
+    <input class="input" id="voiceDesc" maxlength="240" placeholder="Warm, calm, mid-30s…">
+
+    <label class="consent">
+      <input type="checkbox" id="consent">
+      <span>This is my voice, or I have the speaker's permission to clone it.</span>
+    </label>
+
+    <div class="modal-foot">
+      <button class="btn" data-close>Cancel</button>
+      <button class="btn btn-primary" id="saveVoice" disabled>Save voice</button>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<audio id="audio" preload="auto"></audio>
+<audio id="previewAudio" preload="none"></audio>
+<script src="app.js"></script>
+</body>
+</html>

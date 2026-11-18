@@ -6,7 +6,7 @@
   --border-strong: #d3cfc6;
   --text: #191816;
   --muted: #6e6a62;
-  --faint: #9a958b;
+  --faint: #716d66;
   --ink: #191816;
   --ink-text: #ffffff;
   --accent: #f0571b;
@@ -30,7 +30,7 @@
   --border-strong: #3b3a36;
   --text: #edece8;
   --muted: #a19d94;
-  --faint: #77736b;
+  --faint: #8f8b81;
   --ink: #f3f1ec;
   --ink-text: #141413;
   --accent: #ff6b2c;
@@ -54,7 +54,7 @@ button { cursor: pointer; }
 [hidden] { display: none !important; }
 h1 { font-size: 26px; line-height: 1.2; letter-spacing: -.02em; margin: 0; font-weight: 650; }
 h2 { font-size: 15px; margin: 0; font-weight: 620; }
-h3 { font-size: 17px; margin: 0; font-weight: 620; }
+h3, .modal-head h2 { font-size: 17px; margin: 0; font-weight: 620; }
 .muted { color: var(--muted); font-weight: 400; }
 kbd { font: 11px var(--mono); padding: 2px 6px; border-radius: 5px; background: rgba(255,255,255,.14); }
 

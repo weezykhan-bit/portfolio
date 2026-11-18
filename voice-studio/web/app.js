@@ -290,7 +290,7 @@
       const wrap = document.createElement("div");
       wrap.className = "modal";
       wrap.innerHTML = `<div class="modal-card" style="width:min(420px,100%)">
-        <div class="modal-head"><h3>${esc(title)}</h3></div>
+        <div class="modal-head"><h2>${esc(title)}</h2></div>
         ${body ? `<p class="muted" style="margin:0 0 6px">${esc(body)}</p>` : ""}
         ${input != null ? `<input class="input" value="${esc(input)}" maxlength="60">` : ""}
         <div class="modal-foot"><button class="btn" data-x>Cancel</button><button class="btn btn-primary ${danger ? "btn-danger" : ""}" data-ok>${esc(confirm)}</button></div></div>`;

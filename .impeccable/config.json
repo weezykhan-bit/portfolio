@@ -2,34 +2,6 @@
   "detector": {
     "ignoreRules": [],
     "ignoreFiles": [],
-    "ignoreValues": [
-      {
-        "rule": "design-system-font",
-        "value": "sf pro text",
-        "files": [
-          "swara/web/index.html"
-        ],
-        "createdAt": "2026-11-18T17:07:01.517Z",
-        "reason": "claude: DESIGN.md documents the portfolio site; voice-studio is a separate offline app that uses system font stacks so it never loads web fonts"
-      },
-      {
-        "rule": "design-system-font",
-        "value": "sf mono",
-        "files": [
-          "swara/web/index.html"
-        ],
-        "createdAt": "2026-11-18T17:07:01.525Z",
-        "reason": "claude: DESIGN.md documents the portfolio site; voice-studio is a separate offline app that uses system font stacks so it never loads web fonts"
-      },
-      {
-        "rule": "marquee",
-        "value": "*",
-        "files": [
-          "swara/web/index.html"
-        ],
-        "createdAt": "2026-11-18T17:07:01.533Z",
-        "reason": "claude: the only infinite animation is the indeterminate progress bar shown while audio renders; no auto-scrolling content exists"
-      }
-    ]
+    "ignoreValues": []
   }
 }

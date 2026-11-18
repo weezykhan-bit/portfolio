@@ -365,10 +365,10 @@ details.more[open] summary svg { transform: rotate(90deg); }
 .tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .vcard-actions { display: flex; align-items: center; gap: 4px; margin-top: auto; }
 .vcard-actions .spacer { flex: 1; }
-.add-tile { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; padding: 18px; min-height: 152px; border: 1.5px dashed var(--rule-strong); border-radius: var(--r-lg); background: none; text-align: left; color: var(--ink-3); }
+.add-tile { display: flex; align-items: center; gap: 14px; padding: 18px; min-height: 152px; border: 1.5px dashed var(--rule-strong); border-radius: var(--r-lg); background: none; text-align: left; color: var(--ink-3); }
 .add-tile:hover { border-color: var(--ink-2); color: var(--ink-2); }
-.add-tile strong { color: var(--ink); font-size: 15px; }
-.add-tile .plus { width: 34px; height: 34px; border-radius: 50%; background: var(--hl); color: var(--hl-ink); display: grid; place-items: center; margin-bottom: 4px; }
+.add-tile strong { display: block; color: var(--ink); font-size: 15px; margin-bottom: 2px; }
+.add-tile .plus { width: 34px; height: 34px; border-radius: 50%; background: var(--hl); color: var(--hl-ink); display: grid; place-items: center; flex: none; }
 
 /* =============== pronunciations =============== */
 .lex { display: grid; grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1.4fr) auto auto; gap: 10px; align-items: center; padding: 8px 14px; border-top: 1px solid var(--rule); }

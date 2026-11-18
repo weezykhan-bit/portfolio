@@ -22,7 +22,7 @@
   function renderVoices() {
     const clones = SW.state.voices.clones;
     $("#myCount").textContent = clones.length ? `${clones.length} saved` : "";
-    $("#myVoices").innerHTML = `<button class="add-tile" data-add-voice><span class="plus">${SW.ICON.plus}</span><strong>Clone a voice</strong><span>Upload or record 10–30 seconds</span></button>` + clones.map(card).join("");
+    $("#myVoices").innerHTML = `<button class="add-tile" data-add-voice><span class="plus">${SW.ICON.plus}</span><span><strong>Clone a voice</strong>Upload or record 10–30 seconds</span></button>` + clones.map(card).join("");
     const langs = { all: "All", ...SW.state.voices.preset_languages };
     $("#presetFilter").innerHTML = Object.entries(langs).map(([k, n]) => `<button data-f="${k}" class="${filter === k ? "active" : ""}">${esc(n)}</button>`).join("");
     $("#presetVoices").innerHTML = SW.state.voices.presets.filter((v) => filter === "all" || v.lang_code === filter).map(card).join("");

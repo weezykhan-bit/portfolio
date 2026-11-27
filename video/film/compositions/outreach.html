@@ -1,0 +1,71 @@
+<template>
+  <style>
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-ext-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    #root{position:absolute;inset:0;overflow:hidden;background:#F3F3EF;color:#0D1B2E;font-family:'Schibsted Grotesk',sans-serif;font-variant-numeric:tabular-nums lining-nums}
+    #root *{box-sizing:border-box;margin:0}
+    #root .abs{position:absolute}
+    #root .cap{font-weight:600;font-size:30px;letter-spacing:.08em;text-transform:uppercase;color:#475266}
+    #root .line{font-weight:600;font-size:46px;letter-spacing:-.015em;line-height:1.15;color:#0D1B2E}
+    #root .fig{font-weight:800;letter-spacing:-.05em;line-height:.88;white-space:nowrap}
+    #root .ver{color:#C9381C}
+
+    #or-head{left:84px;right:84px;top:120px;height:92px;background:#0D1B2E;color:#F3F3EF;display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+    #or-head span{font-weight:700;font-size:32px;letter-spacing:.08em;text-transform:uppercase;position:relative;white-space:nowrap}
+    #or-head span+span{color:#A7B2C4;font-weight:600}
+    #or-head i{font-style:normal}
+    #or-head b{font-weight:inherit;position:absolute;top:0;white-space:nowrap}
+    #or-grid{left:260px;top:300px;width:560px;height:560px;display:grid;grid-template-columns:repeat(5,104px);gap:10px}
+    #or-grid i{display:block;width:104px;height:104px;background:#E7E7E1;border:1.5px solid #C8CAD0}
+
+    #or-grid i{background:#0D1B2E;border-color:#0D1B2E}
+    #or-dots{left:84px;top:290px;width:912px;height:600px}
+    #or-b{left:74px;top:920px;font-size:180px}
+    #or-b small{font-size:.34em;letter-spacing:-.02em;margin-left:.14em}
+    #or-b-l{left:84px;top:1112px;width:900px}
+    #or-n{left:74px;top:920px;font-size:180px;font-variant-numeric:proportional-nums lining-nums}
+    #or-n-l{left:84px;top:1112px;width:900px}
+  </style>
+  <div id="root" data-composition-id="outreach" data-width="1080" data-height="1350">
+    <div id="or-head" class="abs"><span><i id="or-h1">Studio · Swastik Bhoomi</i><b id="or-h2" style="left:0">Outreach · one dot per contact</b></span><span><i id="or-h3">Umargaon</i></span></div>
+    <canvas id="or-dots" class="abs" width="912" height="600"></canvas>
+    <div id="or-grid" class="abs">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div id="or-b" class="abs fig ver">₹10<small>Cr+</small></div>
+    <div id="or-b-l" class="abs line">Annual studio revenue mandate</div>
+    <div id="or-n" class="abs fig ver"><span id="or-c">3,000</span>+</div>
+    <div id="or-n-l" class="abs line">Industry decision-makers reached</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#or-h1, #or-h3", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.15 }, 0.15);
+    tl.fromTo("#or-h2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, 0.3);
+    tl.fromTo("#or-b, #or-b-l", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in" }, 0.2);
+    tl.fromTo("#or-grid i", { scale: 1, opacity: 1 }, { scale: 0.04, opacity: 0, duration: 0.45, ease: "power3.in", stagger: { each: 0.012, from: "center" } }, 0.3);
+    // dots: 60 x 50 = 3000, seeded order
+    const cv = document.getElementById("or-dots"), ctx = cv.getContext("2d");
+    const COLS = 60, ROWS = 50, N = COLS * ROWS, dx = 912 / COLS, dy = 600 / ROWS;
+    let s = 20141; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    const idx = Array.from({ length: N }, (_, i) => i);
+    for (let i = N - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
+    // dots nearest the grid centre come first
+    const cx = 456, cy = 300;
+    const key = new Float64Array(N);
+    for (let i = 0; i < N; i++) key[i] = Math.hypot((i % COLS) * dx - cx, Math.floor(i / COLS) * dy - cy) + rnd() * 140;
+    idx.sort((a, b) => key[a] - key[b]);
+    const p = { v: 0 };
+    const draw = () => {
+      ctx.clearRect(0, 0, 912, 600); ctx.fillStyle = "#0D1B2E";
+      const k = Math.round(p.v);
+      for (let i = 0; i < k; i++) { const d = idx[i]; ctx.beginPath(); ctx.arc((d % COLS) * dx + dx / 2, Math.floor(d / COLS) * dy + dy / 2, 3.4, 0, 6.2832); ctx.fill(); }
+      document.getElementById("or-c").textContent = (Math.floor(k / 10) * 10).toLocaleString("en-US");
+    };
+    tl.fromTo(p, { v: 0 }, { v: N, duration: 1.9, ease: "power1.inOut", onUpdate: draw }, 0.55);
+    tl.fromTo("#or-n", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.6);
+    tl.fromTo("#or-n-l", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, 2.5);
+    // clear the page for the career rule
+    tl.to("#or-dots, #or-n, #or-n-l", { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 4.95);
+    window.__timelines["outreach"] = tl;
+  </script>
+</template>

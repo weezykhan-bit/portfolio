@@ -1,0 +1,70 @@
+<template>
+  <style>
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-ext-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    #root{position:absolute;inset:0;overflow:hidden;background:#F3F3EF;color:#0D1B2E;font-family:'Schibsted Grotesk',sans-serif;font-variant-numeric:tabular-nums lining-nums}
+    #root *{box-sizing:border-box;margin:0}
+    #root .abs{position:absolute}
+    #root .cap{font-weight:600;font-size:30px;letter-spacing:.08em;text-transform:uppercase;color:#475266}
+    #root .line{font-weight:600;font-size:46px;letter-spacing:-.015em;line-height:1.15;color:#0D1B2E}
+    #root .fig{font-weight:800;letter-spacing:-.05em;line-height:.88;white-space:nowrap}
+    #root .ver{color:#C9381C}
+
+    #cr-head{left:84px;right:84px;top:120px;height:92px;background:#0D1B2E;color:#F3F3EF;display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+    #cr-head span{font-weight:700;font-size:32px;letter-spacing:.08em;text-transform:uppercase;position:relative;white-space:nowrap}
+    #cr-head span+span{color:#A7B2C4;font-weight:600}
+    #cr-head i{font-style:normal}
+    #cr-head b{font-weight:inherit;position:absolute;top:0;white-space:nowrap}
+    #cr-grid{left:260px;top:300px;width:560px;height:560px;display:grid;grid-template-columns:repeat(5,104px);gap:10px}
+    #cr-grid i{display:block;width:104px;height:104px;background:#E7E7E1;border:1.5px solid #C8CAD0}
+
+    #cr-yrs{left:74px;top:270px;font-size:200px}
+    #cr-yrs small{font-size:.34em;letter-spacing:-.02em;margin-left:.14em}
+    #cr-yrs-l{left:84px;top:458px}
+    #cr-roles{left:84px;top:580px;width:912px}
+    #root .role{display:flex;gap:28px;height:68px;align-items:baseline;font-size:42px;font-weight:700;letter-spacing:-.015em}
+    #root .role em{font-style:normal;font-weight:600;font-size:34px;color:#475266;width:110px}
+    #cr-axis{left:84px;top:960px;width:912px;height:3px;background:#0D1B2E}
+    #root .tick{position:absolute;top:948px;width:2px;height:14px;background:#0D1B2E}
+    #root .tl{position:absolute;top:984px;font-weight:600;font-size:30px;color:#475266;transform:translateX(-50%)}
+    #cr-head-pt{position:absolute;left:0;top:924px;width:6px;height:72px;margin-left:-3px;background:#C9381C}
+    #cr-flood{position:absolute;left:996px;top:960px;width:3400px;height:3400px;margin:-1700px 0 0 -1700px;border-radius:50%;background:#0D1B2E}
+  </style>
+  <div id="root" data-composition-id="career" data-width="1080" data-height="1350">
+    <div id="cr-head" class="abs"><span><i id="cr-h1">Outreach · one dot per contact</i><b id="cr-h2" style="left:0">Career · Mar 2014 – present</b></span><span><i id="cr-h3">&nbsp;</i></span></div>
+    <div id="cr-yrs" class="abs fig">12+<small>years</small></div>
+    <div id="cr-yrs-l" class="abs line">In media and entertainment</div>
+    <div id="cr-roles" class="abs">
+      <div class="role" id="cr-r1"><em>2014</em>Production Coordinator</div>
+      <div class="role" id="cr-r2"><em>2020</em>Executive Producer</div>
+      <div class="role" id="cr-r3"><em>2022</em>Deputy Commercial Manager</div>
+      <div class="role ver" id="cr-r4"><em>2024</em>Head of Commercial</div>
+    </div>
+    <div id="cr-axis" class="abs"></div>
+    <div id="cr-ticks"></div>
+    <div id="cr-head-pt"></div>
+    <div id="cr-flood"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const X = (y) => 84 + (y - 2014) * 76;
+    const tk = document.getElementById("cr-ticks");
+    for (let y = 2014; y <= 2026; y++) {
+      const t = document.createElement("div"); t.className = "tick"; t.style.left = (X(y) - 1) + "px"; tk.appendChild(t);
+      if (y % 4 === 2) { const l = document.createElement("div"); l.className = "tl"; l.style.left = X(y) + "px"; l.textContent = y; tk.appendChild(l); }
+    }
+    tl.fromTo("#cr-h1", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.15 }, 0);
+    tl.fromTo("#cr-h2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, 0.12);
+    tl.fromTo("#cr-yrs", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.22, ease: "power4.out" }, 0.1);
+    tl.fromTo("#cr-yrs-l", { opacity: 0, color: "#C8CAD0" }, { opacity: 1, color: "#0D1B2E", duration: 0.35 }, 0.35);
+    tl.fromTo("#cr-axis", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.6, ease: "expo.out" }, 0.25);
+    tl.fromTo(".tick, .tl", { opacity: 0 }, { opacity: 1, duration: 0.12, stagger: 0.02 }, 0.35);
+    const T0 = 0.8, T1 = 3.6, tAt = (y) => T0 + (T1 - T0) * (y - 2014) / 12;
+    tl.fromTo("#cr-head-pt", { x: X(2014) }, { x: X(2026), duration: T1 - T0, ease: "none" }, T0);
+    [[1, 2014], [2, 2020], [3, 2022], [4, 2024]].forEach(([i, y]) => {
+      tl.fromTo(`#cr-r${i}`, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, tAt(y));
+    });
+    tl.fromTo("#cr-flood", { scale: 0 }, { scale: 1, duration: 0.6, ease: "power2.inOut" }, 4.5);
+    window.__timelines["career"] = tl;
+  </script>
+</template>

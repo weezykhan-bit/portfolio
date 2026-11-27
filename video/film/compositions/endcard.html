@@ -1,0 +1,45 @@
+<template>
+  <style>
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-ext-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    #root{position:absolute;inset:0;overflow:hidden;background:#F3F3EF;color:#0D1B2E;font-family:'Schibsted Grotesk',sans-serif;font-variant-numeric:tabular-nums lining-nums}
+    #root *{box-sizing:border-box;margin:0}
+    #root .abs{position:absolute}
+    #root .cap{font-weight:600;font-size:30px;letter-spacing:.08em;text-transform:uppercase;color:#475266}
+    #root .line{font-weight:600;font-size:46px;letter-spacing:-.015em;line-height:1.15;color:#0D1B2E}
+    #root .fig{font-weight:800;letter-spacing:-.05em;line-height:.88;white-space:nowrap}
+    #root .ver{color:#C9381C}
+
+    #root{background:#0D1B2E;color:#F3F3EF;font-variant-numeric:normal}
+    #ec-rule{left:84px;top:392px;width:120px;height:8px;background:#FF7A5C}
+    #ec-name{left:80px;top:432px;font-size:138px;color:#F3F3EF}
+    #ec-name span{display:inline-block}
+    #ec-title{left:84px;top:600px;width:912px;font-weight:600;font-size:52px;line-height:1.2;letter-spacing:-.015em;color:#A7B2C4}
+    #ec-hr{left:84px;top:790px;width:912px;height:1.5px;background:#2A3D5B}
+    #ec-mail-c,#ec-li-c{color:#A7B2C4}
+    #ec-mail-c{left:84px;top:836px}
+    #ec-mail{left:84px;top:880px;font-weight:700;font-size:50px;letter-spacing:-.015em}
+    #ec-li-c{left:84px;top:984px}
+    #ec-li{left:84px;top:1028px;font-weight:700;font-size:40px;letter-spacing:-.015em}
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1080" data-height="1350">
+    <div id="ec-rule" class="abs"></div>
+    <div id="ec-name" class="abs fig"><span>F</span><span>o</span><span>w</span><span>z</span><span>a</span><span>n</span><span>&nbsp;</span><span>K</span><span>h</span><span>a</span><span>n</span></div>
+    <div id="ec-title" class="abs">Head of Commercial,<br>Media &amp; Entertainment</div>
+    <div id="ec-hr" class="abs"></div>
+    <div id="ec-mail-c" class="abs cap">Email</div>
+    <div id="ec-mail" class="abs">khanfowzan28@gmail.com</div>
+    <div id="ec-li-c" class="abs cap">LinkedIn</div>
+    <div id="ec-li" class="abs">linkedin.com/in/fowzan-khan-89903a42</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ec-rule", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 0.15);
+    tl.fromTo("#ec-name span", { opacity: 0.0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, stagger: 0.06, ease: "power4.out" }, 0.25);
+    tl.fromTo("#ec-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 1.15);
+    tl.fromTo("#ec-hr", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.6, ease: "expo.out" }, 1.5);
+    tl.fromTo("#ec-mail-c, #ec-mail", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, stagger: 0.07, ease: "power4.out" }, 1.75);
+    tl.fromTo("#ec-li-c, #ec-li", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, stagger: 0.07, ease: "power4.out" }, 2.0);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>

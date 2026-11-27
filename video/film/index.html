@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1350" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1350px; overflow: hidden; background: #F3F3EF; }
+      #root { position: relative; width: 1080px; height: 1350px; background: #F3F3EF; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1350">
+      <div id="callsheet" data-composition-id="callsheet" data-composition-src="compositions/callsheet.html" data-start="0" data-duration="5.4" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1350"></div>
+      <div id="ledger" data-composition-id="ledger" data-composition-src="compositions/ledger.html" data-start="5.4" data-duration="5.2" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1350"></div>
+      <div id="studio" data-composition-id="studio" data-composition-src="compositions/studio.html" data-start="10.6" data-duration="6.8" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1350"></div>
+      <div id="outreach" data-composition-id="outreach" data-composition-src="compositions/outreach.html" data-start="17.4" data-duration="5.2" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1350"></div>
+      <div id="career" data-composition-id="career" data-composition-src="compositions/career.html" data-start="22.6" data-duration="5.2" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1350"></div>
+      <div id="endcard" data-composition-id="endcard" data-composition-src="compositions/endcard.html" data-start="27.8" data-duration="6.2" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1350"></div>
+      <audio id="sfx-key1" class="clip" src="assets/sfx/key-press.mp3" data-start="0.56" data-duration="0.43" data-track-index="10" data-volume="2.5"></audio>
+      <audio id="sfx-key2" class="clip" src="assets/sfx/click-soft.mp3" data-start="1.0" data-duration="0.36" data-track-index="10" data-volume="1.2"></audio>
+      <audio id="sfx-key3" class="clip" src="assets/sfx/key-press.mp3" data-start="1.44" data-duration="0.43" data-track-index="10" data-volume="2.5"></audio>
+      <audio id="sfx-six" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="3.46" data-duration="2.1" data-track-index="10" data-volume="0.35"></audio>
+      <audio id="sfx-rule" class="clip" src="assets/sfx/pop.mp3" data-start="6.91" data-duration="0.7" data-track-index="10" data-volume="1.4"></audio>
+      <audio id="sfx-total" class="clip" src="assets/sfx/impact-bass-2.mp3" data-start="8.91" data-duration="2.5" data-track-index="10" data-volume="0.3"></audio>
+      <audio id="sfx-whip" class="clip" src="assets/sfx/whoosh.mp3" data-start="10.42" data-duration="0.57" data-track-index="11" data-volume="0.8"></audio>
+      <audio id="sfx-acres" class="clip" src="assets/sfx/pop.mp3" data-start="12.76" data-duration="0.7" data-track-index="10" data-volume="1.4"></audio>
+      <audio id="sfx-ten" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="15.06" data-duration="2.1" data-track-index="10" data-volume="0.3"></audio>
+      <audio id="sfx-dots" class="clip" src="assets/sfx/pop.mp3" data-start="19.76" data-duration="0.7" data-track-index="10" data-volume="1.4"></audio>
+      <audio id="sfx-rise" class="clip" src="assets/sfx/riser.mp3" data-start="24.26" data-duration="4.3" data-track-index="10" data-volume="0.6" data-fade-out="0.6"></audio>
+      <audio id="sfx-head" class="clip" src="assets/sfx/key-press.mp3" data-start="25.69" data-duration="0.43" data-track-index="11" data-volume="2.5"></audio>
+      <audio id="sfx-end" class="clip" src="assets/sfx/impact-bass-2.mp3" data-start="27.72" data-duration="2.5" data-track-index="11" data-volume="0.35"></audio>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

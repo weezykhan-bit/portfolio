@@ -1,0 +1,68 @@
+<template>
+  <style>
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Schibsted Grotesk';font-weight:400 900;src:url('assets/fonts/schibsted-grotesk-normal-ext-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    #root{position:absolute;inset:0;overflow:hidden;background:#F3F3EF;color:#0D1B2E;font-family:'Schibsted Grotesk',sans-serif;font-variant-numeric:tabular-nums lining-nums}
+    #root *{box-sizing:border-box;margin:0}
+    #root .abs{position:absolute}
+    #root .cap{font-weight:600;font-size:30px;letter-spacing:.08em;text-transform:uppercase;color:#475266}
+    #root .line{font-weight:600;font-size:46px;letter-spacing:-.015em;line-height:1.15;color:#0D1B2E}
+    #root .fig{font-weight:800;letter-spacing:-.05em;line-height:.88;white-space:nowrap}
+    #root .ver{color:#C9381C}
+
+    #lg-head{left:84px;right:84px;top:120px;height:92px;background:#0D1B2E;color:#F3F3EF;display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+    #lg-head span{font-weight:700;font-size:32px;letter-spacing:.08em;text-transform:uppercase}
+    #lg-head span+span{color:#A7B2C4;font-weight:600}
+    #lg-head .sw{position:relative}
+    #lg-head .sw b{font-weight:inherit;position:absolute;right:0;top:0;white-space:nowrap}
+    #lg-rows{left:84px;top:250px;width:912px}
+    #root .row{height:100px;border-bottom:1.5px solid #C8CAD0;display:flex;align-items:center;position:relative}
+    #root .row .nm{font-weight:700;font-size:48px;letter-spacing:-.02em;width:520px}
+    #root .row .nw{font-weight:600;font-size:34px;color:#475266}
+    #root .row .st{position:absolute;right:6px;font-weight:800;font-size:26px;letter-spacing:.1em;border:3px solid #0D1B2E;padding:6px 12px 4px;color:#0D1B2E;transform:rotate(-5deg)}
+    #lg-six{left:70px;top:236px;font-size:420px}
+    #lg-six-l{left:84px;top:636px;width:860px}
+    #lg-six-tag{left:228px;top:254px;font-weight:700;font-size:44px;letter-spacing:-.015em}
+    #lg-rule{left:84px;top:822px;width:912px;height:10px;border-top:3px solid #0D1B2E;border-bottom:3px solid #0D1B2E}
+    #lg-tot-l{left:84px;top:870px}
+    #lg-tot{left:74px;top:924px;font-size:230px}
+    #lg-tot small{font-size:.36em;letter-spacing:-.02em;margin-left:.12em}
+  </style>
+  <div id="root" data-composition-id="ledger" data-width="1080" data-height="1350">
+    <div id="lg-sheet" class="abs" style="inset:0">
+      <div id="lg-head" class="abs"><span class="sw"><i id="lg-h1" style="font-style:normal">Call sheet</i><b id="lg-h2" style="right:auto;left:0">Production P&amp;L</b></span><span>On air · 2024–now</span></div>
+      <div id="lg-rows" class="abs">
+        <div class="row"><span class="nm">Shiv Shakti</span><span class="nw">Colors</span><span class="st">On air</span></div>
+        <div class="row"><span class="nm">Laxmi Narayan</span><span class="nw">Colors</span><span class="st">On air</span></div>
+        <div class="row"><span class="nm">Ramayan</span><span class="nw">Sony</span><span class="st">On air</span></div>
+        <div class="row"><span class="nm">Vanshaj</span><span class="nw">Sony</span><span class="st">On air</span></div>
+        <div class="row"><span class="nm">Veer Hanuman</span><span class="nw">SAB</span><span class="st">On air</span></div>
+        <div class="row"><span class="nm">Tu Dil Mai Dhadkan</span><span class="nw">Star Plus</span><span class="st">On air</span></div>
+      </div>
+      <div id="lg-six" class="abs fig ver">6+</div>
+      <div id="lg-six-tag" class="abs">properties at once</div>
+      <div id="lg-six-l" class="abs line">Prime-time and digital<br>properties at once</div>
+      <div id="lg-rule" class="abs"></div>
+      <div id="lg-tot-l" class="abs cap">Annual production P&amp;L controlled</div>
+      <div id="lg-tot" class="abs fig ver">₹<span id="lg-n">120</span><small>Cr+</small></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#lg-rows", { y: 560, scale: 0.6, opacity: 0.3, transformOrigin: "0 0" }, { y: 80, scale: 0.85, opacity: 1, duration: 0.8, ease: "power2.inOut" }, 0.35);
+    tl.fromTo("#lg-six-l", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 0.15);
+    tl.fromTo("#lg-six", { scale: 1, color: "#C9381C", transformOrigin: "0 0" }, { scale: 0.2, x: 14, y: 14, color: "#0D1B2E", duration: 0.7, ease: "power2.inOut" }, 0.3);
+    tl.fromTo("#lg-six-tag", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, 0.95);
+    tl.fromTo("#lg-h1", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.15 }, 0.3);
+    tl.fromTo("#lg-h2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15 }, 0.42);
+    tl.fromTo(".row .st", { opacity: 1 }, { opacity: 0, duration: 0.2, stagger: 0.04 }, 0.9);
+    tl.fromTo("#lg-rule", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 1.6);
+    tl.fromTo("#lg-tot-l", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, 1.9);
+    tl.fromTo("#lg-tot", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 2.1);
+    const n = { v: 0 };
+    tl.fromTo(n, { v: 0 }, { v: 120, duration: 1.4, ease: "power2.out", onUpdate: () => { document.getElementById("lg-n").textContent = Math.round(n.v); } }, 2.1);
+    // whip out
+    tl.fromTo("#lg-sheet", { y: 0, filter: "blur(0px)" }, { y: -520, filter: "blur(14px)", duration: 0.35, ease: "power3.in" }, 4.85);
+    window.__timelines["ledger"] = tl;
+  </script>
+</template>

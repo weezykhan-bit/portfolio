@@ -1,2 +1,9 @@
 .impeccable/review/
 .impeccable/questions/
+shots/
+.taste-skill/chrome-*/
+.taste-skill/consistency/
+.taste-skill/gate/
+.taste-skill/found.json
+.taste-skill/gate.json
+.taste-skill/build.done.json

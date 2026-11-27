@@ -1,0 +1,22 @@
+{
+  "palettes": [
+    "rose-grey-green",
+    "rose-grey-green"
+  ],
+  "types": [
+    "instrument",
+    "newsreader"
+  ],
+  "dealt": [
+    "instrument",
+    "newsreader",
+    "literata"
+  ],
+  "moments": [
+    {
+      "id": "word-highlight",
+      "at": "2026-11-27T15:17:35.748Z",
+      "seed": "fc58d415"
+    }
+  ]
+}

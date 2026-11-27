@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-27T15:57:16.467Z",
+        "reason": "Claude triage: the tasteskill kit's .rows lists close each row with a 1px rule and inset their text vertically (16px gap visible in the 1440 and 390 screenshots); the flagged sections are full-bleed grounds whose .wrap supplies 80px/24px gutters. Static detector misses both."
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-27T15:57:23.083Z",
+        "reason": "Claude triage: dead .ly-live rule in the tasteskill kit's layout.css; no .ly-live element on the page, so nothing pulses."
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-27T15:57:23.091Z",
+        "reason": "Claude triage: dead rule in the tasteskill kit's backgrounds.css; the page sets no ground class, so no halo renders on this light, flat page."
+      }
+    ]
+  }
+}

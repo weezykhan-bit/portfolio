@@ -2,7 +2,7 @@
 
 Personal portfolio website of Fowzan Khan, Head of Commercial, Media & Entertainment.
 
-A single static page (`index.html` + self-hosted fonts in `fonts/`), designed as an Indian bazaar sponsor calendar: a tear-off date pad of headline figures, career years that flip over like calendar sheets as you scroll, and status-stamped new formats.
+A single static page (`index.html`), built with the tasteskill 2.5.1 frontend skill. The kit's CSS and scripts live in `assets/` (only the files the page loads), the three official promo stills in `assets/img/`. Fonts load from Google Fonts. See `DESIGN.md` for the dealt design and the rules the page keeps.
 
 ## Publish on GitHub Pages
 
@@ -10,4 +10,4 @@ Settings → Pages → Source: "Deploy from a branch" → pick the branch and `/
 
 ## Editing
 
-All copy lives in `index.html`. Figures, show names and statuses come from the 2026 resume. Promo videos load from YouTube only when clicked.
+All copy lives in `index.html`. Figures, show names and statuses come from the 2026 resume. The promo stills link to the official promos on YouTube. Don't edit files under `assets/`: they belong to the kit.

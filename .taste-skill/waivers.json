@@ -1,0 +1,7 @@
+[
+  { "check": "no-visual", "target": "section#record", "reason": "PRODUCT.md (the owner's brief): no headshot, no fabricated imagery; the owner has supplied no photographs, and every licensed stand-in found showed identifiable strangers or another broadcaster's logo, which would read as the owner's crew. The section is a figures table, as a specs table would be." },
+  { "check": "no-visual", "target": "section#pipeline", "reason": "PRODUCT.md: no fabricated imagery; projects are in development and have no released material to show. A status list, like a price list." },
+  { "check": "no-visual", "target": "section#career", "reason": "PRODUCT.md: no headshot or fabricated imagery; the career is a dated list of roles, and the owner has supplied no photographs of the work." },
+  { "check": "off-viewport", "target": "button.nav__toggle", "reason": "the kit's own nav-split bar at 320px puts its menu button 1px past the edge; no page markup or CSS of ours sets its size or place (reported as a kit finding)" },
+  { "check": "section-gaps", "target": "section.hero.hero--film / section#record", "reason": "the film hero's frame fills the phone screen less its kit padding by design (layout-v4: 342x724 at y 96), so the gap to the next section is the kit's own padding; the record section's content fills its screen" }
+]

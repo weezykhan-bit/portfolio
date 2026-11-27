@@ -1,240 +1,220 @@
 ---
 name: Fowzan Khan
-description: A commercial leader's career published as an annual report.
+description: A senior commercial leader's portfolio; the work in a cinema frame, the record on quiet stone.
 colors:
-  report-stock: "#F3F3EF"
-  report-stock-shade: "#E7E7E1"
-  hairline: "#C8CAD0"
-  cover-navy: "#0D1B2E"
-  cover-navy-rule: "#2A3D5B"
-  ink-muted: "#475266"
-  on-navy-muted: "#A7B2C4"
-  vermilion: "#C9381C"
-  vermilion-deep: "#A82C14"
-  vermilion-on-navy: "#FF7A5C"
+  go-light-green: "#0f7d45"
+  on-green: "#ffffff"
+  studio-stone: "#ebe5e3"
+  stone-surface: "#e1dad7"
+  greasepaint-ink: "#2b2622"
+  ink-muted: "#655c58"
+  projection-booth: "#2b2622"
+  booth-surface: "#36312d"
+  booth-ink: "#ebe5e3"
+  booth-muted: "#a29c99"
 typography:
   display:
-    fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(3.4rem, 8.6vw, 6rem)"
-    fontWeight: 800
-    lineHeight: 0.92
-    letterSpacing: "-0.04em"
-  headline:
-    fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(2.2rem, 4.6vw, 3.75rem)"
-    fontWeight: 800
-    lineHeight: 1.04
-    letterSpacing: "-0.025em"
-  figure:
-    fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(2rem, 3.3vw, 3rem)"
-    fontWeight: 700
-    lineHeight: 1
-    letterSpacing: "-0.035em"
-    fontFeature: "lnum"
-  lead:
-    fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(1.3rem, 2.1vw, 1.75rem)"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "-0.012em"
-  title:
-    fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
-    fontSize: "1.0625rem"
-    fontWeight: 700
-    lineHeight: 1.35
-    letterSpacing: "-0.01em"
-  dek:
-    fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
-    fontSize: "1rem"
-    fontWeight: 500
-    lineHeight: 1.45
-  body:
-    fontFamily: "Source Serif 4, Georgia, serif"
-    fontSize: "1.125rem"
+    fontFamily: "Instrument Sans, system-ui, sans-serif"
+    fontSize: "clamp(38px, 3.24vw + 25.4px, 72px)"
     fontWeight: 400
-    lineHeight: 1.62
+    lineHeight: 1.02
+    letterSpacing: "-0.036em"
+    fontVariation: "'wdth' 96"
+  headline:
+    fontFamily: "Instrument Sans, system-ui, sans-serif"
+    fontSize: "clamp(30px, 1.72vw + 23.3px, 48px)"
+    fontWeight: 400
+    letterSpacing: "-0.028em"
+  title:
+    fontFamily: "Instrument Sans, system-ui, sans-serif"
+    fontSize: "20px"
+    fontWeight: 400
+  body:
+    fontFamily: "Instrument Sans, system-ui, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.625
   label:
-    fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
-    fontSize: "0.8125rem"
-    fontWeight: 600
-    lineHeight: 1.3
-    letterSpacing: "0.06em"
+    fontFamily: "Instrument Sans, system-ui, sans-serif"
+    fontSize: "13px"
+    fontWeight: 500
 rounded:
-  none: "0px"
-  sm: "2px"
+  sm: "8px"
+  md: "12px"
+  lg: "20px"
+  btn: "8px"
 spacing:
-  gutter: "clamp(16px, 4vw, 48px)"
-  row: "14px"
-  block: "44px"
-  section: "clamp(72px, 10vw, 136px)"
+  s-1: "4px"
+  s-2: "8px"
+  s-3: "12px"
+  s-4: "16px"
+  s-5: "24px"
+  s-6: "32px"
+  s-7: "48px"
+  s-8: "64px"
+  s-9: "96px"
+  s-10: "128px"
 components:
-  button-solid:
-    backgroundColor: "{colors.vermilion}"
-    textColor: "{colors.report-stock}"
+  button-primary:
+    backgroundColor: "{colors.go-light-green}"
+    textColor: "{colors.on-green}"
+    rounded: "{rounded.btn}"
+    height: "44px"
+    padding: "0 24px"
+  button-primary-on-booth:
+    backgroundColor: "{colors.booth-ink}"
+    textColor: "{colors.projection-booth}"
+    rounded: "{rounded.btn}"
+    height: "44px"
+  nav:
+    backgroundColor: "{colors.studio-stone}"
+    textColor: "{colors.greasepaint-ink}"
+    height: "72px"
+  hero-box:
+    backgroundColor: "{colors.projection-booth}"
+    textColor: "{colors.booth-ink}"
+    rounded: "{rounded.md}"
+    padding: "48px"
+  promo-tile:
+    rounded: "{rounded.lg}"
     typography: "{typography.title}"
-    rounded: "{rounded.sm}"
-    padding: "15px 20px"
-  button-solid-hover:
-    backgroundColor: "{colors.vermilion-deep}"
-  button-solid-on-navy:
-    backgroundColor: "{colors.report-stock}"
-    textColor: "{colors.cover-navy}"
-    rounded: "{rounded.sm}"
-    padding: "15px 20px"
-  button-solid-on-navy-hover:
-    backgroundColor: "{colors.vermilion-on-navy}"
-  button-line:
-    backgroundColor: "transparent"
-    textColor: "{colors.cover-navy}"
-    rounded: "{rounded.sm}"
-    padding: "15px 20px"
-  button-line-hover:
-    backgroundColor: "{colors.cover-navy}"
-    textColor: "{colors.report-stock}"
-  masthead:
-    backgroundColor: "{colors.cover-navy}"
-    textColor: "{colors.on-navy-muted}"
-    height: "60px"
-  section-tab:
-    textColor: "{colors.vermilion}"
-    typography: "{typography.label}"
+  list-row:
+    textColor: "{colors.greasepaint-ink}"
+    typography: "{typography.body}"
 ---
 
 # Design System: Fowzan Khan
 
 ## Overview
 
-**Creative North Star: "The Annual Report"**
+**Creative North Star: "The Screening Room"**
 
-The site is a career published the way a board reads performance: figures first, every number footnoted, narrative set as the commentary that explains the figures. Two materials carry the whole world. Report stock (the uncoated off-white page) holds the reading sections; ink-navy cover boards open and close the document and mark the career chapter. Structure comes from typography and rules, never from boxes: hairlines separate rows, a 2px ink rule heads every table and list, and section numbers sit in a side column like the tabs of a printed report.
+The work is shown the way a screening room shows it: one picture, large, in a dark rounded frame, and everything around it kept quiet so the picture carries. The first screen is a cinema frame holding an official promo still, with the name and title set in a solid booth-dark box at its lower left and a play control that goes to the real promo. After that the lights come up: the record, the slate and the career are plain rows on a warm stone ground, read like the papers handed round after a screening.
 
-Density is that of a well-set financial statement: generous section spacing (72–136px), tight ruled rows inside. One vermilion accent behaves like a reviewer's highlighter; it marks the section number, the note reference, the live status, the current role on the timeline, and the primary action, and nothing else. Motion is mechanical and documentary: cover figures roll in on odometer reels, Fig. 1 is printed live as a two-colour halftone, and charts draw themselves when they scroll into view. Every motion device has a complete static state; nothing depends on JavaScript to be read.
+Density is low and even: every section is exactly one screen tall at 1440x900 and 390x844, with one idea and one heading per screen. Colour comes from the promos, not the interface; the interface stays about 95% neutral, with one green used only where the visitor can act or where one figure must land. Motion is small and earned: the hero enters once on load, linked tiles lift 2px and their stills zoom 3% inside the frame, and one statement turns to ink word by word as it crosses the screen.
 
-The world explicitly replaces a playful print-ephemera presentation the owner rejected as too casual, and refuses the dark executive template of hero, stat counters and card grid.
+The system is built on the tasteskill 2.5.1 kit (`assets/`). It replaced, in November 2026, an "annual report" world of navy cover boards, a vermilion highlighter and Schibsted Grotesk with Source Serif; do not bring those back piecemeal.
+
+The kit dealt these parts at random so pages don't repeat; a later edit keeps them:
+
+| Part | Dealt | Note |
+|---|---|---|
+| Hero | film | Redealt from `photo`: no licensed photograph of the trade could stand in without showing strangers as the owner's crew |
+| Palette | rose-grey-green | Warm stone ground, one green accent |
+| Type | instrument | Instrument Sans alone, headlines at 400 |
+| Nav | nav-split | The Work word opens a panel of the three promo stills |
+| Close | close-type | `close-photo` redealt: no unused photograph left |
+| Footer | footer-dark | `footer-visit` redealt: no street address to publish |
+| Rhythm | surface-pairs | `#work` and `#pipeline` sit on the stone surface |
+| Buttons | solid | |
+| Mark | stack | Also `favicon.svg` |
+| Moment | word-highlight | The Swastik Bhoomi statement in `#studio` |
 
 **Key Characteristics:**
-- Two surfaces only: report stock and navy cover board, in full-bleed bands.
-- Hairline rules and 2px ink rule heads instead of cards, borders or shadows.
-- Tabular, lining figures everywhere a number appears; figures carry superscript note references to "Notes to the figures".
-- Section number tabs in a 3/9 side column, hidden on phones; a dek line under every h2.
-- Single vermilion accent, swapped to a lighter vermilion on navy.
-- Mechanical motion (odometer, halftone press, self-drawing charts) that is always optional.
+- One picture leads: an official promo still in a dark rounded cinema frame; no captions under any picture.
+- Warm stone ground, near-black warm ink, one green go-light.
+- One type family at regular weight; size and tight tracking carry the hierarchy, never bold.
+- One section per screen, equal left and right edges on a 1280px wrap.
+- Lists are plain rows closed by hairlines, never cards, icons or stat counters.
 
 ## Colors
 
-A two-material palette (paper and navy board) with a single vermilion highlighter.
+A warm, almost colourless room with one green signal; the promo stills bring all the colour.
 
 ### Primary
-- **Highlighter Vermilion** (vermilion): the only accent on report stock. Section number tabs and their trailing rule, footnote numerals in the notes list, the solid button, the "live" status dot, focus rings, text selection, and the highlighted fragment in a pull quote.
-- **Pressed Vermilion** (vermilion-deep): hover state of the solid vermilion button only.
-- **Lit Vermilion** (vermilion-on-navy): the accent's navy-board form, used wherever vermilion appears on navy: note superscripts in the figures strip, section tabs, the current-role bar and its marker on the timeline, the reading-progress line, the email underline, focus rings and button hovers on navy.
+- **Go-Light Green** (#0f7d45): the primary button (Email Fowzan in the nav, hero and close), the focus ring, links, and the one strong word (₹10 Cr+) in the Swastik Bhoomi statement. Nothing decorative.
 
 ### Neutral
-- **Report Stock** (report-stock): page background for every reading section, and text colour on navy (the same value, so the two materials stay one pair).
-- **Stock Shade** (report-stock-shade): the unfilled state of the 25-acre grid before it draws in.
-- **Hairline Grey** (hairline): 1px row rules, section top rules, notes rule.
-- **Cover Navy** (cover-navy): masthead, cover, career chapter, contact close and footer backgrounds; also the ink colour for headings, body emphasis and 2px rule heads on paper.
-- **Cover Rule** (cover-navy-rule): hairlines and column rules on navy; the timeline year grid.
-- **Commentary Grey** (ink-muted): body copy, deks, meta labels and table headers on paper.
-- **Board Grey** (on-navy-muted): secondary text, deks, captions and nav links on navy.
+- **Studio Stone** (#ebe5e3): the page ground and the nav bar.
+- **Stone Surface** (#e1dad7): the alternate ground for `#work` and `#pipeline`, so neighbouring sections part by a full-width change of ground.
+- **Greasepaint Ink** (#2b2622): all text people read, at 7:1 or more on stone.
+- **Ink Muted** (#655c58): labels, tile meta lines and a heading's grey run-on only; never body text (5.2:1 on stone, 4.7:1 on the surface).
+- **Projection Booth** (#2b2622): the inverse ground of the hero's text box and the closing footer. The same value as the ink, so the dark is the ink itself, not a new colour.
+- **Booth Surface** (#36312d), **Booth Ink** (#ebe5e3), **Booth Muted** (#a29c99): surface, text and labels on the booth ground. On the booth, the primary button turns Booth Ink with booth-dark text.
 
 ### Named Rules
-**The Highlighter Rule.** Vermilion marks a reference, a status or an action; it is never a fill for a surface, a heading colour, or decoration. If it does not point at something, it is not vermilion.
+**The One Go-Light Rule.** Green marks what the visitor can do and nothing else, plus at most one word a page. Under 3% of any screen.
 
-**The Material Swap Rule.** On navy, every paper-side colour has a fixed counterpart: vermilion becomes lit vermilion, ink-muted becomes board grey, hairline becomes cover rule. Never place the paper-side vermilion on navy.
+**The Colour Comes From the Work Rule.** No tints, gradients or coloured panels in the interface; the promo stills are the only saturated colour on the page.
 
 ## Typography
 
-**Display Font:** Schibsted Grotesk (with Helvetica Neue, Arial)
-**Body Font:** Source Serif 4 (with Georgia)
+**Display Font:** Instrument Sans (with system-ui, sans-serif)
+**Body Font:** Instrument Sans (with system-ui, sans-serif)
 
-**Character:** A dense, newsroom grotesk carries headings, figures, labels and every table cell head; a quiet text serif carries the narrative, like the commentary pages of a report. Both are self-hosted.
+**Character:** A precise, slightly condensed neo-grotesk (width axis at 96%) used at regular weight throughout; it reads as calm and senior, closer to a film's end credits than to a pitch deck.
 
 ### Hierarchy
-- **Display** (800, clamp(3.4rem, 8.6vw, 6rem), 0.92): the name on the cover only; lines rise in from a mask on load. The contact close uses the same weight at clamp(2.8rem, 7vw, 6rem).
-- **Headline** (800, clamp(2.2rem, 4.6vw, 3.75rem), 1.04, max 18ch): section h2s.
-- **Figure** (700, clamp(2rem, 3.3vw, 3rem), 1, lining figures): cover key figures; unit set in a 0.48em small, note reference as a 0.75rem superscript. Studio KPIs use 800 at 2.25rem; the acre count 800 at clamp(3.4rem, 6vw, 5rem).
-- **Lead** (500, clamp(1.3rem, 2.1vw, 1.75rem), 1.4, max 40ch): the opening statement of a section, in the grotesk.
-- **Pull figure** (700, clamp(1.4rem, 2.4vw, 2rem), 1.25, max 34ch): a pull statement under a 3px ink rule, with one vermilion fragment.
-- **Title** (700, 1.0625rem, 1.35): row heads in ruled lists and the first column of tables.
-- **Dek** (500, 1rem, 1.45, max 60ch): the line directly under every h2: entity, role, date range or scope.
-- **Body** (400, 1.125rem, 1.62, max 68ch): narrative in Source Serif 4, in ink-muted with ink-coloured strong.
-- **Label** (600, 0.8125rem, 0.06em, uppercase): table headers, role meta lines, figure captions' "Fig. n" lead.
+- **Display** (400, 72px at 1440 / 40px at 390, line-height 1.02, -3.6%): the hero h1 only, at most three lines, never hyphenated.
+- **Headline** (400, 48px / 30px, -2.8%): one h2 per section, first in the section; the closing h2 too. Each names a thing or carries a digit.
+- **Title** (400–500, 20px / 18px): the hero lead, row names, tile titles.
+- **Body** (400, 16px, line-height 1.6): row descriptions and section leads, at most 62 characters a line.
+- **Label** (500, 13px, sentence case): the statement's eyebrow, footer column heads, tile meta. Never tracked capitals.
 
 ### Named Rules
-**The Tabular Figures Rule.** Every number that can sit in a column uses tabular, lining numerals (tables, axis years, tabs, stream numbers); display figures use lining numerals.
+**The Regular Weight Rule.** Headlines are set at 400; 500 only for labels and buttons. No 600, 700 or 800 anywhere on the page.
 
-**The Serif Is Commentary Rule.** Source Serif 4 is for running narrative, captions and the cover lede. Headings, figures, labels, list rows and table text stay in the grotesk.
+**The Statement Is Body-Sized Thought Rule.** The word-highlight statement is set at headline scale as running prose with one strong word, never as a slogan.
 
 ## Layout
 
-A single 1280px measure (`min(1280px, 100% - 2 × gutter)`, gutter clamp(16px, 4vw, 48px)) holds everything. Reading sections use a 3/9 split: the left column carries only the section number tab with a hairline running to the edge; the right column carries h2, dek and content. Below 860px the side column is hidden and content runs single-column. Sections are separated by a 1px hairline and clamp(72px, 10vw, 136px) vertical padding; navy sections drop the hairline because the material change is the separator.
+One section per screen: every `main > section` and the closing footer is exactly 1 or 2 screen heights (`100svh`; `100lvh` on phones), with 120px above the h2 and 72px below the content at 1440 (96 and 48 on phones). The fixed nav is 72px (56 on phones). Content sits on one 1280px wrap with 80px gutters (24px on phones), 12 columns with a 24px gap (12 on phones). Text always starts on the left line; nothing is centred wider than half the wrap, nothing staggers, nothing bleeds to one side only.
 
-The cover is a 7/5 grid (name and lede left, Fig. 1 right) above a full-width figures strip: six columns separated by navy hairlines under a 2px paper rule, reflowing to three (≤1100px) and two (≤560px). Inside sections, content blocks start about 44px below the dek; ruled rows run 10–22px tall padding. Tables collapse to stacked two-column rows under 700px with the status in the right column. Breakpoints in use: 1100, 1060, 860, 760, 700, 560, 480px.
+Breakpoints: under 640px (phone: one column, full-width buttons, menu sheet), 640–1023px (tablet: splits stack text first), 1024px and up (desktop). On phones the explanatory lines under the figures, projects and roles are hidden so each section stays one screen; names, values, statuses and years always remain.
+
+Spacing follows the 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px scale; heading to content is 48px (32 on phones), tiles sit 24px apart.
 
 ## Elevation & Depth
 
-The system is flat. Depth comes from the change of material (paper to navy board) and from rule weight, not from shadow. The single exception is the Fig. 1 plate on the navy cover, which carries a soft drop so the printed sheet reads as laid on the board.
+Flat by default. Depth comes from two things: the change of ground between stone, stone surface and booth dark, and the cinema frame's dark rounded box around the hero still. The only shadow is a response to the pointer.
 
 ### Shadow Vocabulary
-- **Plate on board** (`box-shadow: 0 30px 60px -30px rgba(0,0,0,.6)`): the cover photograph plate only.
+- **Hover lift** (`box-shadow: 0 14px 32px -18px` in a ground-derived ink, with `translateY(-2px)`, 180ms): a linked card or tile under the pointer.
 
 ### Named Rules
-**The Rules Not Boxes Rule.** Group content with a heavy rule above and hairlines between, never with a filled card, an outline box or a shadow.
+**The Flat-At-Rest Rule.** Nothing casts a shadow at rest; no glows, no blurred panels, no scrims or gradients over a photograph.
 
 ## Shapes
 
-Square by default. Buttons, the masthead call to action and the promo play tab take a 2px corner, enough to read as cut card stock rather than pills. Status markers are 8px dots (filled for live and development, outlined for planned). Rule weights form the real shape vocabulary: 1px hairline for rows, 2px ink for table and list heads and the figures strip, 3px ink for the pull statement and the email underline.
+Gently rounded throughout on the kit's soft scheme: controls and buttons 8px, the hero's text box 12px, the cinema frame and promo tiles 20px. Lists have no corners at all: rows run on the wrap's lines, each closed by a 1px hairline at about 11% of the ink. The mark is three stacked rounded bars of shrinking length.
 
 ## Components
 
 ### Buttons
-- **Shape:** gently squared (2px), 1.5px border slot, 15px 20px padding, grotesk 600 1rem, optional 1.05em stroke icon.
-- **Solid:** vermilion on paper; on navy it inverts to a report-stock button with navy text.
-- **Line:** transparent with a currentColor border; on hover it fills with ink (paper) or report stock (navy).
-- **Hover / Focus:** 0.15s colour transitions; solid hovers to pressed vermilion on paper and lit vermilion on navy. Focus is a 2px vermilion outline at 3px offset (lit vermilion on navy).
+- **Shape:** gently rounded (8px), 44px tall, 24px side padding, 16px label at 500. One filled button per view.
+- **Primary:** Go-Light Green with white text on stone; on the booth ground (hero box, footer) it turns Booth Ink with booth-dark text. The label is always "Email Fowzan" and opens a mailto.
+- **Hover / Focus:** steps on hover, presses on click (the kit's motion layer); a 2px green focus ring that never animates. The primary carries a small drawn arrow.
+- **Extra-large:** once, in the close, across the full wrap.
 
-### Navigation (masthead)
-- 60px sticky navy bar with a 1px cover-rule bottom. Wordmark in grotesk 800 with an uppercase report title that hides under 1060px. Links in board grey brighten to report stock on hover and when current. The email action is a small report-stock button; LinkedIn is an underlined text link. A 2px lit-vermilion reading-progress line runs along the bottom edge. Under 860px only the email and LinkedIn actions remain.
+### Cards / Containers
+- **Promo tile:** a 16:9 still in a 20px-rounded mask, the title and one meta line under it on the ground, no box. The whole tile links to the promo; on hover it lifts 2px and the still zooms 3% inside its mask.
+- **Hero box:** a solid booth-dark box (12px radius, 48px padding) at the cinema frame's lower left; never a scrim.
 
-### Figures strip
-- The cover's ledger: a caption row ("Key figures" and the source line linking to the notes), then six figures each with a unit, a superscript note number linking to its note, and a one-line grotesk description. Separated by vertical navy hairlines.
+### Lists (rows)
+- **Style:** name in title size on the left, a one-line description under it, the value or status right-aligned; a 1px hairline closes each row. Used for the figures, the development slate and the career.
 
-### Notes to the figures
-- A numbered two-column list (one column under 700px) under a hairline; numerals in vermilion grotesk. A targeted note gets a vermilion highlighter band across the lower 40% of its line.
+### Navigation
+- **Style:** a fixed, opaque stone bar with a 1px hairline: four words on the left (Record, Work, Studio, Career, 15px at 500), the mark and name centred, Email Fowzan on the right. Work opens a flat panel of the three promo stills after 150ms of hover.
+- **Mobile:** the name moves left, a 44px menu button opens a full-screen sheet; the nav's button keeps its place on tablet.
 
-### Ruled tables and lists
-- A 2px ink rule heads the block; rows are divided by hairlines. Table headers are uppercase labels; the first column is a grotesk title with an uppercase sub-label. All figures are tabular.
+### Cinema frame (signature)
+The hero: one rounded frame on the wrap's lines from 16px under the nav to 16px above the fold, holding an official promo still with `object-fit: cover`. The play control (a 64px white disc and a booth-dark label pill) sits at the frame's lower right and opens the real promo on YouTube; it is never a dead button.
 
-### Status marker
-- 8px dot plus grotesk 600 label in the last column: vermilion for live, a filled dot for in development, an outlined dot for planned.
-
-### Section tab and dek
-- Side-column number ("01"…"08") in vermilion grotesk 700 with a half-opacity rule running out to the column edge; decorative and hidden from assistive tech. Under every h2, a dek line naming entity, role, dates or scope.
-
-### Halftone press (signature)
-- Fig. 1 is drawn by WebGL as a two-colour halftone (navy and vermilion screens on report stock) that prints in after load; a ring loupe under the pointer (or touch) clears the screen to show the photograph. Without WebGL, or if the image fails within 6s, the photo shows grayscale at contrast 1.15 under a navy multiply dot screen (5px pitch). A small caption ("Fig. 1" label plus serif line) sits beneath.
-
-### Odometer figures (signature)
-- Each digit in a cover figure becomes a two-turn reel that rolls to its value (1.5s, expo-out ease), staggered right-to-left and by figure. The number is plain text in the HTML and keeps its aria-label; reduced motion leaves it static.
-
-### Self-drawing charts (signature)
-- The career timeline (13-year grid, white role bars, lit-vermilion current bar with a marker) and the 25-acre 5×5 grid render complete in HTML. With motion allowed and IntersectionObserver present they reset to empty and draw in on scroll (bars scale from the left over 1.1s; acres fill one by one at 40ms steps).
+### Word-highlight statement (signature)
+One statement of 12 to 40 words in its own one-screen section, resting at half ink and turning to full ink word by word as it crosses the middle of the screen, its one strong word in green. Under reduced motion it rests in full ink.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** put every number in Schibsted Grotesk with tabular or lining figures, and give cover figures a note reference that links to "Notes to the figures".
-- **Do** head every table and ruled list with a 2px ink rule and separate rows with 1px hairlines.
-- **Do** follow every h2 with a dek line, and give every reading section a side-column number tab.
-- **Do** swap to lit vermilion (vermilion-on-navy) and board grey on navy surfaces.
-- **Do** render every chart and figure complete without JavaScript; motion only resets and replays it.
-- **Do** remove draw-ins, the odometer and the name rise under prefers-reduced-motion.
+- **Do** keep the main action worded "Email Fowzan" in the nav, the hero and the close, and nowhere else as a filled button.
+- **Do** keep every section exactly one or two screens tall, with its h2 first and top-aligned.
+- **Do** credit the promo stills to their rights holders in the one footer line.
+- **Do** change the page in `index.html` only; the kit's files in `assets/` stay as shipped.
+- **Do** record any check you judge false in `.taste-skill/waivers.json` with its reason (five are there now: three sections without a picture, the film hero's phone gap, the kit menu button's 1px overflow at 320px).
 
 ### Don't:
-- **Don't** use vermilion as a surface fill, heading colour or ornament; it marks references, status and actions only.
-- **Don't** introduce cards, outlined boxes or shadows to group content; the plate on the cover is the only shadow.
-- **Don't** add a third surface colour or a second accent hue.
-- **Don't** set headings, figures or table text in the serif.
-- **Don't** let any motion hide content that has no static state.
+- **Don't** put a caption, label or description under any picture.
+- **Don't** use stock photographs of crews, studios or people; they read as the owner's own work. No headshot until the owner supplies one.
+- **Don't** bring back the navy, vermilion, Schibsted Grotesk or Source Serif of the replaced design.
+- **Don't** use bold or tracked-capital type, coloured panels, gradients, scrims, glows or a row of big stat counters.
+- **Don't** add a phone number, a form, or a second filled button style.

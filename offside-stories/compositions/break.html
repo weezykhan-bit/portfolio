@@ -1,0 +1,75 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:38px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+
+    #root .tier{height:88px;border:3px solid rgba(245,245,240,.35);display:flex;align-items:center;justify-content:center;background:#0A0A0A;z-index:2}
+    #root .tier span{font-weight:800;font-size:30px;letter-spacing:.16em;color:rgba(245,245,240,.6)}
+    #root .dot{width:44px;height:44px;border-radius:50%;background:#FFE600;z-index:3}
+
+    #b-dream{left:120px;top:330px;font-size:170px}
+    #b-yr{left:120px;top:290px;font-size:220px}
+    #b-lc{left:120px;top:478px;font-weight:900;font-size:60px;letter-spacing:.02em;text-transform:uppercase}
+    #b-tr{left:120px;top:1000px;font-weight:700;font-size:34px;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,245,240,.65)}
+    #b-g1{left:120px;top:430px;font-size:300px}
+    #b-g2{left:120px;top:690px;font-size:300px}
+    #b-p1{left:120px;top:420px;font-weight:800;font-size:56px;letter-spacing:.04em;text-transform:uppercase}
+    #b-p2{left:120px;top:500px;font-size:330px}
+
+  </style>
+  <div id="root" data-composition-id="break" data-width="1080" data-height="1920">
+
+    <div class="grain"></div>
+    <div id="b-lad" class="a" style="inset:0">
+    <div class="a tier" id="b-t0" style="left:360px;top:560px;width:360px"><span>PREMIER LEAGUE</span></div>
+<div class="a tier" id="b-t1" style="left:310px;top:664px;width:460px"><span>CHAMPIONSHIP</span></div>
+<div class="a tier" id="b-t2" style="left:260px;top:768px;width:560px"><span>LEAGUE ONE</span></div>
+<div class="a tier" id="b-t3" style="left:210px;top:872px;width:660px"><span>LEAGUE TWO</span></div>
+<div class="a tier" id="b-t4" style="left:160px;top:976px;width:760px"><span>NON-LEAGUE</span></div>
+    <div class="a dot" id="b-dot" style="left:518px;top:946px"></div>
+    </div>
+    <div id="b-dream" class="a lg y">Just a dream.</div>
+    <div id="b-yr" class="a lg">2012</div>
+    <div id="b-lc" class="a">Leicester City</div>
+    <div id="b-gam" class="a" style="inset:0">
+      <div id="b-g1" class="a lg">Massive</div>
+      <div id="b-g2" class="a lg">Gamble<span class="r">?</span></div>
+    </div>
+    <div id="b-pl" class="a" style="inset:0">
+      <div id="b-p1" class="a">But Vardy had</div>
+      <div id="b-p2" class="a lg y">Other<br>plans.</div>
+    </div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.set("#b-t4", { borderColor: "#FFE600" }, 0).set("#b-t4 span", { color: "#FFE600" }, 0);
+    tl.to("#b-dream", { opacity: 0, filter: "blur(10px)", duration: 0.15 }, 0.05);
+    tl.fromTo("#b-yr", { opacity: 0, y: -120, filter: "blur(12px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 0.12);
+    // dot jumps non-league -> championship (Leicester were in the Championship in 2012)
+    tl.fromTo("#b-dot", { y: 0 }, { y: -312, duration: 0.6, ease: "power3.inOut" }, 1.35);
+    tl.fromTo("#b-dot", { x: 0 }, { x: 0, keyframes: { x: [0, 90, 0], ease: "sine.inOut" }, duration: 0.6 }, 1.35);
+    tl.to("#b-t4", { borderColor: "rgba(245,245,240,.35)", duration: 0.2 }, 1.4);
+    tl.to("#b-t4 span", { color: "rgba(245,245,240,.6)", duration: 0.2 }, 1.4);
+    tl.fromTo("#b-t1", { backgroundColor: "rgba(29,66,138,0)", borderColor: "rgba(245,245,240,.35)" }, { backgroundColor: "#1D428A", borderColor: "#1D428A", duration: 0.3 }, 1.85);
+    tl.fromTo("#b-t1 span", { color: "rgba(245,245,240,.6)" }, { color: "#F5F5F0", duration: 0.3 }, 1.85);
+    tl.fromTo("#b-lc", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 1.4);
+    
+    // gamble
+    tl.to("#b-yr, #b-lc, #b-lad", { opacity: 0, filter: "blur(10px)", duration: 0.18, ease: "power2.in" }, 3.3);
+    tl.fromTo("#b-g1", { opacity: 0, color: "#3a3a3a" }, { opacity: 1, color: "#F5F5F0", duration: 0.25 }, 5.2);
+    tl.fromTo("#b-g2", { opacity: 0, color: "#3a3a3a" }, { opacity: 1, color: "#F5F5F0", duration: 0.25 }, 5.55);
+    tl.fromTo("#b-gam", { x: 0 }, { x: 0 }, 0);
+    // other plans: gamble wipes up, plans rise from below
+    tl.to("#b-gam", { y: -1300, filter: "blur(16px)", duration: 0.28, ease: "power3.in" }, 6.2);
+    tl.fromTo("#b-pl", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 6.45); tl.fromTo("#b-pl", { y: 1300, filter: "blur(16px)" }, { y: 0, filter: "blur(0px)", duration: 0.5, ease: "expo.out" }, 6.45); tl.set("#b-gam", { opacity: 0 }, 6.49);
+
+    window.__timelines["break"] = tl;
+  </script>
+</template>

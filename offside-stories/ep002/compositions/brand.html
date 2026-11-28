@@ -1,0 +1,47 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+
+    #o-line{left:0;top:590px;width:6px;height:250px;background:#FFE600}
+    #o-word{left:0;top:620px;width:1080px;text-align:center;font-size:250px}
+    #o-word span{display:inline-block}
+    #o-st{left:0;top:850px;width:1080px;text-align:center;font-weight:900;font-size:62px;letter-spacing:.42em;padding-left:.42em}
+    #o-tag{left:0;top:990px;width:1080px;text-align:center;font-weight:800;font-size:44px;letter-spacing:.12em;color:#FFE600}
+    #o-fol{left:0;top:1070px;width:1080px;text-align:center;font-weight:700;font-size:32px;letter-spacing:.12em;color:rgba(245,245,240,.75)}
+
+  </style>
+  <div id="root" data-composition-id="brand" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="o-line" class="a"></div>
+    <div id="o-word" class="a lg"><span>O</span><span>F</span><span>F</span><span>S</span><span>I</span><span>D</span><span id="o-e">E</span></div>
+    <div id="o-st" class="a">STORIES</div>
+    <div id="o-tag" class="a">BEYOND THE 90 MINUTES.</div>
+    <div id="o-fol" class="a">FOLLOW FOR MORE FOOTBALL STORIES</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    const e = document.getElementById("o-e").getBoundingClientRect(), root = document.querySelector('[data-composition-id="brand"]').getBoundingClientRect();
+    gsap.set("#o-line", { x: e.left - root.left - 8 });
+    tl.fromTo("#o-line", { scaleY: 0, transformOrigin: "50% 0" }, { scaleY: 1, duration: 0.4, ease: "expo.out" }, 0.0);
+    tl.fromTo("#o-word span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, stagger: 0.05, ease: "power4.out" }, 0.15);
+    tl.fromTo("#o-e", { x: -30 }, { x: 22, duration: 0.28, ease: "back.out(2.2)" }, 0.62);
+    tl.fromTo("#o-st", { opacity: 0, scaleX: 1.35 }, { opacity: 1, scaleX: 1, duration: 0.5, ease: "expo.out" }, 0.75);
+    tl.fromTo("#o-tag", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 2.301);
+    tl.fromTo("#o-fol", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 2.5509999999999997);
+
+    window.__timelines["brand"] = tl;
+  </script>
+</template>

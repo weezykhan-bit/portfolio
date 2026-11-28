@@ -1,0 +1,69 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+    #root .chip{display:inline-block;font-family:'League Gothic';font-size:70px;line-height:1;padding:8px 18px 0;color:#F5F5F0}
+    #root .agg{font-weight:800;font-size:36px;letter-spacing:.12em;text-transform:uppercase}
+
+    #f-k{left:120px;top:330px}
+    #f-sc{left:116px;top:390px;font-size:330px}
+    #f-agg{left:120px;top:700px}
+    #f-bar{left:140px;top:820px;width:800px;height:6px;background:rgba(245,245,240,.25)}
+    #f-fill{left:140px;top:820px;width:800px;height:6px;background:#F5F5F0;transform-origin:0 50%}
+    #root .mk{position:absolute;top:786px;width:4px;height:74px;background:#F5F5F0}
+    #root .mk.red{background:#E10600}
+    #root .ml{position:absolute;top:872px;font-weight:800;font-size:28px;letter-spacing:.04em;white-space:nowrap}
+    #f-need{left:120px;top:960px;font-family:'League Gothic';font-size:96px;line-height:1;color:#E10600;border:6px solid #E10600;padding:6px 22px 0;text-transform:uppercase}
+
+  </style>
+  <div id="root" data-composition-id="first" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="f-k" class="a kick y">8 Mar 2017 · Camp Nou · second leg</div>
+    <div id="f-sc" class="a lg"><span id="f-s">0–0</span></div>
+    <div id="f-agg" class="a agg">Aggregate <span id="f-a" class="r">0–4</span></div>
+    <div id="f-bar" class="a"></div><div id="f-fill" class="a"></div>
+    <div class="mk" id="f-m1" style="left:164.66666666666666px"></div>
+    <div class="mk" id="f-m2" style="left:493.55555555555554px"></div>
+    <div class="mk" id="f-m3" style="left:582.4444444444445px"></div>
+    <div class="mk red" id="f-m4" style="left:689.1111111111111px"></div>
+    <div class="ml" id="f-l1" style="left:162.66666666666666px">3' SUÁREZ</div>
+    <div class="ml" id="f-l2" style="left:345.55555555555554px;top:912px">40' OWN GOAL</div>
+    <div class="ml" id="f-l3" style="left:578.4444444444445px">50' MESSI (PEN)</div>
+    <div class="ml r" id="f-l4" style="left:685.1111111111111px;top:912px">62' CAVANI</div>
+    <div id="f-need" class="a">Need 3 more</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#f-k, #f-sc, #f-agg, #f-bar", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 0);
+    tl.fromTo("#f-fill", { scaleX: 0 }, { scaleX: 62 / 90, duration: 9.46, ease: "none" }, 0.1);
+    const _sf_s = [[0, "0\u20130"], [2.543, "1\u20130"], [3.211, "2\u20130"], [3.823, "3\u20130"], [5.845, "3\u20131"]], _ef_s = document.getElementById("f-s"), _of_s = { v: 0 };
+    tl.fromTo(_of_s, { v: 0 }, { v: 1, duration: 10.012, ease: "none", onUpdate: () => { const t = _of_s.v * 10.012; let c = _sf_s[0][1]; for (const x of _sf_s) if (t >= x[0]) c = x[1]; _ef_s.textContent = c; } }, 0);
+    const _sf_a = [[0, "0\u20134"], [2.543, "1\u20134"], [3.211, "2\u20134"], [3.823, "3\u20134"], [5.845, "3\u20135"]], _ef_a = document.getElementById("f-a"), _of_a = { v: 0 };
+    tl.fromTo(_of_a, { v: 0 }, { v: 1, duration: 10.012, ease: "none", onUpdate: () => { const t = _of_a.v * 10.012; let c = _sf_a[0][1]; for (const x of _sf_a) if (t >= x[0]) c = x[1]; _ef_a.textContent = c; } }, 0);
+    tl.fromTo("#f-m1, #f-l1", { opacity: 0, scaleY: 0.2 }, { opacity: 1, scaleY: 1, duration: 0.2, ease: "expo.out" }, 2.543);
+    tl.fromTo("#f-sc", { scale: 1.12, transformOrigin: "0 50%" }, { scale: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, 2.543);
+    tl.fromTo("#f-m2, #f-l2", { opacity: 0, scaleY: 0.2 }, { opacity: 1, scaleY: 1, duration: 0.2, ease: "expo.out" }, 3.211);
+    tl.fromTo("#f-sc", { scale: 1.12, transformOrigin: "0 50%" }, { scale: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, 3.211);
+    tl.fromTo("#f-m3, #f-l3", { opacity: 0, scaleY: 0.2 }, { opacity: 1, scaleY: 1, duration: 0.2, ease: "expo.out" }, 3.823);
+    tl.fromTo("#f-sc", { scale: 1.12, transformOrigin: "0 50%" }, { scale: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, 3.823);
+    tl.fromTo("#f-m4, #f-l4", { opacity: 0, scaleY: 0.2 }, { opacity: 1, scaleY: 1, duration: 0.2, ease: "expo.out" }, 5.845);
+    tl.fromTo("#f-sc", { scale: 1.12, transformOrigin: "0 50%" }, { scale: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, 5.845);
+    
+    tl.fromTo("#f-need", { opacity: 0, scale: 1.5, rotation: -3 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.16, ease: "power4.out" }, 9.035);
+    tl.fromTo("#f-need", { x: 0 }, { x: 7, duration: 0.033, yoyo: true, repeat: 3, ease: "none" }, 9.195);
+
+    window.__timelines["first"] = tl;
+  </script>
+</template>

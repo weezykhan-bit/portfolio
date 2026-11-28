@@ -1,0 +1,59 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:30px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.5)}
+    #root .grain{position:absolute;inset:0;opacity:.05;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:6px 6px;z-index:8;pointer-events:none}
+    #root .tag{position:absolute;left:96px;top:64px;font-weight:800;font-size:22px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,245,240,.6);z-index:9;white-space:nowrap}
+    #root .tag b{display:inline-block;width:28px;height:4px;background:#FFE600;vertical-align:middle;margin-right:14px}
+    #root .cred{position:absolute;right:40px;bottom:30px;font-size:16px;font-weight:600;letter-spacing:.04em;color:rgba(245,245,240,.55);z-index:9;white-space:nowrap;text-align:right}
+    #root .cam{position:absolute;inset:0;transform-origin:50% 45%}
+    #root .ph{position:absolute;overflow:hidden}
+    #root .ph img{position:absolute;left:-5%;top:-5%;width:110%;height:110%;object-fit:cover}
+    #root .ph.fb{background:#111}
+    #root .ph.fb .mv{position:absolute;left:-5%;top:-5%;width:110%;height:110%;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,rgba(245,245,240,.035) 0 2px,transparent 2px 22px),radial-gradient(ellipse at 60% 40%,#262626,#0d0d0d 75%)}
+    #root .ph.fb .mv span{font-family:'League Gothic';font-size:420px;line-height:.85;text-transform:uppercase;color:transparent;-webkit-text-stroke:3px rgba(255,230,0,.22);white-space:nowrap}
+    #root .ph .ht{position:absolute;inset:0;background-image:radial-gradient(rgba(10,10,10,.55) 1.1px,transparent 1.6px);background-size:5px 5px;opacity:.35;mix-blend-mode:multiply}
+    #root .shade{position:absolute;inset:0}
+    #root .nc{position:absolute;display:flex;align-items:stretch;height:70px}
+    #root .nc b{width:10px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:34px;letter-spacing:.02em;padding:14px 20px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:22px;letter-spacing:.14em;padding:22px 18px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+    #root .chip{display:inline-block;font-family:'League Gothic';font-size:58px;line-height:1;padding:8px 16px 0;color:#F5F5F0;text-transform:uppercase;white-space:nowrap}
+    #root .row{position:absolute;display:flex;align-items:center;gap:22px;white-space:nowrap}
+    #root .res{position:absolute;display:flex;align-items:center;white-space:nowrap;height:76px}
+    #root .res .d{width:200px;font-weight:800;font-size:22px;letter-spacing:.14em;color:rgba(245,245,240,.6);text-transform:uppercase}
+    #root .res .t{font-family:'League Gothic';font-size:64px;line-height:1;text-transform:uppercase}
+    #root .res .n{margin-left:22px;font-weight:700;font-size:22px;letter-spacing:.1em;color:#FFE600;text-transform:uppercase}
+
+    #vi-n{left:0;width:1920px;top:430px;text-align:center;font-family:'League Gothic';font-size:120px;line-height:1;text-transform:uppercase}
+    #vi-d{left:0;width:1920px;top:570px;text-align:center;font-weight:700;font-size:32px;letter-spacing:.3em;color:rgba(245,245,240,.7)}
+    #vi-r{left:0;width:1920px;top:640px;text-align:center;font-weight:600;font-size:24px;letter-spacing:.12em;color:rgba(245,245,240,.5);text-transform:uppercase}
+
+  </style>
+  <div id="root" data-composition-id="c10_vichai" data-width="1920" data-height="1080">
+    <div class="cam" id="cam-c10_vichai">
+
+    <div id="vi-n" class="a">Vichai Srivaddhanaprabha</div>
+    <div id="vi-d" class="a">1958 – 2018</div>
+    <div id="vi-r" class="a">Leicester City chairman, 2010–2018</div>
+
+    </div>
+    <div class="tag"><b></b>10 · After the fairy tale</div>
+    <div class="grain"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo(".tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.05);
+    tl.fromTo("#cam-c10_vichai", { scale: 1 }, { scale: 1.035, duration: 10.158, ease: "none" }, 0);
+
+    tl.fromTo("#vi-n", { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "power2.out" }, 2.479);
+    tl.fromTo("#vi-d", { opacity: 0 }, { opacity: 1, duration: 1.0, ease: "power2.out" }, 4.659);
+    tl.fromTo("#vi-r", { opacity: 0 }, { opacity: 1, duration: 1.0, ease: "power2.out" }, 7.992);
+
+    window.__timelines["c10_vichai"] = tl;
+  </script>
+</template>

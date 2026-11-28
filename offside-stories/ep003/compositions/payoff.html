@@ -1,0 +1,44 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+    #root .chip{display:inline-block;font-family:'League Gothic';font-size:70px;line-height:1;padding:8px 18px 0;color:#F5F5F0}
+    #root .agg{font-weight:800;font-size:36px;letter-spacing:.12em;text-transform:uppercase}
+
+    #root{background:#FFE600;color:#0A0A0A}
+    #root .grain{display:none}
+    #p-k{left:0;top:340px;width:1080px;text-align:center;font-weight:900;font-size:40px;letter-spacing:.16em;color:#0A0A0A}
+    #p-sc{left:0;top:420px;width:1080px;text-align:center;font-size:520px;color:#0A0A0A}
+    #p-agg{left:0;top:880px;width:1080px;text-align:center;font-weight:900;font-size:52px;letter-spacing:.06em;color:#0A0A0A}
+    #p-line{left:150px;top:980px;width:780px;text-align:center;font-weight:800;font-size:36px;line-height:1.2;color:#0A0A0A}
+
+  </style>
+  <div id="root" data-composition-id="payoff" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="p-k" class="a">LA REMONTADA · 8 MARCH 2017</div>
+    <div id="p-sc" class="a lg">6–1</div>
+    <div id="p-agg" class="a">6–5 ON AGGREGATE</div>
+    <div id="p-line" class="a">The biggest comeback in Champions League history</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#p-sc", { opacity: 0, scale: 1.4, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 0.150);
+    tl.fromTo("#p-k", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.400);
+    tl.fromTo("#p-agg", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 1.746);
+    tl.fromTo("#p-line", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 2.815);
+
+    window.__timelines["payoff"] = tl;
+  </script>
+</template>

@@ -1,0 +1,106 @@
+[
+ {
+  "beat": "hook",
+  "show": "In the 88th minute, Barcelona needed three more goals.",
+  "say": "In the eighty-eighth minute, Barcelona needed three more goals.",
+  "start": 0.3,
+  "dur": 3.597,
+  "gap": 0.45
+ },
+ {
+  "beat": "rewind",
+  "show": "Three weeks earlier, in Paris, they had lost 4\u20130.",
+  "say": "Three weeks earlier, in Paris, they had lost four nil.",
+  "start": 4.347,
+  "dur": 3.157,
+  "gap": 0.3
+ },
+ {
+  "beat": "rewind",
+  "show": "Before the second leg, Luis Enrique said: if they can score four, we can score six.",
+  "say": "Before the second leg, Luis Enrique said, if they can score four, we can score six.",
+  "start": 7.804,
+  "dur": 5.082,
+  "gap": 0.45
+ },
+ {
+  "beat": "first",
+  "show": "By 50 minutes, it was 3\u20130. Su\u00e1rez. An own goal. Messi from the spot.",
+  "say": "By fifty minutes, it was three nil. Suarez. An own goal. Messi, from the spot.",
+  "start": 14.136,
+  "dur": 5.009,
+  "gap": 0.35
+ },
+ {
+  "beat": "first",
+  "show": "Then Cavani scored. One away goal, and Barcelona needed three more.",
+  "say": "Then Cavani scored. One away goal, and Barcelona needed three more.",
+  "start": 19.495,
+  "dur": 4.253,
+  "gap": 0.45
+ },
+ {
+  "beat": "seven",
+  "show": "With two minutes left, it was still 3\u20131.",
+  "say": "With two minutes left, it was still three, one.",
+  "start": 24.198,
+  "dur": 2.594,
+  "gap": 0.3
+ },
+ {
+  "beat": "seven",
+  "show": "Neymar. A free kick.",
+  "say": "Neymar. A free kick.",
+  "start": 27.092,
+  "dur": 1.348,
+  "gap": 0.25
+ },
+ {
+  "beat": "seven",
+  "show": "Neymar again. A penalty.",
+  "say": "Neymar again. A penalty.",
+  "start": 28.69,
+  "dur": 1.712,
+  "gap": 0.35
+ },
+ {
+  "beat": "seven",
+  "show": "Still not enough. The 95th minute. One last ball into the box.",
+  "say": "Still not enough. The ninety-fifth minute. One last ball, into the box.",
+  "start": 30.752,
+  "dur": 4.128,
+  "gap": 0.25
+ },
+ {
+  "beat": "seven",
+  "show": "Sergi Roberto.",
+  "say": "Sergi Roberto.",
+  "start": 35.13,
+  "dur": 1.174,
+  "gap": 0.55
+ },
+ {
+  "beat": "payoff",
+  "show": "6\u20131. 6\u20135 on aggregate. The biggest comeback in Champions League history.",
+  "say": "Six, one. Six, five on aggregate. The biggest comeback in Champions League history.",
+  "start": 36.854,
+  "dur": 5.755,
+  "gap": 0.6
+ },
+ {
+  "beat": "brand",
+  "show": "You're watching Offside Stories.",
+  "say": "You're watching Offside Stories.",
+  "start": 43.209,
+  "dur": 2.001,
+  "gap": 0.25
+ },
+ {
+  "beat": "brand",
+  "show": "Beyond the 90 minutes.",
+  "say": "Beyond the ninety minutes.",
+  "start": 45.46,
+  "dur": 1.587,
+  "gap": 0.0
+ }
+]

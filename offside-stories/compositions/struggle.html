@@ -1,0 +1,86 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:38px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+
+    #root .tier{height:88px;border:3px solid rgba(245,245,240,.35);display:flex;align-items:center;justify-content:center;background:#0A0A0A;z-index:2}
+    #root .tier span{font-weight:800;font-size:30px;letter-spacing:.16em;color:rgba(245,245,240,.6)}
+    #root .dot{width:44px;height:44px;border-radius:50%;background:#FFE600;z-index:3}
+
+    #s-k{left:120px;top:330px}
+    #s-j{left:122px;top:390px;font-size:300px}
+    #s-v{left:122px;top:640px;font-size:300px}
+    #s-club{left:120px;top:912px;font-weight:800;font-size:40px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,245,240,.7)}
+    #s-rel{left:120px;top:968px;font-family:'League Gothic';font-size:96px;line-height:1;color:#E10600;border:6px solid #E10600;padding:6px 22px 0;text-transform:uppercase}
+    #s-card{left:170px;top:400px;width:740px;height:560px;background:#F5F5F0;color:#0A0A0A;padding:44px 48px}
+    #s-card h4{font-family:'League Gothic';font-weight:400;font-size:120px;line-height:.9;text-transform:uppercase}
+    #s-card .row{display:flex;justify-content:space-between;border-top:3px solid #0A0A0A;padding:16px 0 10px;font-weight:800;font-size:34px;letter-spacing:.06em;text-transform:uppercase}
+    #s-card .row b{font-weight:600;letter-spacing:.02em}
+    #s-punch{left:540px;top:770px;font-family:'League Gothic';font-size:110px;line-height:1;background:#FFE600;color:#0A0A0A;padding:8px 26px 0;text-transform:uppercase}
+    #s-l1,#s-l2,#s-l3{left:124px;top:330px;font-size:170px}
+
+  </style>
+  <div id="root" data-composition-id="struggle" data-width="1080" data-height="1920">
+
+    <div class="grain"></div>
+    <div id="s-name" class="a" style="inset:0">
+      <div id="s-k" class="a kick y">Meet</div>
+      <div id="s-j" class="a lg">Jamie</div>
+      <div id="s-v" class="a lg y">Vardy</div>
+      <div id="s-club" class="a">Sheffield Wednesday academy</div>
+      <div id="s-rel" class="a">Released at 16</div>
+    </div>
+    <div id="s-card" class="a">
+      <h4>Time card</h4>
+      <div class="row"><span>Name</span><b>J. Vardy</b></div>
+      <div class="row"><span>Job</span><b>Factory · medical splints</b></div>
+      <div class="row"><span>Evenings</span><b>Non-league football</b></div>
+    </div>
+    <div id="s-punch" class="a">Shift over</div>
+    <div id="s-lad" class="a" style="inset:0">
+    <div class="a tier" id="s-t0" style="left:360px;top:560px;width:360px"><span>PREMIER LEAGUE</span></div>
+<div class="a tier" id="s-t1" style="left:310px;top:664px;width:460px"><span>CHAMPIONSHIP</span></div>
+<div class="a tier" id="s-t2" style="left:260px;top:768px;width:560px"><span>LEAGUE ONE</span></div>
+<div class="a tier" id="s-t3" style="left:210px;top:872px;width:660px"><span>LEAGUE TWO</span></div>
+<div class="a tier" id="s-t4" style="left:160px;top:976px;width:760px"><span>NON-LEAGUE</span></div>
+    <div class="a dot" id="s-dot" style="left:518px;top:946px"></div>
+    </div>
+    <div id="s-l1" class="a lg">No fame.</div>
+    <div id="s-l2" class="a lg">No shortcuts.</div>
+    <div id="s-l3" class="a lg y">Just a dream.</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#s-k", { opacity: 0 }, { opacity: 1, duration: 0.1 }, 0.02);
+    tl.fromTo("#s-j", { opacity: 0, filter: "blur(10px)", x: -40 }, { opacity: 1, filter: "blur(0px)", x: 0, duration: 0.3, ease: "expo.out" }, 0.06);
+    tl.fromTo("#s-v", { opacity: 0, filter: "blur(10px)", x: 40 }, { opacity: 1, filter: "blur(0px)", x: 0, duration: 0.3, ease: "expo.out" }, 0.5);
+    tl.fromTo("#s-club", { opacity: 0, color: "#555" }, { opacity: 1, color: "rgba(245,245,240,.7)", duration: 0.3 }, 2.3);
+    tl.fromTo("#s-rel", { opacity: 0, scale: 1.5, rotation: -4 }, { opacity: 1, scale: 1, rotation: -4, duration: 0.16, ease: "power4.out" }, 4.25);
+    tl.fromTo("#s-rel", { x: 0 }, { x: 7, duration: 0.033, yoyo: true, repeat: 3, ease: "none" }, 4.41);
+    // factory: name block whips up, time card drops in
+    tl.to("#s-name", { y: -1300, filter: "blur(16px)", duration: 0.3, ease: "power3.in" }, 5.1); tl.set("#s-name", { opacity: 0 }, 5.41);
+    tl.fromTo("#s-card", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 5.33); tl.fromTo("#s-punch", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 6.75); tl.fromTo("#s-card", { y: 1400, rotation: 4, filter: "blur(16px)" }, { y: 0, rotation: -2, filter: "blur(0px)", duration: 0.55, ease: "expo.out" }, 5.33);
+    tl.fromTo("#s-punch", { scale: 1.6, rotation: 6 }, { scale: 1, rotation: 6, duration: 0.16, ease: "power4.out" }, 6.75);
+    // card falls away, ladder rises: the dot starts at the bottom
+    tl.to("#s-card, #s-punch", { y: 1500, rotation: 10, duration: 0.45, ease: "power3.in" }, 7.35); tl.set("#s-card, #s-punch", { opacity: 0 }, 7.81);
+    tl.fromTo("#s-lad .tier", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out", stagger: { each: 0.06, from: "end" } }, 7.6);
+    tl.fromTo("#s-t4", { borderColor: "rgba(245,245,240,.35)" }, { borderColor: "#FFE600", duration: 0.2 }, 8.0);
+    tl.fromTo("#s-t4 span", { color: "rgba(245,245,240,.6)" }, { color: "#FFE600", duration: 0.2 }, 8.0);
+    tl.fromTo("#s-dot", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, 8.05);
+    // three hard-cut lines
+    tl.fromTo("#s-l1", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 7.7);
+    tl.set("#s-l1", { opacity: 0 }, 8.75);
+    tl.fromTo("#s-l2", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 8.75);
+    tl.set("#s-l2", { opacity: 0 }, 9.75);
+    tl.fromTo("#s-l3", { opacity: 0, scale: 1.12, transformOrigin: "0 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "expo.out" }, 9.75);
+
+    window.__timelines["struggle"] = tl;
+  </script>
+</template>

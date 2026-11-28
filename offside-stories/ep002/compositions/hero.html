@@ -1,0 +1,90 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+
+    #e-et{left:116px;top:400px;font-size:300px}
+    #e-clk{left:120px;top:930px;font-size:120px}
+    #e-goal{left:190px;top:470px;width:700px;height:260px;border:8px solid #F5F5F0;border-bottom:0}
+    #e-net{left:198px;top:478px;width:684px;height:252px;background-image:linear-gradient(rgba(245,245,240,.12) 2px,transparent 2px),linear-gradient(90deg,rgba(245,245,240,.12) 2px,transparent 2px);background-size:34px 34px}
+    #e-line{left:120px;top:730px;width:840px;height:6px;background:#F5F5F0}
+    #root .sx{position:absolute;font-family:'League Gothic';font-size:120px;line-height:1;color:#FFE600}
+    #e-117{left:120px;top:790px;font-weight:900;font-size:40px;letter-spacing:.06em;text-transform:uppercase}
+    #e-117 span{color:#FFE600}
+    #e-so{left:120px;top:400px;width:840px}
+    #e-so h5{font-weight:900;font-size:36px;letter-spacing:.14em;color:#FFE600;margin-bottom:26px}
+    #root .krow{display:flex;align-items:center;gap:14px;margin-bottom:34px}
+    #root .krow > span{width:120px;font-family:'League Gothic';font-size:80px;line-height:1}
+    #root .kc{width:126px;text-align:center}
+    #root .kc b{display:flex;align-items:center;justify-content:center;width:96px;height:96px;margin:0 auto;border:4px solid rgba(245,245,240,.35);border-radius:50%;font-size:54px;font-weight:900}
+    #root .kc b.ok{background:#F5F5F0;color:#0A0A0A;border-color:#F5F5F0}
+    #root .kc b.no{color:#E10600;border-color:#E10600}
+    #root .kc i{display:block;font-style:normal;font-weight:700;font-size:22px;margin-top:8px;color:rgba(245,245,240,.7);white-space:nowrap}
+    #e-win{left:116px;top:780px;font-size:200px}
+
+  </style>
+  <div id="root" data-composition-id="hero" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="e-et" class="a lg">Extra<br>time</div>
+    <div id="e-clk" class="a lg g"><span id="e-c">90'</span></div>
+    <div id="e-dd" class="a" style="inset:0">
+      <div id="e-net" class="a"></div><div id="e-goal" class="a"></div><div id="e-line" class="a"></div>
+      <div class="sx" id="e-x1" style="left:430px;top:560px">✕</div>
+      <div class="sx" id="e-x2" style="left:560px;top:600px">✕</div>
+      <div id="e-117" class="a"><span>117'</span> · Double save from Shevchenko</div>
+    </div>
+    <div class="nc" id="e-nc" style="top:1000px"><b></b><span>Jerzy Dudek</span><i>Liverpool FC</i></div>
+    <div id="e-so" class="a">
+      <h5>PENALTY SHOOTOUT</h5>
+      <div class="krow"><span>MIL</span><div class="kc" id="k0"><b class="no">✕</b></div><div class="kc" id="k2"><b class="no">✕</b></div><div class="kc" id="k4"><b class="ok">●</b></div><div class="kc" id="k6"><b class="ok">●</b></div><div class="kc" id="k8"><b class="no">✕</b></div></div>
+      <div class="krow"><span class="y">LIV</span><div class="kc" id="k1"><b class="ok">●</b></div><div class="kc" id="k3"><b class="ok">●</b></div><div class="kc" id="k5"><b class="no">✕</b></div><div class="kc" id="k7"><b class="ok">●</b></div><div class="kc empty"><b></b></div></div>
+    </div>
+    <div id="e-win" class="a lg">Liverpool<br>win <span class="y">3–2</span></div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#e-et", { opacity: 0, scale: 1.15, transformOrigin: "0 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "expo.out" }, 0.2);
+    tl.fromTo("#e-clk", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.4);
+    const ec = document.getElementById("e-c"), eo = { v: 90 };
+    tl.fromTo(eo, { v: 90 }, { v: 120, duration: 2.28, ease: "power1.in", onUpdate: () => { ec.textContent = Math.round(eo.v) + "'"; } }, 0.4);
+    tl.to("#e-et, #e-clk", { y: -1300, filter: "blur(16px)", duration: 0.26, ease: "power3.in" }, 2.058);
+    tl.set("#e-et, #e-clk", { opacity: 0 }, 2.328);
+    tl.fromTo("#e-dd", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 2.328);
+    tl.fromTo("#e-nc b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.18, ease: "expo.out" }, 3.226);
+    tl.fromTo("#e-nc span, #e-nc i", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "expo.out", stagger: 0.08 }, 3.306);
+    tl.fromTo("#e-x1", { opacity: 0, scale: 1.5, rotation: 0 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.16, ease: "power4.out" }, 4.409);
+    tl.fromTo("#e-x1", { x: 0 }, { x: 7, duration: 0.033, yoyo: true, repeat: 3, ease: "none" }, 4.569);
+    tl.fromTo("#e-x2", { opacity: 0, scale: 1.5, rotation: 0 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.16, ease: "power4.out" }, 5.218);
+    tl.fromTo("#e-x2", { x: 0 }, { x: 7, duration: 0.033, yoyo: true, repeat: 3, ease: "none" }, 5.378);
+    tl.fromTo("#e-117", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 3.831);
+    tl.to("#e-nc", { opacity: 0, x: -30, duration: 0.15, ease: "power2.in" }, 5.733);
+    tl.to("#e-dd", { opacity: 0, filter: "blur(10px)", duration: 0.15, ease: "power2.in" }, 5.733);
+    tl.fromTo("#e-so", { opacity: 0, x: 900, filter: "blur(16px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.35, ease: "expo.out" }, 5.833);
+    tl.fromTo("#k0 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 6.033);
+    tl.fromTo("#k1 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 6.553);
+    tl.fromTo("#k2 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 7.072);
+    tl.fromTo("#k3 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 7.592);
+    tl.fromTo("#k4 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 8.112);
+    tl.fromTo("#k5 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 8.631);
+    tl.fromTo("#k6 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 9.151);
+    tl.fromTo("#k7 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 9.670);
+    tl.fromTo("#k8 b", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.out" }, 10.190);
+    
+    
+    tl.fromTo("#e-win", { opacity: 0, filter: "blur(12px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power4.out" }, 10.44);
+
+    window.__timelines["hero"] = tl;
+  </script>
+</template>

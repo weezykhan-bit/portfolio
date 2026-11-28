@@ -1,0 +1,47 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+    #root .chip{display:inline-block;font-family:'League Gothic';font-size:70px;line-height:1;padding:8px 18px 0;color:#F5F5F0}
+    #root .agg{font-weight:800;font-size:36px;letter-spacing:.12em;text-transform:uppercase}
+
+    #h-k{left:120px;top:330px}
+    #h-clk{left:120px;top:390px;font-size:150px}
+    #h-teams{left:120px;top:560px;display:flex;gap:20px;align-items:center}
+    #h-sc{left:116px;top:640px;font-size:440px}
+    #h-agg{left:120px;top:1030px}
+    #h-need{left:540px;top:990px;font-family:'League Gothic';font-size:96px;line-height:1;background:#FFE600;color:#0A0A0A;padding:8px 22px 0;text-transform:uppercase}
+
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="h-k" class="a kick y">Champions League · Last 16</div>
+    <div id="h-clk" class="a lg"><span id="h-c">88:00</span></div>
+    <div id="h-teams" class="a"><span class="chip" style="background:#A50044">BARCELONA</span><span class="chip" style="background:#004170">PSG</span></div>
+    <div id="h-sc" class="a lg">3–1</div>
+    <div id="h-agg" class="a agg">Aggregate <span class="r">3–5</span></div>
+    <div id="h-need" class="a">Need 3 goals</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    const hc = document.getElementById("h-c"), ho = { v: 0 };
+    tl.fromTo(ho, { v: 0 }, { v: 1, duration: 4.197, ease: "none", onUpdate: () => { const s = Math.floor(ho.v * 4.197); hc.textContent = "88:" + String(s).padStart(2, "0"); } }, 0);
+    tl.set("#h-need", { rotation: -4 }, 0);
+    tl.fromTo("#h-need", { scale: 1 }, { scale: 1.12, duration: 0.12, yoyo: true, repeat: 1, ease: "power2.out" }, 2.854);
+    tl.to("#h-clk, #h-teams, #h-sc, #h-agg, #h-need, #h-k", { x: -1150, filter: "blur(18px)", duration: 0.26, ease: "power3.in" }, 3.927);
+
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

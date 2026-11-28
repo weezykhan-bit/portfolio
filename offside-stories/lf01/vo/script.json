@@ -1,0 +1,850 @@
+[
+ {
+  "beat": "co_tv",
+  "show": "On the second of May 2016, a group of footballers sat in a living room in Leicester, watching someone else's match.",
+  "say": "On the second of May 2016, a group of footballers sat in a living room in Leicester, watching someone else's match.",
+  "start": 0.6,
+  "dur": 8.107,
+  "gap": 0.5
+ },
+ {
+  "beat": "co_tv",
+  "show": "If Tottenham won, the title race went on.",
+  "say": "If Tottenham won, the title race went on.",
+  "start": 9.207,
+  "dur": 2.828,
+  "gap": 0.35
+ },
+ {
+  "beat": "co_tv",
+  "show": "If Tottenham failed to win, Leicester City were champions of England.",
+  "say": "If Tottenham failed to win, Leicester City were champions of England.",
+  "start": 12.385,
+  "dur": 4.403,
+  "gap": 0.6
+ },
+ {
+  "beat": "co_tv",
+  "show": "At half-time, Tottenham were winning 2–0.",
+  "say": "At half-time, Tottenham were winning two nil.",
+  "start": 17.388,
+  "dur": 2.751,
+  "gap": 1.0
+ },
+ {
+  "beat": "co_odds",
+  "show": "A year earlier, nobody would have bet on any of this. The bookmakers had Leicester at 5000–1.",
+  "say": "A year earlier, nobody would have bet on any of this. The bookmakers had Leicester at five thousand to one.",
+  "start": 21.139,
+  "dur": 6.127,
+  "gap": 0.6
+ },
+ {
+  "beat": "co_title",
+  "show": "This is the story of the most unlikely title in the history of English football.",
+  "say": "This is the story of the most unlikely title in the history of English football.",
+  "start": 27.866,
+  "dur": 5.358,
+  "gap": 2.2
+ },
+ {
+  "beat": "c1",
+  "show": "Chapter one. The great escape.",
+  "say": "Chapter one. The great escape.",
+  "start": 35.424,
+  "dur": 2.146,
+  "gap": 1.2
+ },
+ {
+  "beat": "c1_bottom",
+  "show": "To understand how unlikely it was, go back one more year.",
+  "say": "To understand how unlikely it was, go back one more year.",
+  "start": 38.77,
+  "dur": 3.944,
+  "gap": 0.4
+ },
+ {
+  "beat": "c1_bottom",
+  "show": "They had come up from the Championship the year before, as champions.",
+  "say": "They had come up from the Championship the year before, as champions.",
+  "start": 43.114,
+  "dur": 4.183,
+  "gap": 0.4
+ },
+ {
+  "beat": "c1_bottom",
+  "show": "Christmas 2014. Leicester City are bottom of the Premier League.",
+  "say": "Christmas, twenty fourteen. Leicester City are bottom of the Premier League.",
+  "start": 47.697,
+  "dur": 4.522,
+  "gap": 0.5
+ },
+ {
+  "beat": "c1_bottom",
+  "show": "In April 2015, they are still bottom, seven points from safety.",
+  "say": "In April, twenty fifteen, they are still bottom, seven points from safety.",
+  "start": 52.719,
+  "dur": 4.678,
+  "gap": 0.7
+ },
+ {
+  "beat": "c1_escape",
+  "show": "Then, with nine games left, something changes.",
+  "say": "Then, with nine games left, something changes.",
+  "start": 58.097,
+  "dur": 3.111,
+  "gap": 0.35
+ },
+ {
+  "beat": "c1_escape",
+  "show": "They win seven of them.",
+  "say": "They win seven of them.",
+  "start": 61.558,
+  "dur": 1.494,
+  "gap": 0.4
+ },
+ {
+  "beat": "c1_escape",
+  "show": "They finish 14th. It is one of the great escapes in Premier League history.",
+  "say": "They finish fourteenth. It is one of the great escapes in Premier League history.",
+  "start": 63.452,
+  "dur": 4.822,
+  "gap": 0.7
+ },
+ {
+  "beat": "c1_pearson",
+  "show": "And that summer, the manager who saved them, Nigel Pearson, is sacked.",
+  "say": "And that summer, the manager who saved them, Nigel Pearson, is sacked.",
+  "start": 68.974,
+  "dur": 4.51,
+  "gap": 2.0
+ },
+ {
+  "beat": "c2",
+  "show": "Chapter two. Claudio Ranieri? Really?",
+  "say": "Chapter two. Claudio Ranieri. Really?",
+  "start": 75.484,
+  "dur": 2.748,
+  "gap": 1.2
+ },
+ {
+  "beat": "c2_cv",
+  "show": "His replacement is a 63-year-old Italian called Claudio Ranieri.",
+  "say": "His replacement is a sixty-three year old Italian, called Claudio Ranieri.",
+  "start": 79.432,
+  "dur": 4.978,
+  "gap": 0.4
+ },
+ {
+  "beat": "c2_cv",
+  "show": "He had managed Chelsea, Valencia, Juventus, Roma and Inter.",
+  "say": "He had managed Chelsea, Valencia, Juventus, Roma and Inter.",
+  "start": 84.81,
+  "dur": 4.292,
+  "gap": 0.35
+ },
+ {
+  "beat": "c2_cv",
+  "show": "He had never won a top-flight league title.",
+  "say": "He had never won a top-flight league title.",
+  "start": 89.452,
+  "dur": 2.736,
+  "gap": 0.5
+ },
+ {
+  "beat": "c2_cv",
+  "show": "His last job had ended with Greece losing to the Faroe Islands.",
+  "say": "His last job had ended with Greece losing to the Faroe Islands.",
+  "start": 92.688,
+  "dur": 4.25,
+  "gap": 0.7
+ },
+ {
+  "beat": "c2_tweet",
+  "show": "Gary Lineker, Leicester's most famous former player, summed up the mood on Twitter.",
+  "say": "Gary Lineker, Leicester's most famous former player, summed up the mood, on Twitter.",
+  "start": 97.638,
+  "dur": 4.956,
+  "gap": 0.3
+ },
+ {
+  "beat": "c2_tweet",
+  "show": "Claudio Ranieri? Really?",
+  "say": "Claudio Ranieri. Really?",
+  "start": 102.894,
+  "dur": 1.9,
+  "gap": 0.8
+ },
+ {
+  "beat": "c2_odds",
+  "show": "The bookmakers agreed. Leicester were 5000–1 to win the league.",
+  "say": "The bookmakers agreed. Leicester were five thousand to one, to win the league.",
+  "start": 105.594,
+  "dur": 4.722,
+  "gap": 0.4
+ },
+ {
+  "beat": "c2_odds",
+  "show": "Ranieri set his players one target: 40 points, and safety.",
+  "say": "Ranieri set his players one target. Forty points, and safety.",
+  "start": 110.716,
+  "dur": 4.187,
+  "gap": 2.0
+ },
+ {
+  "beat": "c3",
+  "show": "Chapter three. The bargains.",
+  "say": "Chapter three. The bargains.",
+  "start": 116.903,
+  "dur": 1.909,
+  "gap": 1.2
+ },
+ {
+  "beat": "c3_def",
+  "show": "What Ranieri inherited was a squad of players other clubs had overlooked.",
+  "say": "What Ranieri inherited was a squad of players other clubs had overlooked.",
+  "start": 120.012,
+  "dur": 4.591,
+  "gap": 0.4
+ },
+ {
+  "beat": "c3_def",
+  "show": "Kasper Schmeichel in goal. Wes Morgan and Robert Huth in the middle of defence.",
+  "say": "Kasper Schmeichel in goal. Wes Morgan and Robert Hoot, in the middle of defence.",
+  "start": 125.003,
+  "dur": 5.091,
+  "gap": 0.7
+ },
+ {
+  "beat": "c3_vardy",
+  "show": "Up front, Jamie Vardy, who had been playing non-league football until 2012.",
+  "say": "Up front, Jamie Vardy, who had been playing non-league football until twenty twelve.",
+  "start": 130.794,
+  "dur": 5.13,
+  "gap": 0.35
+ },
+ {
+  "beat": "c3_vardy",
+  "show": "Released by Sheffield Wednesday as a teenager, he had worked in a factory making medical splints, and played on Saturdays for Stocksbridge Park Steels.",
+  "say": "Released by Sheffield Wednesday as a teenager, he had worked in a factory making medical splints, and played on Saturdays for Stocksbridge Park Steels.",
+  "start": 136.274,
+  "dur": 9.173,
+  "gap": 0.4
+ },
+ {
+  "beat": "c3_vardy",
+  "show": "Leicester signed him from Fleetwood Town for a reported one million pounds.",
+  "say": "Leicester signed him from Fleetwood Town for a reported one million pounds.",
+  "start": 145.847,
+  "dur": 4.563,
+  "gap": 0.7
+ },
+ {
+  "beat": "c3_mahrez",
+  "show": "On the right, Riyad Mahrez, an Algerian winger from the French second division.",
+  "say": "On the right, Riyad Mah-rez, an Algerian winger, from the French second division.",
+  "start": 151.11,
+  "dur": 5.133,
+  "gap": 0.35
+ },
+ {
+  "beat": "c3_mahrez",
+  "show": "His reported fee: around 400,000 pounds.",
+  "say": "His reported fee. Around four hundred thousand pounds.",
+  "start": 156.593,
+  "dur": 3.514,
+  "gap": 0.7
+ },
+ {
+  "beat": "c3_kante",
+  "show": "And on the third of August 2015, Ranieri added the last piece.",
+  "say": "And on the third of August, twenty fifteen, Ranieri added the last piece.",
+  "start": 160.807,
+  "dur": 4.596,
+  "gap": 0.35
+ },
+ {
+  "beat": "c3_kante",
+  "show": "A midfielder from Caen called N'Golo Kanté, for a reported 5.6 million pounds.",
+  "say": "A midfielder from Caan, called Ngolo Kantay, for a reported five point six million pounds.",
+  "start": 165.753,
+  "dur": 6.195,
+  "gap": 0.4
+ },
+ {
+  "beat": "c3_kante",
+  "show": "Nobody outside France had heard of him. By May, everybody had.",
+  "say": "Nobody outside France had heard of him. By May, everybody had.",
+  "start": 172.348,
+  "dur": 4.199,
+  "gap": 0.7
+ },
+ {
+  "beat": "c3_plan",
+  "show": "Ranieri kept it simple. Two banks of four.",
+  "say": "Ranieri kept it simple. Two banks of four.",
+  "start": 177.247,
+  "dur": 2.975,
+  "gap": 0.35
+ },
+ {
+  "beat": "c3_plan",
+  "show": "Win the ball, and give it to Vardy and Mahrez as fast as possible.",
+  "say": "Win the ball, and give it to Vardy and Mah-rez, as fast as possible.",
+  "start": 180.572,
+  "dur": 4.284,
+  "gap": 2.0
+ },
+ {
+  "beat": "c4",
+  "show": "Chapter four. The record.",
+  "say": "Chapter four. The record.",
+  "start": 186.856,
+  "dur": 1.796,
+  "gap": 1.2
+ },
+ {
+  "beat": "c4_run",
+  "show": "Leicester beat Sunderland 4–2 on the opening day.",
+  "say": "Leicester beat Sunderland four, two, on the opening day.",
+  "start": 189.852,
+  "dur": 3.539,
+  "gap": 0.4
+ },
+ {
+  "beat": "c4_run",
+  "show": "They kept coming from behind. Against Aston Villa in September, they were 2–0 down and won 3–2.",
+  "say": "They kept coming from behind. Against Aston Villa in September, they were two nil down, and won three, two.",
+  "start": 193.791,
+  "dur": 6.797,
+  "gap": 0.4
+ },
+ {
+  "beat": "c4_run",
+  "show": "Their only league defeat that autumn was a heavy one: Arsenal won 5–2 at the King Power.",
+  "say": "Their only league defeat that autumn was a heavy one. Arsenal won five, two, at the King Power.",
+  "start": 200.988,
+  "dur": 6.374,
+  "gap": 0.5
+ },
+ {
+  "beat": "c4_run",
+  "show": "And Jamie Vardy started scoring, and did not stop.",
+  "say": "And Jamie Vardy started scoring, and did not stop.",
+  "start": 207.862,
+  "dur": 3.279,
+  "gap": 0.4
+ },
+ {
+  "beat": "c4_run",
+  "show": "One game. Then another. Then another.",
+  "say": "One game. Then another. Then another.",
+  "start": 211.541,
+  "dur": 2.434,
+  "gap": 0.5
+ },
+ {
+  "beat": "c4_run",
+  "show": "On the 28th of November 2015, against Manchester United, he scored in his 11th Premier League game in a row.",
+  "say": "On the twenty-eighth of November, twenty fifteen, against Manchester United, he scored in his eleventh Premier League game in a row.",
+  "start": 214.475,
+  "dur": 8.289,
+  "gap": 0.5
+ },
+ {
+  "beat": "c4_run",
+  "show": "Nobody had ever done that. The old record of ten belonged to Ruud van Nistelrooy.",
+  "say": "Nobody had ever done that. The old record, of ten, belonged to Rude van Nistelroy.",
+  "start": 223.264,
+  "dur": 5.701,
+  "gap": 0.8
+ },
+ {
+  "beat": "c4_pizza",
+  "show": "Ranieri had a promise for his defence too. Keep a clean sheet, and he would buy everyone pizza.",
+  "say": "Ranieri had a promise for his defence too. Keep a clean sheet, and he would buy everyone pizza.",
+  "start": 229.765,
+  "dur": 5.767,
+  "gap": 0.4
+ },
+ {
+  "beat": "c4_pizza",
+  "show": "It took until late October. When it came, the players had to make the pizzas themselves.",
+  "say": "It took until late October. When it came, the players had to make the pizzas themselves.",
+  "start": 235.932,
+  "dur": 5.728,
+  "gap": 0.7
+ },
+ {
+  "beat": "c4_bell",
+  "show": "And when players switched off in training, he had a catchphrase.",
+  "say": "And when players switched off in training, he had a catchphrase.",
+  "start": 242.36,
+  "dur": 3.438,
+  "gap": 0.3
+ },
+ {
+  "beat": "c4_bell",
+  "show": "Dilly ding, dilly dong. Wake up.",
+  "say": "Dilly ding, dilly dong. Wake up.",
+  "start": 246.098,
+  "dur": 2.303,
+  "gap": 2.0
+ },
+ {
+  "beat": "c5",
+  "show": "Chapter five. Top at Christmas.",
+  "say": "Chapter five. Top at Christmas.",
+  "start": 250.401,
+  "dur": 2.023,
+  "gap": 1.2
+ },
+ {
+  "beat": "c5_xmas",
+  "show": "By Christmas 2015, Leicester City were top of the Premier League.",
+  "say": "By Christmas, twenty fifteen, Leicester City were top of the Premier League.",
+  "start": 253.624,
+  "dur": 4.459,
+  "gap": 0.4
+ },
+ {
+  "beat": "c5_xmas",
+  "show": "Twelve months earlier, they had been bottom.",
+  "say": "Twelve months earlier, they had been bottom.",
+  "start": 258.483,
+  "dur": 2.675,
+  "gap": 0.8
+ },
+ {
+  "beat": "c5_wait",
+  "show": "This is usually where stories like this end.",
+  "say": "This is usually where stories like this end.",
+  "start": 261.958,
+  "dur": 2.854,
+  "gap": 0.35
+ },
+ {
+  "beat": "c5_wait",
+  "show": "On Boxing Day, they lost 1–0 at Liverpool. Only their second league defeat of the season.",
+  "say": "On Boxing Day, they lost one nil at Liverpool. Only their second league defeat of the season.",
+  "start": 265.162,
+  "dur": 5.684,
+  "gap": 0.4
+ },
+ {
+  "beat": "c5_wait",
+  "show": "Everyone waited for the collapse.",
+  "say": "Everyone waited for the collapse.",
+  "start": 271.246,
+  "dur": 2.155,
+  "gap": 2.0
+ },
+ {
+  "beat": "c6",
+  "show": "Chapter six. February.",
+  "say": "Chapter six. February.",
+  "start": 275.401,
+  "dur": 1.898,
+  "gap": 1.2
+ },
+ {
+  "beat": "c6_city",
+  "show": "The collapse never came.",
+  "say": "The collapse never came.",
+  "start": 278.499,
+  "dur": 1.77,
+  "gap": 0.35
+ },
+ {
+  "beat": "c6_city",
+  "show": "On the sixth of February, Leicester went to Manchester City, the favourites, and won 3–1.",
+  "say": "On the sixth of February, Leicester went to Manchester City, the favourites, and won three, one.",
+  "start": 280.619,
+  "dur": 5.759,
+  "gap": 0.35
+ },
+ {
+  "beat": "c6_city",
+  "show": "Robert Huth scored twice. Mahrez scored the other.",
+  "say": "Robert Hoot scored twice. Mah-rez scored the other.",
+  "start": 286.728,
+  "dur": 3.179,
+  "gap": 0.7
+ },
+ {
+  "beat": "c6_arsenal",
+  "show": "Eight days later, they went to Arsenal.",
+  "say": "Eight days later, they went to Arsenal.",
+  "start": 290.607,
+  "dur": 2.419,
+  "gap": 0.35
+ },
+ {
+  "beat": "c6_arsenal",
+  "show": "Vardy put them ahead from the penalty spot. Then Danny Simpson was sent off.",
+  "say": "Vardy put them ahead from the penalty spot. Then Danny Simpson was sent off.",
+  "start": 293.376,
+  "dur": 4.715,
+  "gap": 0.4
+ },
+ {
+  "beat": "c6_arsenal",
+  "show": "Theo Walcott equalised. And in the 95th minute, Danny Welbeck headed the winner. 2–1.",
+  "say": "Theo Walcott equalised. And in the ninety-fifth minute, Danny Welbeck headed the winner. Two, one.",
+  "start": 298.491,
+  "dur": 6.338,
+  "gap": 0.5
+ },
+ {
+  "beat": "c6_arsenal",
+  "show": "It was the last league game Leicester lost all season.",
+  "say": "It was the last league game Leicester lost all season.",
+  "start": 305.329,
+  "dur": 3.452,
+  "gap": 2.0
+ },
+ {
+  "beat": "c7",
+  "show": "Chapter seven. Nerve.",
+  "say": "Chapter seven. Nerve.",
+  "start": 310.781,
+  "dur": 1.768,
+  "gap": 1.2
+ },
+ {
+  "beat": "c7_grind",
+  "show": "From then on, the pressure was supposed to break them.",
+  "say": "From then on, the pressure was supposed to break them.",
+  "start": 313.749,
+  "dur": 3.005,
+  "gap": 0.35
+ },
+ {
+  "beat": "c7_grind",
+  "show": "Instead, they ground out results. A run of 1–0 wins.",
+  "say": "Instead, they ground out results. A run of one nil wins.",
+  "start": 317.104,
+  "dur": 4.127,
+  "gap": 0.4
+ },
+ {
+  "beat": "c7_grind",
+  "show": "On the third of April, Wes Morgan headed the only goal against Southampton.",
+  "say": "On the third of April, Wes Morgan headed the only goal against Southampton.",
+  "start": 321.631,
+  "dur": 4.675,
+  "gap": 0.7
+ },
+ {
+  "beat": "c7_grind",
+  "show": "Against West Ham, Vardy was sent off, and they needed a stoppage-time penalty from Leonardo Ulloa to draw 2–2.",
+  "say": "Against West Ham, Vardy was sent off, and they needed a stoppage-time penalty from Leonardo Ulloa, to draw two, two.",
+  "start": 327.006,
+  "dur": 7.688,
+  "gap": 0.4
+ },
+ {
+  "beat": "c7_grind",
+  "show": "Without Vardy, they beat Swansea 4–0.",
+  "say": "Without Vardy, they beat Swansea four nil.",
+  "start": 335.094,
+  "dur": 2.836,
+  "gap": 0.7
+ },
+ {
+  "beat": "c7_chase",
+  "show": "Only Tottenham were still chasing them.",
+  "say": "Only Tottenham were still chasing them.",
+  "start": 338.63,
+  "dur": 2.627,
+  "gap": 0.35
+ },
+ {
+  "beat": "c7_chase",
+  "show": "On the first of May, Leicester drew at Old Trafford. One more win would do it.",
+  "say": "On the first of May, Leicester drew at Old Trafford. One more win would do it.",
+  "start": 341.607,
+  "dur": 4.622,
+  "gap": 0.35
+ },
+ {
+  "beat": "c7_chase",
+  "show": "Or one Tottenham slip.",
+  "say": "Or one Tottenham slip.",
+  "start": 346.579,
+  "dur": 1.654,
+  "gap": 2.0
+ },
+ {
+  "beat": "c8",
+  "show": "Chapter eight. Stamford Bridge.",
+  "say": "Chapter eight. Stamford Bridge.",
+  "start": 350.233,
+  "dur": 2.123,
+  "gap": 1.2
+ },
+ {
+  "beat": "c8_match",
+  "show": "The next night, Tottenham played at Chelsea.",
+  "say": "The next night, Tottenham played at Chelsea.",
+  "start": 353.556,
+  "dur": 2.503,
+  "gap": 0.35
+ },
+ {
+  "beat": "c8_match",
+  "show": "The Leicester players gathered at Jamie Vardy's house to watch.",
+  "say": "The Leicester players gathered at Jamie Vardy's house to watch.",
+  "start": 356.409,
+  "dur": 3.638,
+  "gap": 0.5
+ },
+ {
+  "beat": "c8_match",
+  "show": "At half-time, Tottenham led 2–0.",
+  "say": "At half-time, Tottenham led two nil.",
+  "start": 360.547,
+  "dur": 2.405,
+  "gap": 0.7
+ },
+ {
+  "beat": "c8_match",
+  "show": "In the second half, Gary Cahill scored for Chelsea.",
+  "say": "In the second half, Gary Cahill scored for Chelsea.",
+  "start": 363.652,
+  "dur": 3.171,
+  "gap": 0.5
+ },
+ {
+  "beat": "c8_match",
+  "show": "The game turned ugly. Tottenham collected nine yellow cards.",
+  "say": "The game turned ugly. Tottenham collected nine yellow cards.",
+  "start": 367.323,
+  "dur": 4.122,
+  "gap": 0.5
+ },
+ {
+  "beat": "c8_match",
+  "show": "Then, late on, Eden Hazard curled in the equaliser.",
+  "say": "Then, late on, Eden Hazard curled in the equaliser.",
+  "start": 371.945,
+  "dur": 3.411,
+  "gap": 0.6
+ },
+ {
+  "beat": "c8_match",
+  "show": "2–2. Tottenham could not catch them.",
+  "say": "Two, two. Tottenham could not catch them.",
+  "start": 375.956,
+  "dur": 2.503,
+  "gap": 0.9
+ },
+ {
+  "beat": "c8_champs",
+  "show": "Leicester City, 5000–1, were champions of England.",
+  "say": "Leicester City. Five thousand to one. Were champions of England.",
+  "start": 379.359,
+  "dur": 4.141,
+  "gap": 2.2
+ },
+ {
+  "beat": "c9",
+  "show": "Chapter nine. The trophy.",
+  "say": "Chapter nine. The trophy.",
+  "start": 385.7,
+  "dur": 1.843,
+  "gap": 1.2
+ },
+ {
+  "beat": "c9_everton",
+  "show": "Five days later, Leicester played Everton at home.",
+  "say": "Five days later, Leicester played Everton at home.",
+  "start": 388.743,
+  "dur": 3.169,
+  "gap": 0.35
+ },
+ {
+  "beat": "c9_everton",
+  "show": "Andrea Bocelli, a friend of Ranieri's, sang Nessun Dorma on the pitch.",
+  "say": "Andrea Bocheli, a friend of Ranieri's, sang Nessun Dorma, on the pitch.",
+  "start": 392.262,
+  "dur": 4.598,
+  "gap": 0.5
+ },
+ {
+  "beat": "c9_everton",
+  "show": "Vardy scored twice. Andy King got the other. 3–1.",
+  "say": "Vardy scored twice. Andy King got the other. Three, one.",
+  "start": 397.36,
+  "dur": 3.872,
+  "gap": 0.5
+ },
+ {
+  "beat": "c9_everton",
+  "show": "Then Wes Morgan and Claudio Ranieri lifted the Premier League trophy.",
+  "say": "Then Wes Morgan and Claudio Ranieri lifted the Premier League trophy.",
+  "start": 401.732,
+  "dur": 4.556,
+  "gap": 0.8
+ },
+ {
+  "beat": "c9_table",
+  "show": "Leicester finished on 81 points, ten clear of Arsenal.",
+  "say": "Leicester finished on eighty-one points, ten clear of Arsenal.",
+  "start": 407.088,
+  "dur": 3.772,
+  "gap": 0.4
+ },
+ {
+  "beat": "c9_table",
+  "show": "They lost three league games all season.",
+  "say": "They lost three league games all season.",
+  "start": 411.26,
+  "dur": 2.353,
+  "gap": 0.7
+ },
+ {
+  "beat": "c9_awards",
+  "show": "Vardy scored 24 league goals and was named Footballer of the Year by the football writers.",
+  "say": "Vardy scored twenty-four league goals, and was named Footballer of the Year, by the football writers.",
+  "start": 414.313,
+  "dur": 6.086,
+  "gap": 0.4
+ },
+ {
+  "beat": "c9_awards",
+  "show": "Mahrez became the first African to win the PFA Players' Player of the Year.",
+  "say": "Mah-rez became the first African to win the P F A Players' Player of the Year.",
+  "start": 420.799,
+  "dur": 5.031,
+  "gap": 2.0
+ },
+ {
+  "beat": "c10",
+  "show": "Chapter ten. After the fairy tale.",
+  "say": "Chapter ten. After the fairy tale.",
+  "start": 427.83,
+  "dur": 2.558,
+  "gap": 1.2
+ },
+ {
+  "beat": "c10_after",
+  "show": "Fairy tales are not supposed to have a second chapter. This one did.",
+  "say": "Fairy tales are not supposed to have a second chapter. This one did.",
+  "start": 431.588,
+  "dur": 4.261,
+  "gap": 0.5
+ },
+ {
+  "beat": "c10_after",
+  "show": "That summer, Kanté left for Chelsea, and won the league again the following season.",
+  "say": "That summer, Kantay left for Chelsea, and won the league again the following season.",
+  "start": 436.349,
+  "dur": 4.773,
+  "gap": 0.4
+ },
+ {
+  "beat": "c10_after",
+  "show": "Leicester reached the quarter-finals of the Champions League.",
+  "say": "Leicester reached the quarter-finals of the Champions League.",
+  "start": 441.522,
+  "dur": 3.307,
+  "gap": 0.4
+ },
+ {
+  "beat": "c10_after",
+  "show": "But in the league they struggled. In February 2017, nine months after the trophy, Ranieri was sacked.",
+  "say": "But in the league they struggled. In February, twenty seventeen, nine months after the trophy, Ranieri was sacked.",
+  "start": 445.229,
+  "dur": 6.974,
+  "gap": 0.8
+ },
+ {
+  "beat": "c10_after",
+  "show": "Vardy stayed. In 2020, at 33, he won the Premier League Golden Boot.",
+  "say": "Vardy stayed. In twenty twenty, at thirty-three, he won the Premier League Golden Boot.",
+  "start": 453.003,
+  "dur": 5.693,
+  "gap": 0.7
+ },
+ {
+  "beat": "c10_vichai",
+  "show": "In October 2018, the club's owner, Vichai Srivaddhanaprabha, died when his helicopter crashed outside the stadium after a match.",
+  "say": "In October, twenty eighteen, the club's owner, Vee-chai Sree-vadda-na-prabba, died, when his helicopter crashed outside the stadium, after a match.",
+  "start": 459.396,
+  "dur": 9.358,
+  "gap": 0.8
+ },
+ {
+  "beat": "c10_cup",
+  "show": "In 2021, Leicester won the FA Cup for the first time in their history.",
+  "say": "In twenty twenty-one, Leicester won the F A Cup, for the first time in their history.",
+  "start": 469.554,
+  "dur": 5.024,
+  "gap": 1.0
+ },
+ {
+  "beat": "close",
+  "show": "Every season since, someone asks the same question. Could it happen again?",
+  "say": "Every season since, someone asks the same question. Could it happen again?",
+  "start": 475.578,
+  "dur": 4.625,
+  "gap": 0.5
+ },
+ {
+  "beat": "close",
+  "show": "The money in football has only grown. The gap between the richest clubs and everyone else is wider than ever.",
+  "say": "The money in football has only grown. The gap between the richest clubs and everyone else is wider than ever.",
+  "start": 480.703,
+  "dur": 6.824,
+  "gap": 0.6
+ },
+ {
+  "beat": "close",
+  "show": "Which is what makes 2015–16 so hard to believe.",
+  "say": "Which is what makes twenty fifteen, sixteen, so hard to believe.",
+  "start": 488.127,
+  "dur": 3.925,
+  "gap": 0.4
+ },
+ {
+  "beat": "close",
+  "show": "A manager nobody wanted. Players nobody rated. 5000–1.",
+  "say": "A manager nobody wanted. Players nobody rated. Five thousand to one.",
+  "start": 492.452,
+  "dur": 5.112,
+  "gap": 0.5
+ },
+ {
+  "beat": "close",
+  "show": "It happened once.",
+  "say": "It happened once.",
+  "start": 498.064,
+  "dur": 1.106,
+  "gap": 1.0
+ },
+ {
+  "beat": "close_q",
+  "show": "Will we ever see another Leicester? Tell us in the comments.",
+  "say": "Will we ever see another Leicester? Tell us in the comments.",
+  "start": 500.17,
+  "dur": 3.261,
+  "gap": 0.7
+ },
+ {
+  "beat": "brand",
+  "show": "You're watching Offside Stories.",
+  "say": "You're watching Offside Stories.",
+  "start": 504.131,
+  "dur": 1.964,
+  "gap": 0.25
+ },
+ {
+  "beat": "brand",
+  "show": "Beyond the 90 minutes.",
+  "say": "Beyond the ninety minutes.",
+  "start": 506.345,
+  "dur": 1.587,
+  "gap": 0.0
+ }
+]

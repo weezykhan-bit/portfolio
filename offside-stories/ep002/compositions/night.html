@@ -1,0 +1,73 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+
+    #n-k{left:120px;top:420px}
+    #n-vs{left:120px;top:470px;font-size:130px}
+    #n-sc{left:116px;top:400px;font-size:400px}
+    #n-bar{left:140px;top:900px;width:800px;height:6px;background:rgba(245,245,240,.25)}
+    #n-fill{left:140px;top:900px;width:800px;height:6px;background:#F5F5F0;transform-origin:0 50%}
+    #root .mk{position:absolute;top:866px;width:4px;height:74px;background:#F5F5F0}
+    #root .ml{position:absolute;top:952px;font-weight:800;font-size:30px;letter-spacing:.06em;transform:translateX(-50%)}
+    #n-t0,#n-t45{top:952px;font-weight:700;font-size:28px;color:rgba(245,245,240,.5)}
+    #n-head{left:120px;top:400px;font-size:220px}
+
+  </style>
+  <div id="root" data-composition-id="night" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="n-intro" class="a" style="inset:0">
+      <div id="n-k" class="a kick y">25 May 2005 · Istanbul</div>
+      <div id="n-vs" class="a lg">Liverpool <span class="g">v</span> AC Milan</div>
+    </div>
+    <div id="n-sc" class="a lg"><span id="n-s">0–1</span></div>
+    <div id="n-bar" class="a"></div><div id="n-fill" class="a"></div>
+    <div id="n-t0" class="a" style="left:140px">0'</div><div id="n-t45" class="a" style="left:900px">45'</div>
+    <div class="mk" id="n-m1" style="left:155.77777777777777px"></div><div class="mk" id="n-m2" style="left:831.3333333333334px"></div><div class="mk" id="n-m3" style="left:920.2222222222222px"></div>
+    <div class="nc" id="n-c1" style="top:1000px"><b></b><span>Paolo Maldini</span><i>AC Milan · 1&#x27;</i></div>
+    <div class="nc" id="n-c2" style="top:1000px"><b></b><span>Hernán Crespo</span><i>AC Milan · 39&#x27;, 44&#x27;</i></div>
+    <div id="n-head" class="a lg">The perfect<br>night for<br><span class="y">Milan.</span></div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#n-k", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.150);
+    tl.fromTo("#n-vs", { opacity: 0, color: "#333" }, { opacity: 1, color: "#F5F5F0", duration: 0.3 }, 1.488);
+    tl.fromTo("#n-bar, #n-t0, #n-t45", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.488);
+    tl.fromTo("#n-fill", { scaleX: 0 }, { scaleX: 1, duration: 7.89, ease: "none" }, 4.595000000000001);
+    tl.to("#n-intro", { opacity: 0, filter: "blur(10px)", duration: 0.15, ease: "power2.in" }, 4.545);
+    tl.fromTo("#n-sc", { opacity: 0, scale: 1.3, transformOrigin: "0 50%" }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.out" }, 5.553);
+    const sc = document.getElementById("n-s"), st = { v: 0 };
+    tl.fromTo(st, { v: 0 }, { v: 1, duration: 100.0, ease: "none", onUpdate: () => { const t = st.v * 100.0;
+      sc.textContent = t < 9.162 ? (t < 8.725 ? "0–1" : "0–2") : "0–3"; } }, 0);
+    tl.fromTo("#n-m1", { scaleY: 0 }, { scaleY: 1, duration: 0.2, ease: "expo.out" }, 5.553);
+    tl.fromTo("#n-c1 b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.18, ease: "expo.out" }, 5.070);
+    tl.fromTo("#n-c1 span, #n-c1 i", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "expo.out", stagger: 0.08 }, 5.150);
+    tl.to("#n-c1", { opacity: 0, x: -30, duration: 0.15, ease: "power2.in" }, 7.425);
+    tl.fromTo("#n-sc", { scale: 1.12 }, { scale: 1, duration: 0.18, ease: "power4.out" }, 8.725);
+    tl.fromTo("#n-m2", { scaleY: 0 }, { scaleY: 1, duration: 0.2, ease: "expo.out" }, 8.725);
+    tl.fromTo("#n-c2 b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.18, ease: "expo.out" }, 8.289);
+    tl.fromTo("#n-c2 span, #n-c2 i", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "expo.out", stagger: 0.08 }, 8.369);
+
+    tl.fromTo("#n-sc", { scale: 1.12 }, { scale: 1, duration: 0.18, ease: "power4.out" }, 9.162);
+    tl.fromTo("#n-m3", { scaleY: 0 }, { scaleY: 1, duration: 0.2, ease: "expo.out" }, 9.162);
+    tl.to("#n-c2", { opacity: 0, x: -30, duration: 0.15, ease: "power2.in" }, 9.624);
+    tl.to("#n-sc", { y: -1300, filter: "blur(16px)", duration: 0.28, ease: "power3.in" }, 9.424);
+    tl.set("#n-sc", { opacity: 0 }, 9.714);
+    tl.fromTo("#n-head", { opacity: 0, y: 1300, filter: "blur(16px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 9.724);
+    tl.to("#n-bar, #n-fill, #n-t0, #n-t45, .mk", { opacity: 0.25, duration: 0.3 }, 9.724);
+
+    window.__timelines["night"] = tl;
+  </script>
+</template>

@@ -1,0 +1,191 @@
+[
+ {
+  "beat": "hook",
+  "show": "Imagine this...",
+  "say": "Imagine this...",
+  "gap": 0.08,
+  "dur": 1.068,
+  "start": 0.3,
+  "speed": 1.06
+ },
+ {
+  "beat": "hook",
+  "show": "A footballer who, a few years earlier, was playing non-league football...",
+  "say": "A footballer who, a few years earlier, was playing non-league football...",
+  "gap": 0.08,
+  "dur": 3.957,
+  "start": 1.452,
+  "speed": 1.12
+ },
+ {
+  "beat": "hook",
+  "show": "...and then, one day, became a Premier League champion.",
+  "say": "...and then, one day, became a Premier League champion.",
+  "gap": 0.25,
+  "dur": 3.055,
+  "start": 5.45,
+  "speed": 1.06
+ },
+ {
+  "beat": "struggle",
+  "show": "Meet Jamie Vardy.",
+  "say": "Meet Jamie Vardy.",
+  "gap": 0.1,
+  "dur": 1.417,
+  "start": 8.55,
+  "speed": 1.06
+ },
+ {
+  "beat": "struggle",
+  "show": "Released by Sheffield Wednesday at 16.",
+  "say": "Released by Sheffield Wednesday at sixteen.",
+  "gap": 0.1,
+  "dur": 2.875,
+  "start": 10.02,
+  "speed": 1.0
+ },
+ {
+  "beat": "struggle",
+  "show": "He worked in a factory,",
+  "say": "He worked in a factory,",
+  "gap": 0.1,
+  "dur": 1.505,
+  "start": 13.71,
+  "speed": 1.0
+ },
+ {
+  "beat": "struggle",
+  "show": "and chased his dream in non-league football.",
+  "say": "and chased his dream in non-league football.",
+  "gap": 0.22,
+  "dur": 2.779,
+  "start": 15.883,
+  "speed": 1.0
+ },
+ {
+  "beat": "break",
+  "show": "In 2012, Leicester City signed him.",
+  "say": "In twenty twelve, Leicester City signed him.",
+  "gap": 0.12,
+  "dur": 2.945,
+  "start": 19.36,
+  "speed": 1.0
+ },
+ {
+  "beat": "break",
+  "show": "Plenty of people thought it was a massive gamble.",
+  "say": "Plenty of people thought it was a massive gamble.",
+  "gap": 0.12,
+  "dur": 2.961,
+  "start": 22.658,
+  "speed": 1.0
+ },
+ {
+  "beat": "break",
+  "show": "But Vardy had other plans.",
+  "say": "But Vardy had other plans.",
+  "gap": 0.25,
+  "dur": 1.761,
+  "start": 25.686,
+  "speed": 1.12
+ },
+ {
+  "beat": "record",
+  "show": "In 2015, he scored in 11 consecutive Premier League matches.",
+  "say": "In twenty fifteen, he scored in eleven consecutive Premier League matches.",
+  "gap": 0.12,
+  "dur": 4.887,
+  "start": 27.575,
+  "speed": 1.0
+ },
+ {
+  "beat": "record",
+  "show": "He broke Ruud van Nistelrooy's record.",
+  "say": "He broke Ruud van Nistelrooy's record.",
+  "gap": 0.12,
+  "dur": 2.404,
+  "start": 33.356,
+  "speed": 1.18
+ },
+ {
+  "beat": "record",
+  "show": "Suddenly, the whole world was watching.",
+  "say": "Suddenly, the whole world was watching.",
+  "gap": 0.25,
+  "dur": 2.067,
+  "start": 35.901,
+  "speed": 1.18
+ },
+ {
+  "beat": "miracle",
+  "show": "Then came 2015\u201316.",
+  "say": "Then came twenty fifteen, sixteen.",
+  "gap": 0.18,
+  "dur": 2.362,
+  "start": 38.04,
+  "speed": 1.06
+ },
+ {
+  "beat": "miracle",
+  "show": "Leicester City, 5000 to 1 outsiders for the title...",
+  "say": "Leicester City, five thousand to one outsiders for the title...",
+  "gap": 0.18,
+  "dur": 4.014,
+  "start": 40.732,
+  "speed": 1.0
+ },
+ {
+  "beat": "miracle",
+  "show": "became Premier League champions!",
+  "say": "became Premier League champions!",
+  "gap": 0.45,
+  "dur": 2.022,
+  "start": 44.993,
+  "speed": 1.0
+ },
+ {
+  "beat": "legacy",
+  "show": "From working-class roots to the top of English football.",
+  "say": "From working-class roots to the top of English football.",
+  "gap": 0.28,
+  "dur": 3.389,
+  "start": 47.121,
+  "speed": 1.06
+ },
+ {
+  "beat": "legacy",
+  "show": "Jamie Vardy proved one thing...",
+  "say": "Jamie Vardy proved one thing...",
+  "gap": 0.28,
+  "dur": 2.158,
+  "start": 50.628,
+  "speed": 0.95
+ },
+ {
+  "beat": "legacy",
+  "show": "it's never too late to make history.",
+  "say": "it's never too late to make history.",
+  "gap": 0.5,
+  "dur": 2.42,
+  "start": 52.953,
+  "speed": 0.95
+ },
+ {
+  "beat": "brand",
+  "show": "You're watching Offside Stories.",
+  "say": "You're watching Offside Stories.",
+  "gap": 0.15,
+  "dur": 2.001,
+  "start": 55.646,
+  "speed": 1.0
+ },
+ {
+  "beat": "brand",
+  "show": "Beyond the 90 minutes.",
+  "say": "Beyond the ninety minutes.",
+  "gap": 0,
+  "dur": 1.672,
+  "start": 57.76,
+  "speed": 0.95
+ }
+]

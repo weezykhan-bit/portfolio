@@ -1,0 +1,299 @@
+[
+ {
+  "beat": "hook",
+  "show": "Imagine this.",
+  "say": "Imagine this.",
+  "start": 0.3,
+  "dur": 0.987,
+  "gap": 0.15,
+  "speed": 1.15
+ },
+ {
+  "beat": "hook",
+  "show": "You're playing in the Champions League final.",
+  "say": "You're playing in the Champions League final.",
+  "start": 1.437,
+  "dur": 2.399,
+  "gap": 0.12,
+  "speed": 1.15
+ },
+ {
+  "beat": "hook",
+  "show": "Half-time arrives, and your team is losing 3\u20130.",
+  "say": "Half-time arrives, and your team is losing three nil.",
+  "start": 3.956,
+  "dur": 3.162,
+  "gap": 0.15,
+  "speed": 1.15
+ },
+ {
+  "beat": "hook",
+  "show": "Would you still believe in a comeback?",
+  "say": "Would you still believe in a comeback?",
+  "start": 7.268,
+  "dur": 2.111,
+  "gap": 0.36,
+  "speed": 1.15
+ },
+ {
+  "beat": "night",
+  "show": "May 2005. Liverpool faced AC Milan in Istanbul.",
+  "say": "May, two thousand and five. Liverpool faced A C Milan in Istanbul.",
+  "start": 9.739,
+  "dur": 4.365,
+  "gap": 0.18,
+  "speed": 1.18
+ },
+ {
+  "beat": "night",
+  "show": "Paolo Maldini scored in the opening minute.",
+  "say": "Paolo Maldini scored in the opening minute.",
+  "start": 14.284,
+  "dur": 2.68,
+  "gap": 0.15,
+  "speed": 1.18
+ },
+ {
+  "beat": "night",
+  "show": "Then Hern\u00e1n Crespo struck twice.",
+  "say": "Then Hernan Crespo struck twice.",
+  "start": 17.114,
+  "dur": 2.019,
+  "gap": 0.18,
+  "speed": 1.18
+ },
+ {
+  "beat": "night",
+  "show": "At half-time, Liverpool were three goals down.",
+  "say": "At half-time, Liverpool were three goals down.",
+  "start": 19.313,
+  "dur": 2.659,
+  "gap": 0.42,
+  "speed": 1.18
+ },
+ {
+  "beat": "room",
+  "show": "At half-time, Liverpool walked into the dressing room in silence.",
+  "say": "At half-time, Liverpool walked into the dressing room in silence.",
+  "start": 22.392,
+  "dur": 3.675,
+  "gap": 0.27,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "Three goals down. Forty-five minutes away from defeat.",
+  "say": "Three goals down. Forty-five minutes away from defeat.",
+  "start": 26.337,
+  "dur": 3.264,
+  "gap": 0.18,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "Their Champions League dream was slipping away.",
+  "say": "Their Champions League dream was slipping away.",
+  "start": 29.781,
+  "dur": 2.567,
+  "gap": 0.3,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "Across the room stood manager Rafael Ben\u00edtez.",
+  "say": "Across the room stood manager Rafael Benee-tez.",
+  "start": 32.648,
+  "dur": 3.112,
+  "gap": 0.15,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "He had just 15 minutes to change everything.",
+  "say": "He had just fifteen minutes to change everything.",
+  "start": 35.91,
+  "dur": 2.669,
+  "gap": 0.27,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "There was no guarantee of a comeback. No easy answers.",
+  "say": "There was no guarantee of a comeback. No easy answers.",
+  "start": 39.249,
+  "dur": 3.316,
+  "gap": 0.18,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "Just one message: the game wasn't over.",
+  "say": "Just one message: the game wasn't over.",
+  "start": 42.745,
+  "dur": 2.473,
+  "gap": 0.33,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "And when Liverpool walked back onto that pitch, something had changed.",
+  "say": "And when Liverpool walked back onto that pitch, something had changed.",
+  "start": 45.548,
+  "dur": 3.684,
+  "gap": 0.21,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "They weren't walking out to save a final anymore.",
+  "say": "They weren't walking out to save a final anymore.",
+  "start": 49.442,
+  "dur": 2.547,
+  "gap": 0.15,
+  "speed": 1.14
+ },
+ {
+  "beat": "room",
+  "show": "They were walking out to make history.",
+  "say": "They were walking out to make history.",
+  "start": 52.139,
+  "dur": 1.9,
+  "gap": 0.42,
+  "speed": 1.14
+ },
+ {
+  "beat": "turn",
+  "show": "But Liverpool weren't finished.",
+  "say": "But Liverpool weren't finished.",
+  "start": 55.959,
+  "dur": 1.541,
+  "gap": 0.18,
+  "speed": 1.17
+ },
+ {
+  "beat": "turn",
+  "show": "Steven Gerrard rose above the defence and headed home.",
+  "say": "Steven Gerrard rose above the defence and headed home.",
+  "start": 57.68,
+  "dur": 3.356,
+  "gap": 0.18,
+  "speed": 1.17
+ },
+ {
+  "beat": "turn",
+  "show": "Suddenly, belief returned.",
+  "say": "Suddenly, belief returned.",
+  "start": 61.216,
+  "dur": 1.71,
+  "gap": 0.12,
+  "speed": 1.17
+ },
+ {
+  "beat": "turn",
+  "show": "The impossible started to feel possible.",
+  "say": "The impossible started to feel possible.",
+  "start": 63.046,
+  "dur": 2.41,
+  "gap": 0.3,
+  "speed": 1.17
+ },
+ {
+  "beat": "six",
+  "show": "Vladimir \u0160micer made it 3\u20132.",
+  "say": "Vladimir Schmeecher made it three, two.",
+  "start": 65.756,
+  "dur": 2.117,
+  "gap": 0.15,
+  "speed": 1.22
+ },
+ {
+  "beat": "six",
+  "show": "Then came Xabi Alonso.",
+  "say": "Then came Shabbee Alonso.",
+  "start": 68.023,
+  "dur": 1.685,
+  "gap": 0.12,
+  "speed": 1.22
+ },
+ {
+  "beat": "six",
+  "show": "His penalty was saved, but he buried the rebound.",
+  "say": "His penalty was saved, but he buried the rebound.",
+  "start": 69.828,
+  "dur": 2.742,
+  "gap": 0.18,
+  "speed": 1.22
+ },
+ {
+  "beat": "six",
+  "show": "Three goals in just six minutes. The score was 3\u20133.",
+  "say": "Three goals, in just six minutes. The score was three, three.",
+  "start": 72.75,
+  "dur": 3.221,
+  "gap": 0.42,
+  "speed": 1.22
+ },
+ {
+  "beat": "hero",
+  "show": "Extra time brought more drama.",
+  "say": "Extra time brought more drama.",
+  "start": 77.391,
+  "dur": 1.978,
+  "gap": 0.15,
+  "speed": 1.22
+ },
+ {
+  "beat": "hero",
+  "show": "Goalkeeper Jerzy Dudek produced unbelievable saves.",
+  "say": "Goalkeeper Yerzy Doodek produced unbelievable saves.",
+  "start": 79.519,
+  "dur": 3.295,
+  "gap": 0.21,
+  "speed": 1.22
+ },
+ {
+  "beat": "hero",
+  "show": "And in the penalty shootout, Liverpool held their nerve, winning 3\u20132.",
+  "say": "And in the penalty shootout, Liverpool held their nerve, winning three, two.",
+  "start": 83.024,
+  "dur": 3.807,
+  "gap": 0.42,
+  "speed": 1.22
+ },
+ {
+  "beat": "legacy",
+  "show": "From three goals down to European champions.",
+  "say": "From three goals down to European champions.",
+  "start": 87.251,
+  "dur": 3.003,
+  "gap": 0.24,
+  "speed": 1.05
+ },
+ {
+  "beat": "legacy",
+  "show": "One night that proved: in football, it's never over until it's over.",
+  "say": "One night that proved, in football, it's never over, until it's over.",
+  "start": 90.494,
+  "dur": 4.249,
+  "gap": 0.48,
+  "speed": 1.05
+ },
+ {
+  "beat": "brand",
+  "show": "You're watching Offside Stories.",
+  "say": "You're watching Offside Stories.",
+  "start": 95.223,
+  "dur": 2.001,
+  "gap": 0.15,
+  "speed": 1.0
+ },
+ {
+  "beat": "brand",
+  "show": "Beyond the 90 minutes.",
+  "say": "Beyond the ninety minutes.",
+  "start": 97.374,
+  "dur": 1.587,
+  "gap": 0.0,
+  "speed": 1.0
+ }
+]

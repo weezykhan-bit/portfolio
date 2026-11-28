@@ -1,0 +1,42 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+
+    #g-1{left:116px;top:400px;font-size:200px}
+    #g-2{left:116px;top:400px;font-size:200px}
+    #g-3{left:116px;top:400px;font-size:230px}
+    #g-k{left:120px;top:900px;font-weight:800;font-size:32px;letter-spacing:.1em;color:rgba(245,245,240,.7)}
+
+  </style>
+  <div id="root" data-composition-id="legacy" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="g-1" class="a lg">From<br><span class="r">3–0</span> down</div>
+    <div id="g-2" class="a lg">To European<br><span class="y">champions.</span></div>
+    <div id="g-3" class="a lg">The miracle<br>of <span class="y">Istanbul.</span></div>
+    <div id="g-k" class="a">25 MAY 2005 · ATATÜRK OLYMPIC STADIUM</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#g-1", { opacity: 0, color: "#2a2a2a" }, { opacity: 1, color: "#F5F5F0", duration: 0.4 }, 0.2);
+    tl.set("#g-1", { opacity: 0 }, 1.866);
+    tl.fromTo("#g-2", { opacity: 0, scale: 1.12, transformOrigin: "0 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "expo.out" }, 1.8659999999999999);
+    tl.to("#g-2", { opacity: 0, filter: "blur(10px)", duration: 0.15, ease: "power2.in" }, 3.343);
+    tl.fromTo("#g-3", { opacity: 0, color: "#2a2a2a" }, { opacity: 1, color: "#F5F5F0", duration: 0.8, ease: "power2.out" }, 3.543);
+    tl.fromTo("#g-k", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power4.out" }, 4.643);
+
+    window.__timelines["legacy"] = tl;
+  </script>
+</template>

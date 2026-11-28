@@ -1,0 +1,65 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:38px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+
+    #root .tier{height:88px;border:3px solid rgba(245,245,240,.35);display:flex;align-items:center;justify-content:center;background:#0A0A0A;z-index:2}
+    #root .tier span{font-weight:800;font-size:30px;letter-spacing:.16em;color:rgba(245,245,240,.6)}
+    #root .dot{width:44px;height:44px;border-radius:50%;background:#FFE600;z-index:3}
+
+    #l-bg{inset:0;background:#FFE600}
+    #l-trail{left:535px;width:10px;background:#FFE600;z-index:1}
+    #root .yr{position:absolute;font-weight:900;font-size:34px;letter-spacing:.08em;color:#FFE600}
+    #l-txt{left:122px;top:330px}
+    #l-txt div{font-size:220px}
+
+  </style>
+  <div id="root" data-composition-id="legacy" data-width="1080" data-height="1920">
+
+    <div class="grain"></div>
+    <div id="l-lad" class="a" style="inset:0">
+    <div class="a tier" id="l-t0" style="left:360px;top:560px;width:360px"><span>PREMIER LEAGUE</span></div>
+<div class="a tier" id="l-t1" style="left:310px;top:664px;width:460px"><span>CHAMPIONSHIP</span></div>
+<div class="a tier" id="l-t2" style="left:260px;top:768px;width:560px"><span>LEAGUE ONE</span></div>
+<div class="a tier" id="l-t3" style="left:210px;top:872px;width:660px"><span>LEAGUE TWO</span></div>
+<div class="a tier" id="l-t4" style="left:160px;top:976px;width:760px"><span>NON-LEAGUE</span></div>
+    <div class="a dot" id="l-dot" style="left:518px;top:946px"></div>
+    <div id="l-trail" class="a" style="top:968px;height:0"></div>
+    <div class="yr" id="l-y1" style="left:788px;top:690px">2012</div>
+    <div class="yr" id="l-y2" style="left:738px;top:586px">2016</div>
+    </div>
+    <div id="l-bg" class="a"></div>
+    <div id="l-txt" class="a">
+      <div class="lg" id="l-w1">It's never</div>
+      <div class="lg" id="l-w2">too late</div>
+      <div class="lg" id="l-w3">to make</div>
+      <div class="lg y" id="l-w4">history.</div>
+    </div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#l-bg", { opacity: 1 }, { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 0.0);
+    tl.fromTo("#l-lad .tier", { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.05 }, 0.3);
+    tl.fromTo("#l-dot", { y: 0 }, { y: -416, duration: 2.9, ease: "power2.inOut" }, 0.45);
+    tl.fromTo("#l-trail", { height: 0, y: 0 }, { height: 416, y: -416, duration: 2.9, ease: "power2.inOut" }, 0.45);
+        tl.fromTo("#l-y1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.9);
+    tl.fromTo("#l-y2", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 3.3);
+    tl.fromTo("#l-t0", { backgroundColor: "rgba(255,230,0,0)" }, { backgroundColor: "#FFE600", duration: 0.3 }, 3.3);
+    tl.fromTo("#l-t0 span", { color: "rgba(245,245,240,.6)" }, { color: "#0A0A0A", duration: 0.3 }, 3.3);
+    // the line, slowly
+    tl.to("#l-lad", { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 3.7);
+    ["#l-w1", "#l-w2", "#l-w3", "#l-w4"].forEach((id, k) => {
+      const t = [5.95, 6.45, 6.95, 7.45][k];
+      tl.fromTo(id, { opacity: 0, color: "#2a2a2a" }, { opacity: 1, color: k === 3 ? "#FFE600" : "#F5F5F0", duration: 0.45, ease: "power2.out" }, t);
+    });
+
+    window.__timelines["legacy"] = tl;
+  </script>
+</template>

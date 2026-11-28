@@ -1,0 +1,68 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+    #root .chip{display:inline-block;font-family:'League Gothic';font-size:70px;line-height:1;padding:8px 18px 0;color:#F5F5F0}
+    #root .agg{font-weight:800;font-size:36px;letter-spacing:.12em;text-transform:uppercase}
+
+    #s-k{left:120px;top:330px}
+    #s-clk{left:116px;top:390px;font-size:300px}
+    #s-agg{left:120px;top:680px;display:flex;align-items:baseline;gap:26px}
+    #s-agg .lab{font-weight:800;font-size:36px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,245,240,.7)}
+    #s-a{font-family:'League Gothic';font-size:200px;line-height:.9}
+    #s-out{left:120px;top:880px;font-weight:800;font-size:34px;letter-spacing:.08em;color:#E10600;text-transform:uppercase}
+    #s-boom{inset:0;background:#FFE600}
+
+  </style>
+  <div id="root" data-composition-id="seven" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="s-k" class="a kick y">Barcelona v PSG · second leg</div>
+    <div id="s-clk" class="a lg"><span id="s-c">88'</span></div>
+    <div id="s-agg" class="a"><span class="lab">Aggregate</span><span id="s-a">3–5</span></div>
+    <div id="s-out" class="a">5–5: PSG still through on the away goal</div>
+    <div class="nc" id="s-n1" style="top:1000px"><b></b><span>Neymar</span><i>Free kick · 88&#x27;</i></div>
+    <div class="nc" id="s-n2" style="top:1000px"><b></b><span>Neymar</span><i>Penalty · 90+1&#x27;</i></div>
+    <div class="nc" id="s-n3" style="top:1000px"><b></b><span>Sergi Roberto</span><i>90+5&#x27;</i></div>
+    <div id="s-boom" class="a"></div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#s-k, #s-clk, #s-agg", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out" }, 0.05);
+    const _ss_c = [[0, "88'"], [4.692, "90+1'"], [8.06, "90+5'"]], _es_c = document.getElementById("s-c"), _os_c = { v: 0 };
+    tl.fromTo(_os_c, { v: 0 }, { v: 1, duration: 12.706, ease: "none", onUpdate: () => { const t = _os_c.v * 12.706; let c = _ss_c[0][1]; for (const x of _ss_c) if (t >= x[0]) c = x[1]; _es_c.textContent = c; } }, 0);
+    const _ss_a = [[0, "3\u20135"], [3.739, "4\u20135"], [5.833, "5\u20135"], [11.132, "6\u20135"]], _es_a = document.getElementById("s-a"), _os_a = { v: 0 };
+    tl.fromTo(_os_a, { v: 0 }, { v: 1, duration: 12.706, ease: "none", onUpdate: () => { const t = _os_a.v * 12.706; let c = _ss_a[0][1]; for (const x of _ss_a) if (t >= x[0]) c = x[1]; _es_a.textContent = c; } }, 0);
+    tl.fromTo("#s-a", { scale: 1.3, transformOrigin: "0 70%" }, { scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, 3.739);
+    tl.fromTo("#s-a", { scale: 1.3, transformOrigin: "0 70%" }, { scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, 5.833);
+    tl.fromTo("#s-a", { scale: 1.3, transformOrigin: "0 70%" }, { scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, 11.132);
+    
+    tl.fromTo("#s-clk", { scale: 1.08, transformOrigin: "0 50%" }, { scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, 4.692);
+    tl.fromTo("#s-clk", { scale: 1.08, transformOrigin: "0 50%" }, { scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, 8.060);
+    tl.fromTo("#s-n1 b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.18, ease: "expo.out" }, 3.094);
+    tl.fromTo("#s-n1 span, #s-n1 i", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "expo.out", stagger: 0.08 }, 3.174);
+    tl.to("#s-n1", { opacity: 0, x: -30, duration: 0.15, ease: "power2.in" }, 4.592);
+    tl.fromTo("#s-n2 b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.18, ease: "expo.out" }, 4.692);
+    tl.fromTo("#s-n2 span, #s-n2 i", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "expo.out", stagger: 0.08 }, 4.772);
+    tl.to("#s-n2", { opacity: 0, x: -30, duration: 0.15, ease: "power2.in" }, 6.654);
+    tl.fromTo("#s-out", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 6.183);
+    tl.to("#s-out", { opacity: 0, duration: 0.15 }, 11.032);
+    tl.to("#s-a", { color: "#FFE600", duration: 0.1 }, 11.132);
+    tl.fromTo("#s-n3 b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.18, ease: "expo.out" }, 11.132);
+    tl.fromTo("#s-n3 span, #s-n3 i", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "expo.out", stagger: 0.08 }, 11.212);
+    tl.fromTo("#s-boom", { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 0.4, ease: "power3.inOut" }, 12.286);
+
+    window.__timelines["seven"] = tl;
+  </script>
+</template>

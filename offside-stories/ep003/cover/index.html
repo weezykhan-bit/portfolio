@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0A0A0A}
+#root{position:relative;width:1080px;height:1920px;font-family:Inter,sans-serif;color:#F5F5F0;overflow:hidden}
+.a{position:absolute}
+.lg{font-family:'League Gothic';font-weight:400;line-height:.86;text-transform:uppercase;white-space:nowrap}
+#top{left:0;top:0;width:1080px;height:1030px;background:#161616;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+#bot{left:0;top:900px;width:1080px;height:1020px;background:#FFE600;clip-path:polygon(0 12%,100% 0,100% 100%,0 100%)}
+#pitch{left:0;top:0;opacity:.16}
+#pitch *{fill:none;stroke:#F5F5F0;stroke-width:4}
+.tag{font-weight:900;font-size:34px;letter-spacing:.14em;text-transform:uppercase}
+#t1{left:120px;top:300px;color:rgba(245,245,240,.6)}
+#h1{left:116px;top:350px;font-size:300px}
+#dot{left:120px;top:640px;width:40px;height:40px;border-radius:50%;background:#FFE600}
+#dl{left:180px;top:644px;font-weight:800;font-size:30px;letter-spacing:.12em;color:#FFE600}
+#t2{left:120px;top:1060px;color:#0A0A0A}
+#h2{left:116px;top:1120px;font-size:212px;color:#0A0A0A}
+#story{left:120px;top:1370px;font-weight:900;font-size:50px;letter-spacing:.02em;color:#0A0A0A}
+#ep{left:120px;top:1440px;font-weight:800;font-size:30px;letter-spacing:.12em;color:#0A0A0A}
+#logo{left:120px;top:1530px;height:110px;display:flex;align-items:center;gap:16px;background:#0A0A0A;padding:12px 26px 8px}
+#logo .w{font-size:92px;color:#F5F5F0}
+#logo .ln{display:inline-block;width:5px;height:74px;background:#FFE600;margin:0 6px 0 2px;vertical-align:-4px}
+#logo .s{font-weight:900;font-size:26px;letter-spacing:.38em;color:#F5F5F0}
+</style></head>
+<body>
+<div id="root" data-composition-id="cover" data-start="0" data-duration="1" data-width="1080" data-height="1920" data-no-timeline>
+  <div id="top" class="a">
+    <svg id="pitch" class="a" width="1080" height="1030"><rect x="150" y="80" width="780" height="1100"/><circle cx="540" cy="1030" r="130"/><rect x="330" y="80" width="420" height="250"/><line x1="150" y1="1030" x2="930" y2="1030"/></svg>
+  </div>
+  <div id="bot" class="a"></div>
+  <div id="t1" class="a tag">88th minute · aggregate 3–5</div>
+  <div id="h1" class="a lg">Need<br><span style="color:#E10600">three.</span></div>
+
+
+  <div id="t2" class="a tag">8 March 2017 · Camp Nou</div>
+  <div id="h2" class="a lg">Got three.</div>
+  <div id="story" class="a">BARCELONA 6–1 PSG</div>
+  <div id="ep" class="a">OFFSIDE STORIES – EPISODE 003</div>
+  <div id="logo" class="a"><span class="w lg">OFFSID<span class="ln"></span>E</span><span class="s">STORIES</span></div>
+</div>
+<script>window.__timelines = window.__timelines || {};</script>
+</body></html>

@@ -1,0 +1,78 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+#root .pitch *{fill:none;stroke:#F5F5F0;stroke-width:4;opacity:.18}
+    #t-wh{inset:0;background:#F5F5F0}
+    #t-goal{left:440px;top:196px;width:200px;height:36px;border:5px solid #F5F5F0;border-bottom:0}
+    #t-ball{left:0;top:0;width:30px;height:30px;border-radius:50%;background:#F5F5F0}
+    #t-ger{left:0;top:0;width:60px;height:60px;border-radius:50%;background:#C8102E;border:4px solid #F5F5F0;font-weight:900;font-size:30px;display:flex;align-items:center;justify-content:center}
+    #t-cross{left:0;top:0}
+    #t-cross path{fill:none;stroke:#FFE600;stroke-width:6;stroke-dasharray:14 12}
+    #t-min{left:120px;top:300px;font-size:120px;z-index:3}
+    #t-sc{left:116px;top:560px;font-size:330px;z-index:3}
+    #t-head{left:120px;top:420px;font-size:250px;z-index:3}
+
+  </style>
+  <div id="root" data-composition-id="turn" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <svg class="a pitch" style="left:0;top:0" width="1080" height="1920" viewBox="0 0 1080 1920"><g class="pg">
+  <rect class="pl" x="150" y="230" width="780" height="1460"/><line class="pl" x1="150" y1="960" x2="930" y2="960"/>
+  <circle class="pl" cx="540" cy="960" r="130"/><rect class="pl" x="330" y="230" width="420" height="250"/>
+  <rect class="pl" x="330" y="1440" width="420" height="250"/></g></svg>
+    <div id="t-goal" class="a"></div>
+    <svg id="t-cross" class="a" width="1080" height="1920"><path id="t-cp" d="M 170 640 Q 420 320 650 380"/><path id="t-hp" d="M 650 380 L 590 214"/></svg>
+    <div id="t-ger" class="a">8</div>
+    <div id="t-ball" class="a"></div>
+    <div class="nc" id="t-nc" style="top:1000px"><b></b><span>Steven Gerrard</span><i>Liverpool FC · 54&#x27;</i></div>
+    <div id="t-sc" class="a lg"><span class="y">1</span>–3</div>
+    <div id="t-head" class="a lg">The<br>comeback<br><span class="y">begins.</span></div>
+    <div id="t-wh" class="a"></div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#t-wh", { opacity: 1 }, { opacity: 0, duration: 0.45, ease: "power2.out" }, 0);
+    tl.fromTo(".pitch .pl", { strokeDasharray: 2400, strokeDashoffset: 1600 }, { strokeDashoffset: 0, duration: 1.0, ease: "power2.out", stagger: 0.04 }, 0.2);
+    tl.fromTo(".pg", { scale: 1, transformOrigin: "540px 300px" }, { scale: 1.35, duration: 5.28, ease: "power1.inOut" }, 0.2);
+    tl.fromTo("#t-goal", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.6);
+    // the cross from the left, Gerrard arrives, header
+    const cp = document.getElementById("t-cp"), hp = document.getElementById("t-hp");
+    const cl = cp.getTotalLength(), hl = hp.getTotalLength();
+    gsap.set(cp, { strokeDasharray: cl, strokeDashoffset: cl }); gsap.set(hp, { strokeDasharray: hl, strokeDashoffset: hl });
+    const tc0 = 1.921, tc1 = 4.531, th1 = 5.277;
+    tl.fromTo(cp, { strokeDashoffset: cl }, { strokeDashoffset: 0, duration: tc1 - tc0, ease: "none" }, tc0);
+    tl.fromTo(hp, { strokeDashoffset: hl }, { strokeDashoffset: 0, duration: th1 - tc1, ease: "power2.in" }, tc1);
+    const bl = { t: 0 }, ball = document.getElementById("t-ball");
+    const place = () => { const t = bl.t; let pt;
+      if (t <= 1) pt = cp.getPointAtLength(cl * t); else pt = hp.getPointAtLength(hl * Math.min(1, t - 1));
+      ball.style.transform = `translate(${pt.x - 15}px, ${pt.y - 15}px)`; };
+    tl.fromTo(bl, { t: 0 }, { t: 1, duration: tc1 - tc0, ease: "none", onUpdate: place }, tc0);
+    tl.fromTo(bl, { t: 1 }, { t: 2, duration: th1 - tc1, ease: "power2.in", onUpdate: place, immediateRender: false }, tc1);
+    tl.fromTo("#t-ball", { opacity: 0 }, { opacity: 1, duration: 0.1 }, tc0);
+    tl.fromTo("#t-ger", { x: 600, y: 760, opacity: 0 }, { x: 623, y: 353, opacity: 1, duration: tc1 - tc0 + 0.1, ease: "power2.out" }, tc0 - 0.1);
+    tl.fromTo("#t-goal", { borderColor: "#F5F5F0" }, { borderColor: "#FFE600", duration: 0.1 }, th1);
+    tl.fromTo("#t-nc b", { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.18, ease: "expo.out" }, 2.347);
+    tl.fromTo("#t-nc span, #t-nc i", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "expo.out", stagger: 0.08 }, 2.427);
+    // score lands
+    tl.to(".pitch, #t-goal, #t-cross, #t-ball, #t-ger", { opacity: 0, duration: 0.3 }, th1 + 0.2);
+    tl.to("#t-nc", { opacity: 0, x: -30, duration: 0.15, ease: "power2.in" }, 7.087);
+    tl.fromTo("#t-sc", { opacity: 0, scale: 1.3, transformOrigin: "0 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.out" }, th1 + 0.25);
+    tl.set("#t-sc", { opacity: 0 }, 7.287);
+    tl.to(".pitch, #t-goal, #t-cross, #t-ball, #t-ger", { opacity: 0, duration: 0.2 }, 7.287);
+    tl.fromTo("#t-head", { opacity: 0, x: 900, filter: "blur(16px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 7.287);
+
+    window.__timelines["turn"] = tl;
+  </script>
+</template>

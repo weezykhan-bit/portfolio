@@ -1,0 +1,74 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:38px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+
+    #root .tier{height:88px;border:3px solid rgba(245,245,240,.35);display:flex;align-items:center;justify-content:center;background:#0A0A0A;z-index:2}
+    #root .tier span{font-weight:800;font-size:30px;letter-spacing:.16em;color:rgba(245,245,240,.6)}
+    #root .dot{width:44px;height:44px;border-radius:50%;background:#FFE600;z-index:3}
+
+    #h-pitch{left:0;top:0}
+    #h-pitch *{fill:none;stroke:#F5F5F0;stroke-width:4;opacity:.22}
+    #h-from{left:120px;top:330px}
+    #h-big{left:122px;top:396px;font-size:330px}
+    #h-to{left:120px;top:400px}
+    #h-leg{left:122px;top:466px;font-size:400px}
+    #h-sub{left:120px;top:830px;font-weight:800;font-size:44px;letter-spacing:.06em;text-transform:uppercase}
+    #h-run{left:518px;top:1460px;width:44px;height:44px;border-radius:50%;background:#FFE600}
+    #h-trail{left:534px;top:1482px;width:12px;height:0;background:#FFE600}
+    #h-flash{inset:0;background:#F5F5F0;opacity:0}
+
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+
+    <div class="grain"></div>
+    <svg id="h-pitch" class="a" width="1080" height="1920" viewBox="0 0 1080 1920">
+      <g id="h-pg">
+      <rect class="pl" x="150" y="230" width="780" height="1460"/>
+      <line class="pl" x1="150" y1="960" x2="930" y2="960"/>
+      <circle class="pl" cx="540" cy="960" r="130"/>
+      <rect class="pl" x="330" y="230" width="420" height="250"/>
+      <rect class="pl" x="330" y="1440" width="420" height="250"/>
+      <rect class="pl" x="440" y="230" width="200" height="90"/>
+      <rect class="pl" x="440" y="1600" width="200" height="90"/>
+      </g>
+    </svg>
+    <div id="h-trail" class="a"></div>
+    <div id="h-run" class="a"></div>
+    <div id="h-txt1" class="a" style="inset:0">
+      <div id="h-from" class="a kick">From</div>
+      <div id="h-big" class="a lg">Non-<br>League</div>
+    </div>
+    <div id="h-txt2" class="a" style="inset:0">
+      <div id="h-to" class="a kick">To</div>
+      <div id="h-leg" class="a lg y">Legend.</div>
+      <div id="h-sub" class="a">Premier League champion · 2016</div>
+    </div>
+    <div id="h-flash" class="a"></div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#h-pitch .pl", { strokeDasharray: 2400, strokeDashoffset: 1400 }, { strokeDashoffset: 0, duration: 1.4, ease: "power2.out", stagger: 0.05 }, 0);
+    tl.fromTo("#h-big", { scale: 1.08, transformOrigin: "0 50%" }, { scale: 1, duration: 0.6, ease: "expo.out" }, 0);
+    tl.fromTo("#h-txt1", { x: 0, filter: "blur(0px)" }, { x: -1150, filter: "blur(18px)", duration: 0.28, ease: "power3.in" }, 2.35); tl.set("#h-txt1", { opacity: 0 }, 2.64);
+    tl.fromTo("#h-pg", { scale: 1, transformOrigin: "540px 1480px" }, { scale: 1.5, duration: 2.6, ease: "power2.inOut" }, 2.45);
+    tl.fromTo("#h-run", { y: 0 }, { y: -980, duration: 2.5, ease: "power2.inOut" }, 2.5);
+    tl.fromTo("#h-trail", { height: 0, y: 0 }, { height: 980, y: -980, duration: 2.5, ease: "power2.inOut" }, 2.5);
+    tl.fromTo("#h-flash", { opacity: 0 }, { opacity: 0.95, duration: 0.05 }, 5.38);
+    tl.set("#h-pitch, #h-run, #h-trail", { opacity: 0 }, 5.44);
+    tl.to("#h-flash", { opacity: 0, duration: 0.18, ease: "power2.out" }, 5.44);
+    tl.fromTo("#h-txt2", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 5.43);
+    tl.fromTo("#h-leg", { x: 900, filter: "blur(18px)" }, { x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 5.43);
+    tl.fromTo("#h-to", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 5.55);
+    tl.fromTo("#h-sub", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 7.1);
+
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

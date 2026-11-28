@@ -1,0 +1,170 @@
+[
+ {
+  "beat": "hook",
+  "show": "Imagine karo...",
+  "say": "Imagine karo...",
+  "gap": 0.08,
+  "dur": 1.072,
+  "start": 0.3
+ },
+ {
+  "beat": "hook",
+  "show": "ek footballer jo kuch saal pehle non-league football khel raha tha...",
+  "say": "ek footballer jo kutch saal pay-lay non-league football khel raha taa...",
+  "gap": 0.08,
+  "dur": 3.664,
+  "start": 1.452
+ },
+ {
+  "beat": "hook",
+  "show": "aur phir ek din Premier League ka champion ban gaya.",
+  "say": "aur pir ek din Premier League kaa champion ban guyaa.",
+  "gap": 0.25,
+  "dur": 3.013,
+  "start": 5.196
+ },
+ {
+  "beat": "struggle",
+  "show": "Meet Jamie Vardy.",
+  "say": "Meet Jamie Vardy.",
+  "gap": 0.1,
+  "dur": 1.215,
+  "start": 8.459
+ },
+ {
+  "beat": "struggle",
+  "show": "16 saal ki umar mein Sheffield Wednesday ne release kar diya.",
+  "say": "Sixteen saal kee oomar main Sheffield Wednesday nay release kar diyaa.",
+  "gap": 0.1,
+  "dur": 3.836,
+  "start": 9.774
+ },
+ {
+  "beat": "struggle",
+  "show": "Woh factory mein kaam karta tha,",
+  "say": "Woh factory main kaam karta taa,",
+  "gap": 0.1,
+  "dur": 2.073,
+  "start": 13.71
+ },
+ {
+  "beat": "struggle",
+  "show": "aur non-league football mein apna dream chase kar raha tha.",
+  "say": "aur non-league football main apnaa dream chase kar raha taa.",
+  "gap": 0.22,
+  "dur": 3.257,
+  "start": 15.883
+ },
+ {
+  "beat": "break",
+  "show": "2012 mein Leicester City ne usse sign kiya.",
+  "say": "Twenty twelve main Leicester City nay usay sign kiyaa.",
+  "gap": 0.12,
+  "dur": 3.178,
+  "start": 19.36
+ },
+ {
+  "beat": "break",
+  "show": "Bahut logon ko laga, this was a massive gamble.",
+  "say": "Bahut lowgon ko lagaa, this was a massive gamble.",
+  "gap": 0.12,
+  "dur": 2.908,
+  "start": 22.658
+ },
+ {
+  "beat": "break",
+  "show": "But Vardy had other plans.",
+  "say": "But Vardy had other plans.",
+  "gap": 0.25,
+  "dur": 1.639,
+  "start": 25.686
+ },
+ {
+  "beat": "record",
+  "show": "2015 mein usne Premier League mein continuously 11 matches mein goal score kiya.",
+  "say": "Twenty fifteen main usnay Premier League main continuously eleven matches main goal score kiyaa.",
+  "gap": 0.12,
+  "dur": 5.661,
+  "start": 27.575
+ },
+ {
+  "beat": "record",
+  "show": "Ruud van Nistelrooy ka record tod diya.",
+  "say": "Ruud van Nistelrooy kaa record tode diyaa.",
+  "gap": 0.12,
+  "dur": 2.425,
+  "start": 33.356
+ },
+ {
+  "beat": "record",
+  "show": "Suddenly, the whole world was watching.",
+  "say": "Suddenly, the whole world was watching.",
+  "gap": 0.25,
+  "dur": 1.889,
+  "start": 35.901
+ },
+ {
+  "beat": "miracle",
+  "show": "Then came the 2015\u201316 season.",
+  "say": "Then came the twenty fifteen, sixteen season.",
+  "gap": 0.18,
+  "dur": 2.512,
+  "start": 38.04
+ },
+ {
+  "beat": "miracle",
+  "show": "Leicester City, jinke title jeetne ke odds the 5000 to 1...",
+  "say": "Leicester City, jinkay title jeetnay kay odds tay, five thousand to one...",
+  "gap": 0.18,
+  "dur": 4.081,
+  "start": 40.732
+ },
+ {
+  "beat": "miracle",
+  "show": "became Premier League champions!",
+  "say": "became Premier League champions!",
+  "gap": 0.45,
+  "dur": 1.678,
+  "start": 44.993
+ },
+ {
+  "beat": "legacy",
+  "show": "From working-class roots to the top of English football.",
+  "say": "From working-class roots, to the top of English football.",
+  "gap": 0.28,
+  "dur": 3.227,
+  "start": 47.121
+ },
+ {
+  "beat": "legacy",
+  "show": "Jamie Vardy proved one thing...",
+  "say": "Jamie Vardy proved one thing...",
+  "gap": 0.28,
+  "dur": 2.045,
+  "start": 50.628
+ },
+ {
+  "beat": "legacy",
+  "show": "it's never too late to make history.",
+  "say": "it's never too late to make history.",
+  "gap": 0.5,
+  "dur": 2.193,
+  "start": 52.953
+ },
+ {
+  "beat": "brand",
+  "show": "You're watching Offside Stories.",
+  "say": "You're watching Offside Stories.",
+  "gap": 0.15,
+  "dur": 1.964,
+  "start": 55.646
+ },
+ {
+  "beat": "brand",
+  "show": "Beyond the 90 minutes.",
+  "say": "Beyond the ninety minutes.",
+  "gap": 0,
+  "dur": 1.532,
+  "start": 57.76
+ }
+]

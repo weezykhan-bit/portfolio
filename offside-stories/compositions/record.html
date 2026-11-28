@@ -1,0 +1,94 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:38px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+
+    #r-board{left:120px;top:330px;width:840px;height:620px;background:#111;border:4px solid #262626}
+    #r-lab{left:40px;top:30px;font-weight:800;font-size:32px;letter-spacing:.14em;color:rgba(245,245,240,.7)}
+    #r-cv{left:40px;top:90px}
+    #r-cap{left:40px;top:480px;width:760px;font-weight:900;font-size:44px;line-height:1.1;text-transform:uppercase}
+    #r-strip{left:120px;top:990px;width:840px;display:flex;gap:10px}
+    #r-strip i{flex:1;height:60px;border:3px solid #333;display:block;position:relative}
+    #r-strip i b{position:absolute;inset:14px;border-radius:50%;background:#F5F5F0;display:block}
+    #r-cmp{left:120px;top:330px;width:840px}
+    #r-cmp .lb{font-weight:800;font-size:36px;letter-spacing:.08em;text-transform:uppercase;margin-top:34px}
+    #r-cmp .bar{height:120px;display:flex;align-items:center;justify-content:flex-end;padding-right:24px;font-family:'League Gothic';font-size:110px;margin-top:10px;transform-origin:0 50%}
+    #r-rb{left:300px;top:850px;font-family:'League Gothic';font-size:120px;line-height:1;color:#E10600;border:7px solid #E10600;padding:6px 26px 0;text-transform:uppercase}
+    #r-w1,#r-w2,#r-w3{left:122px;top:520px;font-size:280px}
+
+  </style>
+  <div id="root" data-composition-id="record" data-width="1080" data-height="1920">
+
+    <div class="grain"></div>
+    <div id="r-sb" class="a" style="inset:0">
+      <div id="r-board" class="a">
+        <div id="r-lab" class="a">PREMIER LEAGUE · 2015</div>
+        <canvas id="r-cv" class="a" width="760" height="380"></canvas>
+        <div id="r-cap" class="a">Consecutive Premier League matches <span class="y">scored in</span></div>
+      </div>
+      <div id="r-strip" class="a"><i id="r-m0"><b></b></i><i id="r-m1"><b></b></i><i id="r-m2"><b></b></i><i id="r-m3"><b></b></i><i id="r-m4"><b></b></i><i id="r-m5"><b></b></i><i id="r-m6"><b></b></i><i id="r-m7"><b></b></i><i id="r-m8"><b></b></i><i id="r-m9"><b></b></i><i id="r-m10"><b></b></i></div>
+    </div>
+    <div id="r-cmp" class="a">
+      <div class="lb">Previous record · Van Nistelrooy</div>
+      <div class="bar" id="r-b1" style="width:763px;background:#3a3a3a">10</div>
+      <div class="lb y">Jamie Vardy · 2015</div>
+      <div class="bar" id="r-b2" style="width:840px;background:#FFE600;color:#0A0A0A">11</div>
+    </div>
+    <div id="r-rb" class="a">Record broken</div>
+    <div id="r-w1" class="a lg">The whole</div>
+    <div id="r-w2" class="a lg y">World</div>
+    <div id="r-w3" class="a lg">Was<br>watching.</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    // dot-matrix digits
+    const F = { "0":["01110","10001","10011","10101","11001","10001","01110"], "1":["00100","01100","00100","00100","00100","00100","01110"],
+      "2":["01110","10001","00001","00010","00100","01000","11111"], "3":["11110","00001","00001","01110","00001","00001","11110"],
+      "4":["00010","00110","01010","10010","11111","00010","00010"], "5":["11111","10000","11110","00001","00001","10001","01110"],
+      "6":["00110","01000","10000","11110","10001","10001","01110"], "7":["11111","00001","00010","00100","01000","01000","01000"],
+      "8":["01110","10001","10001","01110","10001","10001","01110"], "9":["01110","10001","10001","01111","00001","00010","01100"] };
+    const cv = document.getElementById("r-cv"), cx = cv.getContext("2d");
+    const P = 50, RAD = 20;
+    const drawN = (n) => {
+      cx.clearRect(0, 0, 760, 380);
+      const s = String(n).padStart(2, " ");
+      for (let d = 0; d < 2; d++) for (let r = 0; r < 7; r++) for (let c = 0; c < 5; c++) {
+        const on = s[d] !== " " && F[s[d]][r][c] === "1";
+        cx.fillStyle = on ? "#FFE600" : "#222";
+        cx.beginPath(); cx.arc(40 + d * 340 + c * P + P / 2, 14 + r * P + P / 2 - 10, on ? RAD : RAD * 0.7, 0, 6.2832); cx.fill();
+      }
+    };
+    const g = { v: 0 };
+    tl.fromTo(g, { v: 0 }, { v: 11, duration: 1.3, ease: "power1.in", onUpdate: () => drawN(Math.max(0, Math.floor(g.v + 1e-6))) }, 0.95);
+    for (let k = 0; k < 11; k++) {
+      const t = 0.95 + 1.3 * Math.sqrt((k + 1) / 11) - 0.01;
+      tl.fromTo(`#r-m${k} b`, { scale: 0 }, { scale: 1, duration: 0.12, ease: "back.out(3)" }, t);
+      tl.fromTo(`#r-m${k}`, { borderColor: "#333" }, { borderColor: "#FFE600", duration: 0.1 }, t);
+    }
+    tl.fromTo("#r-sb", { opacity: 0, scale: 1.06, transformOrigin: "50% 30%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "expo.out" }, 0);
+    tl.fromTo("#r-cap", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 2.4);
+    // compare bars
+    tl.to("#r-sb", { y: -1400, filter: "blur(16px)", duration: 0.3, ease: "power3.in" }, 5.55); tl.set("#r-sb", { opacity: 0 }, 5.86);
+    tl.fromTo("#r-cmp .lb", { opacity: 0 }, { opacity: 1, duration: 0.15, stagger: 0.5 }, 5.85);
+    tl.fromTo("#r-b1", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "expo.out" }, 5.95);
+    tl.fromTo("#r-b2", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "expo.out" }, 6.45);
+    tl.fromTo("#r-rb", { opacity: 0, scale: 1.6, rotation: -5 }, { opacity: 1, scale: 1, rotation: -5, duration: 0.16, ease: "power4.out" }, 7.55);
+    tl.fromTo("#r-rb", { x: 0 }, { x: 8, duration: 0.033, yoyo: true, repeat: 3, ease: "none" }, 7.71);
+    // whole world was watching: hard cuts
+    tl.set("#r-cmp, #r-rb", { opacity: 0 }, 8.35);
+    tl.fromTo("#r-w1", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 8.35);
+    tl.set("#r-w1", { opacity: 0 }, 9.05);
+    tl.fromTo("#r-w2", { opacity: 0, scale: 1.25, transformOrigin: "0 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "expo.out" }, 9.05);
+    tl.set("#r-w2", { opacity: 0 }, 9.65);
+    tl.fromTo("#r-w3", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 9.65);
+
+    window.__timelines["record"] = tl;
+  </script>
+</template>

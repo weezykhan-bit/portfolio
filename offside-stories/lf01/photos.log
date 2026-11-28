@@ -1,0 +1,40 @@
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_appeal HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+FAILED ranieri_appeal
+retry ranieri_watch HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_watch HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_watch HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_watch HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+retry ranieri_watch HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1)
+FAILED ranieri_watch
+ok vardy (2112, 1188)
+retry schmeichel_morgan <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry schmeichel_morgan <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry schmeichel_morgan <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry schmeichel_morgan <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry schmeichel_morgan <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+FAILED schmeichel_morgan
+ok soton (2112, 1188)
+retry clocktower <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry clocktower <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry clocktower <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry clocktower <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry clocktower <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+FAILED clocktower
+retry mahrez_fk1 <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry mahrez_fk1 <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry mahrez_fk1 <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry mahrez_fk1 <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+retry mahrez_fk1 <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>
+FAILED mahrez_fk1
+retry mahrez_fk2 <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>

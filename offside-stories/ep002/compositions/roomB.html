@@ -1,0 +1,71 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#0A0A0A;color:#F5F5F0;font-family:Inter,sans-serif}
+    #root *{box-sizing:border-box;margin:0}
+    #root .a{position:absolute}
+    #root .lg{font-family:'League Gothic',sans-serif;font-weight:400;line-height:.86;letter-spacing:.005em;text-transform:uppercase;white-space:nowrap}
+    #root .kick{font-weight:800;font-size:36px;letter-spacing:.14em;text-transform:uppercase}
+    #root .y{color:#FFE600} #root .r{color:#E10600} #root .g{color:rgba(245,245,240,.45)}
+    #root .grain{position:absolute;inset:0;opacity:.06;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:7px 7px}
+    #root .nc{position:absolute;left:120px;display:flex;align-items:stretch;height:84px}
+    #root .nc b{width:12px;background:#FFE600;display:block}
+    #root .nc span{background:#F5F5F0;color:#0A0A0A;font-weight:900;font-size:40px;letter-spacing:.02em;padding:16px 22px 0;text-transform:uppercase;white-space:nowrap}
+    #root .nc i{background:#0A0A0A;color:#F5F5F0;font-style:normal;font-weight:700;font-size:28px;letter-spacing:.12em;padding:26px 20px 0;text-transform:uppercase;border:3px solid #F5F5F0;border-left:0;white-space:nowrap}
+
+    #rb-1{left:120px;top:400px;font-size:200px}
+    #rb-2{left:120px;top:400px;font-size:200px}
+    #rb-3{left:120px;top:400px;font-size:220px}
+    #rb-tun{left:0;top:0;width:1080px;height:1920px;background:#F5F5F0;clip-path:inset(0 0 0 0)}
+    #rb-cor{left:0;top:0}
+    #rb-cor line{stroke:rgba(245,245,240,.35);stroke-width:3}
+    #rb-dark{inset:0;background:#0A0A0A}
+    #rb-4{left:120px;top:960px;font-size:100px;z-index:3}
+    #rb-5{left:120px;top:420px;font-size:230px;color:#0A0A0A;z-index:3}
+    #rb-6{left:120px;top:900px;width:780px;font-weight:900;font-size:46px;line-height:1.15;color:#0A0A0A;text-transform:uppercase;z-index:3}
+
+  </style>
+  <div id="root" data-composition-id="roomB" data-width="1080" data-height="1920">
+    <div class="grain"></div>
+
+    <div id="rb-1" class="a lg">No guarantee.</div>
+    <div id="rb-2" class="a lg">No easy<br>answers.</div>
+    <div id="rb-3" class="a lg">The game<br>wasn't<br><span class="y">over.</span></div>
+    <svg id="rb-cor" class="a" width="1080" height="1920"><line id="rb-l1"/><line id="rb-l2"/><line id="rb-l3"/><line id="rb-l4"/></svg>
+    <div id="rb-tun" class="a"></div>
+    <div id="rb-4" class="a lg g">Not to save a final.</div>
+    <div id="rb-5" class="a lg">To make<br>history.</div>
+    <div id="rb-6" class="a">The second half was about to change football history.</div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#rb-1", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 0.150);
+    tl.set("#rb-1", { opacity: 0 }, 0.782);
+    tl.fromTo("#rb-2", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 0.782);
+    tl.set("#rb-2", { opacity: 0 }, 3.646);
+    tl.fromTo("#rb-3", { opacity: 0, color: "#2a2a2a" }, { opacity: 1, color: "#F5F5F0", duration: 0.5 }, 3.646);
+    tl.to("#rb-3", { opacity: 0, filter: "blur(10px)", duration: 0.15, ease: "power2.in" }, 6.349);
+    // the tunnel mouth: light at the end, growing as they walk out
+    // corridor: lines from the frame corners to a lit doorway that grows as they walk out
+    const CX = 540, CY = 700, DW = 220, DH = 330, tun = document.getElementById("rb-tun");
+    const ls = ["rb-l1", "rb-l2", "rb-l3", "rb-l4"].map(id => document.getElementById(id));
+    const FC = [[0, 300], [1080, 300], [0, 1920], [1080, 1920]];
+    const dr = { s: 0.25 };
+    const drawT = () => { const w = DW * dr.s, h = DH * dr.s, x0 = CX - w, x1 = CX + w, y0 = CY - h, y1 = CY + h;
+      const ins = [Math.max(0, y0), Math.max(0, 1080 - x1), Math.max(0, 1920 - y1), Math.max(0, x0)];
+      tun.style.clipPath = `inset(${ins[0]}px ${ins[1]}px ${ins[2]}px ${ins[3]}px)`;
+      const DC = [[x0, y0], [x1, y0], [x0, y1], [x1, y1]];
+      ls.forEach((l, k) => { l.setAttribute("x1", FC[k][0]); l.setAttribute("y1", FC[k][1]); l.setAttribute("x2", DC[k][0]); l.setAttribute("y2", DC[k][1]); }); };
+    tl.fromTo("#rb-tun, #rb-cor", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 6.449);
+    tl.fromTo(dr, { s: 0.25 }, { s: 0.7, duration: 5.99, ease: "power1.in", onUpdate: drawT }, 6.449);
+    tl.fromTo(dr, { s: 0.7 }, { s: 6, duration: 0.45, ease: "power3.in", onUpdate: drawT, immediateRender: false }, 12.739999999999998);
+    tl.to("#rb-cor", { opacity: 0, duration: 0.2 }, 12.94);
+    tl.fromTo("#rb-4", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 10.343);
+    tl.set("#rb-4", { opacity: 0 }, 13.040);
+    tl.fromTo("#rb-5", { opacity: 0, filter: "blur(12px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power4.out" }, 14.307);
+    tl.fromTo("#rb-6", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 15.040);
+
+    window.__timelines["roomB"] = tl;
+  </script>
+</template>
